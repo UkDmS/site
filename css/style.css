@@ -81,7 +81,9 @@
     border-right: 0px solid transparent;
     border-left: solid rgb(255, 255, 255);
     position: absolute;
-    border-left-width: calc(100vw);
+    border-left-width: calc(98.75vw);
+    z-index: 999;
+    height: calc(5vh);
 }
 
 #triangle-bottom{
@@ -93,13 +95,26 @@
     bottom: 0;
     right: 0;
     border-right-width: calc(100vw);
+    height: calc(20vh);
 }
 
 .middle-engine .text{
-position: absolute;
+    position: absolute;
     top: 40%;
     color: white;
     margin-left: calc(10vw);
     line-height: 1.4em;
     font-size: 20px;
+}
+.middle-engine form input[type='submit']{
+    width: 240px;
+    height: 35px;
+    background-color: #d11f22;
+    border: none;
+    color: white;
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    bottom: 40%;
+    left: 15%;
 }
