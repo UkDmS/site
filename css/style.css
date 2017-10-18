@@ -1,0 +1,24 @@
+.top-image-engine{
+    position: relative;
+}
+.top-image-engine img{
+    width: 100%;
+}
+#triangle {
+    border: 420px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-left: 0px solid transparent;
+    border-right: solid rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-right-width: calc(100vw);
+}
+.text-block{
+    position: absolute;
+    bottom: calc(10vw);
+    right: calc(10vw);
+    font-size: 35px;
+    text-align: right;
+    font-weight: bold;
+}
