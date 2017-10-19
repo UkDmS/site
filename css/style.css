@@ -1,3 +1,11 @@
+.container{
+    width: calc(100%)!important;
+    overflow: hidden;
+    padding: 0px 0px!important;
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+}
+
 .top-engine, .middle-engine{
     position: relative;
 }
@@ -8,7 +16,7 @@
     left: calc(10vw);
 }
 .top-engine .h h1{
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
 }
 
@@ -16,7 +24,6 @@
     display: block;
     padding-top: 10px;
     text-transform: uppercase;
-    font-size: 12px;
     text-align: center;
     line-height: 1.5em;
 }
@@ -27,14 +34,13 @@
     height: 30px;
     background-color: transparent;
     display: block;
-    margin-bottom: 10px;
-    margin-top: 20px;
+    margin-top: 5px;
     color: white;
     text-align: center;
     width: 270px;
 }
 
-.top-engine .h form input[type='submit']{
+.top-engine .h form button[type='submit']{
     width: 240px;
     height: 35px;
     background-color: #4c9432;
@@ -49,7 +55,6 @@
     filter: brightness(50%);
 }
 #triangle {
-    border: 200px solid transparent;
     border-bottom: 0px solid transparent;
     border-left: 0px solid transparent;
     border-right: solid rgb(255, 255, 255);
@@ -57,36 +62,27 @@
     bottom: 0;
     right: 0;
     border-right-width: calc(100vw);
-    height: calc(20vh);
 }
 .text-block{
     position: absolute;
-    bottom: calc(10vw);
-    right: calc(10vw);
-    font-size: 35px;
+    bottom: 20%;
+    right: 7%;
+    font-size: 2.2em;
     text-align: right;
     font-weight: bold;
 }
+
+.top-engine .h form{
+        margin-top: 10px;
+}
 .engine{
     position: relative;
-    padding-top: 20vh;
     margin: auto;
-    width: 50%;
     padding-bottom: calc(10vw);
 }
 
-#triangle-top{
-    border: 200px solid transparent;
-    border-top: 0px solid transparent;
-    border-right: 0px solid transparent;
-    border-left: solid rgb(255, 255, 255);
-    position: absolute;
-    border-left-width: calc(98.75vw);
-    z-index: 999;
-    height: calc(5vh);
-}
-
-#triangle-bottom{
+@media all and (max-width: 1368px){
+        #triangle {
     border: 200px solid transparent;
     border-bottom: 0px solid transparent;
     border-left: 0px solid transparent;
@@ -95,26 +91,224 @@
     bottom: 0;
     right: 0;
     border-right-width: calc(100vw);
-    height: calc(20vh);
+    height: 40%;
+    }
+    .engine img{
+        width: 100%;
+    }
+    #triangle-top{
+        border: 200px solid transparent;
+            border-top: 0px solid transparent;
+        height: 30%;
+    }
+    #triangle-bottom{
+        border: 200px solid transparent;
+        height: calc(50vh);
+    }
+    .middle-engine form button[type='submit']{
+        width: 240px;
+        height: 35px;
+    }
+    .middle-engine form{
+        position: absolute;
+        top: 50%;
+        left: 10%;
+    }
+    .middle-engine .text{
+        top: 35%;
+        margin-left: calc(10vw);
+        line-height: 1.4em;
+        font-size: 20px;
+    }
+    .middle-form{
+        width: 200px;
+    }
+    .call-green{
+        width: 240px;
+        height: 35px;
+    }
+    .icon ul li {
+        margin-right: 20%;
+    }
+    .price-block{
+        height: 150px;
+        margin-top: 50px!important;
+        margin-bottom: 50px!important;
+    }
+    .price-block span{
+        display: block;
+        width: 50%;
+        margin: auto;
+        padding-top: 35px;
+        font-size: 26px;
+        color: white;
+    }
+
+}
+@media all and (min-width:320px) and (max-width: 480px){
+    .text-block{
+        bottom: 15%;
+        right: 10%;
+        font-size: 16px;
+    }
+        #triangle {
+        border: 120px solid transparent;
+        height: 40%;
+           border-bottom: 0px solid transparent;
+        border-left: 0px solid transparent;
+        border-right: solid rgb(255, 255, 255);
+        border-right-width: 600px;
+    }
+    .top-engine .h h1{
+        font-size: 1.2em;
+    }
+    .top-engine .h {
+        left: 10%;
+    }
+    .top-engine .h span{
+        font-size: 8px;
+        padding-top: 5px;
+    }
+    .top-engine .h form{
+        margin: auto;
+        width: 100px;
+    }
+    .top-engine .h form input[type='text']{
+        border-radius: 10px;
+        height: 10px;
+        padding: 2px 0px 2px 0px;
+        width: 100px;
+    }
+    .top-engine .h form button[type='submit']{
+        width: 60px;
+        height: 20px;
+        font-size: 8px;
+    }
+    .engine{
+        zoom: 0.3;
+        width: 90%;
+    }
+    #triangle-top{
+        border: 80px solid transparent;  height: 110px;
+                border-top: 0px solid transparent;
+    }
+    #triangle-bottom{
+        border: 80px solid transparent;  height: 80px;
+    }
+    .middle-engine form button[type='submit'] {
+        width: 76px;
+        height: 20px;
+        font-size: 8px;
+    }
+    .middle-engine form{
+        position: absolute;
+        top: 70%;
+        left: 10%;
+    }
+    .middle-engine .text{
+        top: 50%;
+        font-size: 8px;
+        width: 260px;
+    }
+    .middle-form{
+        width: 150px;
+    }
+    .call-green{
+        width: 60px;
+        height: 20px;
+        font-size: 8px!important;
+    }
+    .icon ul li img{
+        width: 60px;
+    }
+    .icon ul li {
+        width: 45px;
+        margin-right: 12%;
+    }
+     .price-block{
+        height: 50px;
+    }
+    .btn-middle{
+        
+    }
+
+}
+
+
+#triangle-top{
+    border-right: 0px solid transparent;
+    border-left: solid rgb(255, 255, 255);
+    position: absolute;
+    border-left-width: calc(100vw);
+    z-index: 999;
+}
+
+#triangle-bottom{
+    border-bottom: 0px solid transparent;
+    border-left: 0px solid transparent;
+    border-right: solid rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-right-width: calc(100vw);
 }
 
 .middle-engine .text{
     position: absolute;
-    top: 40%;
     color: white;
-    margin-left: calc(10vw);
-    line-height: 1.4em;
-    font-size: 20px;
 }
-.middle-engine form input[type='submit']{
-    width: 240px;
-    height: 35px;
+.middle-engine form{
+    position: absolute;
+}
+
+.middle-engine form button[type='submit']{
     background-color: #d11f22;
     border: none;
     color: white;
     display: block;
-    position: absolute;
     z-index: 9999;
-    bottom: 40%;
-    left: 15%;
 }
+
+.middle-form{
+    z-index: 9999999;
+    position: relative;
+    margin: auto;
+}
+
+.call-green{
+    background-color: #4c9432!important;
+    border: none;
+    color: white!important;
+    display: block;
+    margin: auto;
+    border: 1px solid green!important;
+}
+
+.icon ul{
+    display: -webkit-box;
+    width: 80%;
+    margin: auto;
+}
+
+.icon{
+    margin-top: 15px;
+}
+
+.price span{
+   text-align: center;
+    display: block;
+    margin-top: 15px;
+    font-size: 28px;
+}
+
+ .price-block{
+    width: 86%;
+    margin: auto;
+    background-color: black;
+ }
+
+ .btn-price-block{
+         width: 50%;
+    margin: auto;
+    padding-top: 60px;
+ }
