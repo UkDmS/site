@@ -1,10 +1,123 @@
+.left-panel{
+    width: 110px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 55;
+    background: #ffffff;
+    min-height: 600px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.logo{
+    display: block;
+    height: 70px;
+    background: url(../image/logo.png) no-repeat 50% 50%;
+    background-size: auto 70px;
+    text-indent: -9999px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20px;
+}
+
+ul.list{
+    list-style: none;
+    margin-top: 130px;
+}
+
+ul.list li a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 14px;
+    color: black;
+    font-family: 'GothamPro Light', sans-serif;
+    background-position: 50% 10px;
+    background-repeat: no-repeat;
+}
+ul.list li.item-1 a{
+    padding-top: 35px;
+    background-image: url(../image/carcase-small.png);
+}
+ul.list li.item-2 a{
+    padding-top: 55px;
+    background-image: url(../image/place-small.png);
+}
+ul.list li.item-3 a{
+    padding-top: 35px;
+    background-image: url(../image/glass-small.png);
+}
+ul.list li.item-4 a{
+    padding-top: 45px;
+    background-image: url(../image/wheel-small.png);
+}
+ul.list li.item-5 a{
+    padding-top: 45px;
+    background-image: url(../image/engine-small.png);
+}
+
+
+#slide1{
+    height: 100%;
+    background-image: url(../image/main.jpg);
+}
+
+
+ #slide1 img{
+    width: 100%;
+ }
+
+
+@media all and (max-width:480px){
+    #slide1{
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .left-panel{
+        zoom: 0.7;
+    }
+}
+@media all and (max-width:1368px) and (min-width: 900px){
+    #slide1{
+        background-size: cover;
+    }
+    .container{
+        width: 100%!important;
+        margin-right: 0px!important;
+        margin-left: 0px!important;
+        padding-left: 0px!important;
+    }
+}
+
+.container{
+    padding-right: 0px!important;
+    margin-left: 0px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       /*
 .container{
     width: calc(100%)!important;
     overflow: hidden;
     padding: 0px 0px!important;
     margin-left: 0px!important;
     margin-right: 0px!important;
-}
+}       */
 
 .top-engine, .middle-engine{
     position: relative;
@@ -229,7 +342,7 @@
         height: 50px;
     }
     .btn-middle{
-        
+
     }
 
 }
