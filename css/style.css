@@ -39,30 +39,30 @@ ul.list li a{
 }
 ul.list li.item-1 a{
     padding-top: 35px;
-    background-image: url(../image/carcase-small.png);
+    background-image: url(../image/engine/carcase-small.png);
 }
 ul.list li.item-2 a{
     padding-top: 55px;
-    background-image: url(../image/place-small.png);
+    background-image: url(../image/engine/place-small.png);
 }
 ul.list li.item-3 a{
     padding-top: 35px;
-    background-image: url(../image/glass-small.png);
+    background-image: url(../image/engine/glass-small.png);
 }
 ul.list li.item-4 a{
     padding-top: 45px;
-    background-image: url(../image/wheel-small.png);
+    background-image: url(../image/engine/wheel-small.png);
 }
 ul.list li.item-5 a{
     padding-top: 45px;
-    background-image: url(../image/engine-small.png);
+    background-image: url(../image/engine/engine-small.png);
 }
 
 
 #slide1{
     height: 100%;
             background-size: contain;
-    background-image: url(../image/main.jpg);
+    background-image: url(../image/engine/main.jpg);
     background-repeat: no-repeat;
 }
 
@@ -71,21 +71,24 @@ ul.list li.item-5 a{
     width: 100%;
  }
 
+      .container,.col-lg-11{
+        margin-right: 0px!important;
+        margin-left: 0px;
+        padding-right: 0px!important;
+        overflow: hidden;
+    }
+
+
 
 @media all and (max-width:480px){
-    #slide1{
-        background-size: contain;
-    }
-    .left-panel{
-        zoom: 0.7;
-    }
+    #slide1{ background-size: contain;}
+    .left-panel{ zoom: 0.7; }
 }
 @media all and (max-width:1280px) and (min-width: 900px){
-    .container{
-        margin-left: 30px!important;
-    }
+
     .container,.col-lg-11{
         width: 100%!important;
+        margin-left: 0px!important;
     }
 }
 @media all and (max-width:1367px) and (min-width: 1281px){
@@ -108,42 +111,23 @@ ul.list li.item-5 a{
     }
 }
 
-     .container,.col-lg-11{
-        margin-right: 0px!important;
-        margin-left: 0px;
-        padding-right: 0px!important;
-        overflow: hidden;
-    }
 
 
 
 
 
-
-
-
-
-
-       /*
-.container{
-    width: calc(100%)!important;
-    overflow: hidden;
-    padding: 0px 0px!important;
-    margin-left: 0px!important;
-    margin-right: 0px!important;
-}       */
-
-.top-engine, .middle-engine{
+/* page engine */
+.top-engine{
     position: relative;
+}
+.top-engine img{
+    width: 100%;
 }
 .top-engine .h{
     position: absolute;
     color: white;
-    top: calc(5vw);
-    left: calc(10vw);
 }
 .top-engine .h h1{
-    font-size: 2em;
     text-align: center;
 }
 
@@ -152,8 +136,211 @@ ul.list li.item-5 a{
     padding-top: 10px;
     text-transform: uppercase;
     text-align: center;
-    line-height: 1.5em;
 }
+.engine{
+    position: relative;
+    margin: auto;
+    width: 85%;
+    float: none;
+    padding-bottom: calc(10vw);
+    padding-top: 40px;
+}
+.engine img{
+    width: 60%;
+    margin: auto;
+    display: block;
+}
+.middle-form{
+    z-index: 9999999;
+    position: relative;
+    margin: auto !important;
+}
+.call-green {
+    background-color: #4c9432 !important;
+    border: none;
+    color: white !important;
+    display: block;
+    margin: auto;
+    border: 1px solid green !important;
+}
+.middle-engine form.block{
+        position: absolute;
+}
+.middle-engine form button[type='submit']{
+    background-color: #d11f22;
+    border: none;
+    color: white;
+    display: block;
+    z-index: 9999;
+}
+.middle-engine .text{
+    position: absolute;
+    color: white;
+    display: block;
+}
+.icon ul{
+    display: -webkit-box;
+}
+.icon{
+}
+.icon ul li img{
+    width: 60px;
+    margin-left: 30px;
+}
+.icon ul li {
+}
+@media all and (min-width: 800px) and (max-width: 800px){
+    .icon ul{
+        margin-left: 5%!important;
+    }
+}
+@media all and (max-width:480px){
+    .top-engine .h {
+        top: 0;
+        left: 15%;
+    }
+    .top-engine .h h1{
+        font-size: 0.8em;
+        margin-bottom: 0px!important;
+    }
+    .top-engine .h span{
+        font-size: 0.3em;
+    }
+    .middle-form {
+        width: 150px;
+    }
+    .call-green {
+        width: 120px;
+    }
+    .middle-engine form.block{
+        left: 35%;
+        bottom: 5%;
+    }
+    .call-red {
+        width: 60px;
+        font-size: 8px!important;
+    }
+    .middle-engine .text {
+        bottom: 40%;
+        left: 15%;
+        font-size: 7px;
+    }
+    .icon ul {
+        display: block;
+    }
+    .icon ul li {
+        width: 100%;
+        margin-left: 30%;
+    }
+}
+@media all and (max-width:1280px) and (min-width: 500px){
+    .top-engine .h{
+        top: 5%;
+        left: 15%;
+    }
+    .top-engine .h h1{
+        font-size: 1.4em;
+    }
+    .middle-form {
+        width: 150px;
+    }
+    .call-green {
+        width: 120px;
+    }
+    .middle-engine form.block{
+        left: 20%;
+        bottom: 25%;
+    }
+    .call-red {
+        width: 150px;
+    }
+    .middle-engine .text {
+        bottom: 30%;
+        left: 15%;
+        font-size: 16px;
+    }
+    .icon ul{
+        margin-left: 15%;
+    }
+}
+@media all and (max-device-width:1366px) and (min-device-width: 500px) and (orientation: landscape){
+    .middle-engine form.block{
+        left: 20%;
+        bottom: 12%;
+    }
+}
+@media all and (max-width:1367px) and (min-width: 1281px){
+    .top-engine .h{
+        top: 5%;
+        left: 15%;
+    }
+    .top-engine .h h1{
+        font-size: 2em;
+    }
+    .middle-form {
+        width: 200px;
+    }
+    .call-green {
+        width: 200px;
+    }
+    .middle-engine form.block{
+        left: 20%;
+        bottom: 25%;
+    }
+    .call-red {
+        width: 200px;
+    }
+    .middle-engine .text {
+        bottom: 35%;
+        left: 19%;
+        font-size: 20px;
+    }
+}
+@media all and (min-width:1368px){
+    .top-engine .h{
+        top: 10%;
+        left: 15%;
+    }
+    .top-engine .h h1{
+        font-size: 2em;
+    }
+    .middle-form {
+        width: 200px;
+    }
+    .call-green {
+        width: 200px;
+    }
+    .middle-engine form.block{
+        left: 20%;
+        bottom: 25%;
+    }
+    .call-red {
+        width: 200px;
+    }
+    .middle-engine .text {
+        bottom: 35%;
+        left: 19%;
+        font-size: 20px;
+    }
+}
+/* end page engine */
+
+
+
+       /*
+.middle-engine form{
+    position: absolute;
+}
+.container{
+    width: calc(100%)!important;
+    overflow: hidden;
+    padding: 0px 0px!important;
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+}       */
+  /*
+
+
 
 .top-engine .h form input[type='text']{
     border: 1px solid white;
@@ -177,19 +364,7 @@ ul.list li.item-5 a{
     margin: auto;
 }
 
-.top-engine img, .middle-engine img{
-    width: 100%;
-    filter: brightness(50%);
-}
-#triangle {
-    border-bottom: 0px solid transparent;
-    border-left: 0px solid transparent;
-    border-right: solid rgb(255, 255, 255);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    border-right-width: calc(100vw);
-}
+
 .text-block{
     position: absolute;
     bottom: 20%;
@@ -202,45 +377,15 @@ ul.list li.item-5 a{
 .top-engine .h form{
         margin-top: 10px;
 }
-.engine{
-    position: relative;
-    margin: auto;
-    padding-bottom: calc(10vw);
-}
+
 
 @media all and (max-width: 1368px){
-        #triangle {
-    border: 200px solid transparent;
-    border-bottom: 0px solid transparent;
-    border-left: 0px solid transparent;
-    border-right: solid rgb(255, 255, 255);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    border-right-width: calc(100vw);
-    height: 40%;
-    }
-    .engine img{
-        width: 100%;
-    }
-    #triangle-top{
-        border: 200px solid transparent;
-            border-top: 0px solid transparent;
-        height: 30%;
-    }
-    #triangle-bottom{
-        border: 200px solid transparent;
-        height: calc(50vh);
-    }
+
     .middle-engine form button[type='submit']{
         width: 240px;
         height: 35px;
     }
-    .middle-engine form{
-        position: absolute;
-        top: 50%;
-        left: 10%;
-    }
+
     .middle-engine .text{
         top: 35%;
         margin-left: calc(10vw);
@@ -278,24 +423,8 @@ ul.list li.item-5 a{
         right: 10%;
         font-size: 16px;
     }
-        #triangle {
-        border: 120px solid transparent;
-        height: 40%;
-           border-bottom: 0px solid transparent;
-        border-left: 0px solid transparent;
-        border-right: solid rgb(255, 255, 255);
-        border-right-width: 600px;
-    }
-    .top-engine .h h1{
-        font-size: 1.2em;
-    }
-    .top-engine .h {
-        left: 10%;
-    }
-    .top-engine .h span{
-        font-size: 8px;
-        padding-top: 5px;
-    }
+
+
     .top-engine .h form{
         margin: auto;
         width: 100px;
@@ -315,13 +444,7 @@ ul.list li.item-5 a{
         zoom: 0.3;
         width: 90%;
     }
-    #triangle-top{
-        border: 80px solid transparent;  height: 110px;
-                border-top: 0px solid transparent;
-    }
-    #triangle-bottom{
-        border: 80px solid transparent;  height: 80px;
-    }
+
     .middle-engine form button[type='submit'] {
         width: 76px;
         height: 20px;
@@ -345,13 +468,7 @@ ul.list li.item-5 a{
         height: 20px;
         font-size: 8px!important;
     }
-    .icon ul li img{
-        width: 60px;
-    }
-    .icon ul li {
-        width: 45px;
-        margin-right: 12%;
-    }
+
      .price-block{
         height: 50px;
     }
@@ -362,64 +479,16 @@ ul.list li.item-5 a{
 }
 
 
-#triangle-top{
-    border-right: 0px solid transparent;
-    border-left: solid rgb(255, 255, 255);
-    position: absolute;
-    border-left-width: calc(100vw);
-    z-index: 999;
-}
 
-#triangle-bottom{
-    border-bottom: 0px solid transparent;
-    border-left: 0px solid transparent;
-    border-right: solid rgb(255, 255, 255);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    border-right-width: calc(100vw);
-}
 
-.middle-engine .text{
-    position: absolute;
-    color: white;
-}
-.middle-engine form{
-    position: absolute;
-}
 
-.middle-engine form button[type='submit']{
-    background-color: #d11f22;
-    border: none;
-    color: white;
-    display: block;
-    z-index: 9999;
-}
 
-.middle-form{
-    z-index: 9999999;
-    position: relative;
-    margin: auto;
-}
 
-.call-green{
-    background-color: #4c9432!important;
-    border: none;
-    color: white!important;
-    display: block;
-    margin: auto;
-    border: 1px solid green!important;
-}
 
-.icon ul{
-    display: -webkit-box;
-    width: 80%;
-    margin: auto;
-}
 
-.icon{
-    margin-top: 15px;
-}
+
+
+
 
 .price span{
    text-align: center;
@@ -439,3 +508,4 @@ ul.list li.item-5 a{
     margin: auto;
     padding-top: 60px;
  }
+*/
