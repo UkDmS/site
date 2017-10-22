@@ -1,91 +1,79 @@
-.left-panel{
-    width: 110px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 55;
-    background: #ffffff;
-    min-height: 600px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-.logo{
-    display: block;
-    height: 70px;
-    background: url(../image/logo.png) no-repeat 50% 50%;
-    background-size: auto 70px;
-    text-indent: -9999px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 20px;
-}
-
-ul.list{
-    list-style: none;
-    margin-top: 130px;
-}
-
-ul.list li a{
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    padding-bottom: 15px;
-    font-size: 14px;
-    color: black;
-    font-family: 'GothamPro Light', sans-serif;
-    background-position: 50% 10px;
-    background-repeat: no-repeat;
-}
-ul.list li.item-1 a{
-    padding-top: 35px;
-    background-image: url(../image/engine/carcase-small.png);
-}
-ul.list li.item-2 a{
-    padding-top: 55px;
-    background-image: url(../image/engine/place-small.png);
-}
-ul.list li.item-3 a{
-    padding-top: 35px;
-    background-image: url(../image/engine/glass-small.png);
-}
-ul.list li.item-4 a{
-    padding-top: 45px;
-    background-image: url(../image/engine/wheel-small.png);
-}
-ul.list li.item-5 a{
-    padding-top: 45px;
-    background-image: url(../image/engine/engine-small.png);
-}
-
-
-#slide1{
-    height: 100%;
-            background-size: contain;
-    background-image: url(../image/engine/main.jpg);
-    background-repeat: no-repeat;
-}
-
-
- #slide1 img{
-    width: 100%;
- }
-
-      .container,.col-lg-11{
-        margin-right: 0px!important;
-        margin-left: 0px;
-        padding-right: 0px!important;
-        overflow: hidden;
+/* menu */
+    .left-panel{
+        width: 110px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 55;
+        background: #ffffff;
+        min-height: 600px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .logo{
+        display: block;
+        height: 70px;
+        background: url(../image/logo.png) no-repeat 50% 50%;
+        background-size: auto 70px;
+        text-indent: -9999px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20px;
     }
 
+    ul.list{
+        list-style: none;
+        margin-top: 130px;
+    }
 
-
+    ul.list li a{
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        padding-bottom: 15px;
+        font-size: 14px;
+        color: black;
+        font-family: 'GothamPro Light', sans-serif;
+        background-position: 50% 10px;
+        background-repeat: no-repeat;
+    }
+    ul.list li.item-1 a{
+        padding-top: 35px;
+        background-image: url(../image/engine/carcase-small.png);
+    }
+    ul.list li.item-2 a{
+        padding-top: 55px;
+        background-image: url(../image/engine/place-small.png);
+    }
+    ul.list li.item-3 a{
+        padding-top: 35px;
+        background-image: url(../image/engine/glass-small.png);
+    }
+    ul.list li.item-4 a{
+        padding-top: 45px;
+        background-image: url(../image/engine/wheel-small.png);
+    }
+    ul.list li.item-5 a{
+        padding-top: 45px;
+        background-image: url(../image/engine/engine-small.png);
+    }
+/* menu */
+/* main page */
+    #slide1{
+        height: 100%;
+        background-size: contain;
+        background-image: url(../image/engine/main.jpg);
+        background-repeat: no-repeat;
+    }
+    #slide1 img{
+        width: 100%;
+    }
 @media all and (max-width:480px){
     #slide1{ background-size: contain;}
     .left-panel{ zoom: 0.7; }
 }
 @media all and (max-width:1280px) and (min-width: 900px){
-
     .container,.col-lg-11{
         width: 100%!important;
         margin-left: 0px!important;
@@ -110,85 +98,123 @@ ul.list li.item-5 a{
         background-size: contain;
     }
 }
+/* end page main */
+/* general style */
+    .container,.col-lg-11{
+        margin-right: 0px!important;
+        margin-left: 0px;
+        padding-right: 0px!important;
+        overflow: hidden;
+    }
+    footer{
+        height: 150px;
+        background-color: black;
+        color: white;
+        margin-top: 50px;
+        text-align: center;
+    }
 
-
-
-
-
-
+/* end general style */
 /* page engine */
-.top-engine{
-    position: relative;
-}
-.top-engine img{
-    width: 100%;
-}
-.top-engine .h{
-    position: absolute;
-    color: white;
-}
-.top-engine .h h1{
-    text-align: center;
-}
-
-.top-engine .h span{
-    display: block;
-    padding-top: 10px;
-    text-transform: uppercase;
-    text-align: center;
-}
-.engine{
-    position: relative;
-    margin: auto;
-    width: 85%;
-    float: none;
-    padding-bottom: calc(10vw);
-    padding-top: 40px;
-}
-.engine img{
-    width: 60%;
-    margin: auto;
-    display: block;
-}
-.middle-form{
-    z-index: 9999999;
-    position: relative;
-    margin: auto !important;
-}
-.call-green {
-    background-color: #4c9432 !important;
-    border: none;
-    color: white !important;
-    display: block;
-    margin: auto;
-    border: 1px solid green !important;
-}
-.middle-engine form.block{
+    .top-engine{
+        position: relative;
+    }
+    .top-engine img{
+        width: 100%;
+    }
+    .top-engine .h{
         position: absolute;
-}
-.middle-engine form button[type='submit']{
-    background-color: #d11f22;
-    border: none;
-    color: white;
-    display: block;
-    z-index: 9999;
-}
-.middle-engine .text{
-    position: absolute;
-    color: white;
-    display: block;
-}
-.icon ul{
-    display: -webkit-box;
-}
-.icon{
-}
-.icon ul li img{
-    width: 60px;
-    margin-left: 30px;
-}
-.icon ul li {
-}
+        color: white;
+    }
+    .top-engine .h h1{
+        text-align: center;
+    }
+    .top-engine .h span{
+        display: block;
+        padding-top: 10px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .engine{
+        position: relative;
+        margin: auto;
+        width: 85%;
+        float: none;
+        padding-bottom: calc(10vw);
+        padding-top: 40px;
+    }
+    .engine img{
+        width: 60%;
+        margin: auto;
+        display: block;
+    }
+    .middle-form{
+        z-index: 9999999;
+        position: relative;
+        margin: auto !important;
+    }
+    .call-green {
+        background-color: #4c9432 !important;
+        border: none;
+        color: white !important;
+        display: block;
+        margin: auto;
+        border: 1px solid green !important;
+    }
+    .middle-engine form.block{
+            position: absolute;
+    }
+    .middle-engine form button[type='submit']{
+        background-color: #d11f22;
+        border: none;
+        color: white;
+        display: block;
+        z-index: 9999;
+    }
+    .middle-engine .text{
+        position: absolute;
+        color: white;
+        display: block;
+    }
+    .icon ul{
+        display: -webkit-box;
+    }
+    .icon{margin-top: 70px;
+    }
+    .icon ul li img{
+        width: 60px;
+        margin-left: 30px;
+    }
+    .icon ul li {
+    }
+    .price span{
+        text-align: center;
+        display: block;
+        margin-top: 50px;
+        font-size: 28px;
+        margin-bottom: 50px;
+    }
+    .price-block span{
+        text-align: center;
+        display: block;
+        margin-top: 22px;
+        font-size: 18px;
+        color: white;
+    }
+
+     .price-block{
+        width: 60%;
+        margin: auto;
+        background-color: black;
+        height: 100px;
+        margin-top: 50px;
+        margin-bottom: 100px;
+     }
+     .btn-price-block{
+        width: 50%;
+        margin: auto;
+        padding-top: 8%;
+     }
 @media all and (min-width: 800px) and (max-width: 800px){
     .icon ul{
         margin-left: 5%!important;
@@ -232,6 +258,13 @@ ul.list li.item-5 a{
         width: 100%;
         margin-left: 30%;
     }
+    .price-block{
+        height: 150px;
+        width: 100%;
+        margin-right: 0px!important;
+        padding-right: 0px!important;
+    }
+
 }
 @media all and (max-width:1280px) and (min-width: 500px){
     .top-engine .h{
@@ -490,22 +523,5 @@ ul.list li.item-5 a{
 
 
 
-.price span{
-   text-align: center;
-    display: block;
-    margin-top: 15px;
-    font-size: 28px;
-}
 
- .price-block{
-    width: 86%;
-    margin: auto;
-    background-color: black;
- }
-
- .btn-price-block{
-         width: 50%;
-    margin: auto;
-    padding-top: 60px;
- }
 */
