@@ -61,7 +61,9 @@ ul.list li.item-5 a{
 
 #slide1{
     height: 100%;
+            background-size: contain;
     background-image: url(../image/main.jpg);
+    background-repeat: no-repeat;
 }
 
 
@@ -73,33 +75,45 @@ ul.list li.item-5 a{
 @media all and (max-width:480px){
     #slide1{
         background-size: contain;
-        background-repeat: no-repeat;
     }
     .left-panel{
         zoom: 0.7;
     }
 }
-@media all and (max-width:1368px) and (min-width: 900px){
+@media all and (max-width:1280px) and (min-width: 900px){
+    .container{
+        margin-left: 30px!important;
+    }
+    .container,.col-lg-11{
+        width: 100%!important;
+    }
+}
+@media all and (max-width:1367px) and (min-width: 1281px){
     #slide1{
         background-size: cover;
     }
     .container{
-        width: 100%!important;
-        margin-right: 0px!important;
-        margin-left: 0px!important;
         padding-left: 0px!important;
+    }
+    .container,.col-lg-11{
+        width: 100%!important;
+    }
+}
+@media all and (min-width:1368px){
+    .container,.col-lg-11{
+        width: 100%!important;
+    }
+    #slide1{
+        background-size: contain;
     }
 }
 
-.container{
-    padding-right: 0px!important;
-    margin-left: 0px;
-    overflow: hidden;
-}
-
-
-
-
+     .container,.col-lg-11{
+        margin-right: 0px!important;
+        margin-left: 0px;
+        padding-right: 0px!important;
+        overflow: hidden;
+    }
 
 
 
