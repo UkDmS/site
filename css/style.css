@@ -201,8 +201,14 @@
         font-size: 18px;
         color: white;
     }
-
-     .price-block{
+    .btn-price-block span{
+        text-align: center;
+        display: block;
+        margin-top: 22px;
+        font-size: 18px;
+        color: white;
+    }
+    .price-block{
         width: 60%;
         margin: auto;
         background-color: black;
@@ -213,11 +219,45 @@
      .btn-price-block{
         width: 50%;
         margin: auto;
-        padding-top: 8%;
      }
+     .text-block{
+        display: block;
+        position: absolute;
+        text-align: right;
+        font-weight: bold;
+    }
+    .icon span{
+        display: block;
+    }
+@keyframes translating {
+    0%   { transform: translate(200px, 0); }
+    100% { transform: translate(0, 0); }
+}
+    .text-block { animation: translating 2s linear; }
+    .car{
+        width: 25% !important;
+        position: absolute;
+        top: 130px;
+        z-index: -2;
+    }
+@keyframes moveCar {
+    0%   { transform: translate(-100px, 0); }
+    100% { transform: translate(500px, 0); }
+}
+    .car { animation: moveCar 5s forwards;}
+
 @media all and (min-width: 800px) and (max-width: 800px){
     .icon ul{
         margin-left: 5%!important;
+    }
+    .text-block{
+        right: 8%!important;
+        top: 16%!important;
+        font-size: 1.2em!important;
+    }
+    .btn-price-block span {
+        padding-left: 18px;
+        width: 100px;
     }
 }
 @media all and (max-width:480px){
@@ -236,7 +276,8 @@
         width: 150px;
     }
     .call-green {
-        width: 120px;
+        width: 80px;
+        font-size: 10px!important;
     }
     .middle-engine form.block{
         left: 35%;
@@ -261,10 +302,19 @@
     .price-block{
         height: 150px;
         width: 100%;
+        margin-left: 8%;
         margin-right: 0px!important;
         padding-right: 0px!important;
     }
-
+    .text-block{
+        right: 8%;
+        top: 10%;
+        font-size: 0.6em;
+    }
+    .btn-price-block{
+        float: none;
+        width: 84px;
+    }
 }
 @media all and (max-width:1280px) and (min-width: 500px){
     .top-engine .h{
@@ -295,11 +345,21 @@
     .icon ul{
         margin-left: 15%;
     }
+    .text-block{
+        right: 8%;
+        top: 20%;
+        font-size: 1.4em;
+    }
 }
 @media all and (max-device-width:1366px) and (min-device-width: 500px) and (orientation: landscape){
     .middle-engine form.block{
         left: 20%;
         bottom: 12%;
+    }
+    .text-block{
+        right: 8%;
+        top: 20%;
+        font-size: 1.2em;
     }
 }
 @media all and (max-width:1367px) and (min-width: 1281px){
@@ -328,6 +388,16 @@
         left: 19%;
         font-size: 20px;
     }
+    .text-block{
+        right: 8%;
+        top: 9%;
+        font-size: 1em;
+    }
+    .text-block{
+        right: 8%;
+        top: 20%;
+        font-size: 1.6em;
+    }
 }
 @media all and (min-width:1368px){
     .top-engine .h{
@@ -354,6 +424,11 @@
         bottom: 35%;
         left: 19%;
         font-size: 20px;
+    }
+    .text-block{
+        right: 5%;
+        top: 22%;
+        font-size: 2em;
     }
 }
 /* end page engine */
@@ -398,14 +473,7 @@
 }
 
 
-.text-block{
-    position: absolute;
-    bottom: 20%;
-    right: 7%;
-    font-size: 2.2em;
-    text-align: right;
-    font-weight: bold;
-}
+
 
 .top-engine .h form{
         margin-top: 10px;
