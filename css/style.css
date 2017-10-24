@@ -113,23 +113,42 @@
         margin-top: 50px;
         text-align: center;
     }
+    .my-flex{
+    	display: flex;
+    	flex-direction: row;
+    	justify-content: space-around;
+    }
+    .my-flex figure{
+    	width:25%;
+    	margin: auto;
+    }
+    .my-flex figure div{
+    	width: 60px;
+    	margin: auto;
+    }
+    .my-flex img{
+    	width:60px;
 
+    }
+    .my-flex span{
+    	text-align: center;
+    }
 /* end general style */
 /* page engine */
-    .top-engine{
+    .top{
         position: relative;
     }
-    .top-engine img{
+    .top img{
         width: 100%;
     }
-    .top-engine .h{
+    .top .h{
         position: absolute;
         color: white;
     }
-    .top-engine .h h1{
+    .top .h h1{
         text-align: center;
     }
-    .top-engine .h span{
+    .top .h span{
         display: block;
         padding-top: 10px;
         text-transform: uppercase;
@@ -176,16 +195,7 @@
         color: white;
         display: block;
     }
-    .icon ul{
-        display: -webkit-box;
-    }
     .icon{margin-top: 70px;
-    }
-    .icon ul li img{
-        width: 60px;
-        margin-left: 30px;
-    }
-    .icon ul li {
     }
     .price span{
         text-align: center;
@@ -213,8 +223,8 @@
         margin: auto;
         background-color: black;
         height: 100px;
-        margin-top: 50px;
-        margin-bottom: 100px;
+        margin-top: 10px;
+        margin-bottom: 10px;
      }
      .btn-price-block{
         width: 50%;
@@ -229,47 +239,66 @@
     .icon span{
         display: block;
     }
+    .top .h form{
+        margin: auto;
+        width: 100%;
+        display: flex;
+    }
+    .top .h form input[type='text']{
+        border: 1px solid white;
+        border-radius: 10px;
+        height: 30px;
+        background-color: transparent;
+        display: block;
+        margin-top: 5px;
+        color: white;
+        text-align: center;
+        width: 100%;
+    }
+
+    .top .h form button[type='submit']{
+        width: 100%;
+        height: 35px;
+        background-color: #4c9432;
+        border: none;
+        color: white;
+        display: block;
+        margin-top:10px!important;
+        margin-left:10%!important;
+        margin: auto;
+    }
 @keyframes translating {
     0%   { transform: translate(200px, 0); }
     100% { transform: translate(0, 0); }
 }
     .text-block { animation: translating 2s linear; }
-    .car{
-        width: 25% !important;
-        position: absolute;
-        top: 130px;
-        z-index: -2;
-    }
-@keyframes moveCar {
-    0%   { transform: translate(-100px, 0); }
-    100% { transform: translate(500px, 0); }
-}
-    .car { animation: moveCar 5s forwards;}
+
 
 @media all and (min-width: 800px) and (max-width: 800px){
-    .icon ul{
-        margin-left: 5%!important;
-    }
     .text-block{
         right: 8%!important;
-        top: 16%!important;
-        font-size: 1.2em!important;
+        top: 17%!important;
+        font-size: 1em!important;
     }
     .btn-price-block span {
         padding-left: 18px;
         width: 100px;
     }
+    .top .h {
+        top: 0%!important;
+        left: 5%!important;
+    }
 }
 @media all and (max-width:480px){
-    .top-engine .h {
+    .top .h {
         top: 0;
         left: 15%;
     }
-    .top-engine .h h1{
+    .top .h h1{
         font-size: 0.8em;
         margin-bottom: 0px!important;
     }
-    .top-engine .h span{
+    .top .h span{
         font-size: 0.3em;
     }
     .middle-form {
@@ -292,13 +321,21 @@
         left: 15%;
         font-size: 7px;
     }
-    .icon ul {
+    .icon .my-flex{
         display: block;
     }
-    .icon ul li {
+    .icon .my-flex figure {
         width: 100%;
-        margin-left: 30%;
+        margin-left: 10%;
     }
+    .price{
+        margin-top: 50px;
+    }
+    .price span{
+        width: 20px;
+        margin: auto;
+    }
+
     .price-block{
         height: 150px;
         width: 100%;
@@ -307,21 +344,32 @@
         padding-right: 0px!important;
     }
     .text-block{
-        right: 8%;
-        top: 10%;
+        right: 7%;
+        top: 11%;
         font-size: 0.6em;
     }
     .btn-price-block{
         float: none;
         width: 84px;
     }
+    .top .h form input[type='text']{
+        border-radius: 10px;
+        height: 20px;
+        padding: 2px 0px 2px 0px;
+        width: 100px;
+    }
+    .top .h form button[type='submit']{
+        width: 60px;
+        height: 20px;
+        font-size: 8px;
+    }
 }
 @media all and (max-width:1280px) and (min-width: 500px){
-    .top-engine .h{
+    .top .h{
         top: 5%;
         left: 15%;
     }
-    .top-engine .h h1{
+    .top .h h1{
         font-size: 1.4em;
     }
     .middle-form {
@@ -350,6 +398,10 @@
         top: 20%;
         font-size: 1.4em;
     }
+    .my-flex{
+        margin-left: 10%!important;
+    }
+
 }
 @media all and (max-device-width:1366px) and (min-device-width: 500px) and (orientation: landscape){
     .middle-engine form.block{
@@ -361,13 +413,32 @@
         top: 20%;
         font-size: 1.2em;
     }
+    .top .h h1{
+        font-size: 1.2em;
+    }
+    .top .h span{
+        font-size: 1em;
+        width:200px;
+    }
+
+    .top .h form input[type='text']{
+        border-radius: 10px;
+        height: 20px;
+        padding: 2px 0px 2px 0px;
+        width: 200px;
+    }
+    .top .h form button[type='submit']{
+        width: 150px;
+        height: 20px;
+        font-size: 8px;
+    }
 }
 @media all and (max-width:1367px) and (min-width: 1281px){
-    .top-engine .h{
+    .top .h{
         top: 5%;
         left: 15%;
     }
-    .top-engine .h h1{
+    .top .h h1{
         font-size: 2em;
     }
     .middle-form {
@@ -389,22 +460,17 @@
         font-size: 20px;
     }
     .text-block{
-        right: 8%;
-        top: 9%;
-        font-size: 1em;
-    }
-    .text-block{
-        right: 8%;
-        top: 20%;
-        font-size: 1.6em;
+        right: 7%!important;
+        top: 21%!important;
+        font-size: 1.6em!important;
     }
 }
 @media all and (min-width:1368px){
-    .top-engine .h{
+    .top .h{
         top: 10%;
         left: 15%;
     }
-    .top-engine .h h1{
+    .top .h h1{
         font-size: 2em;
     }
     .middle-form {
@@ -432,8 +498,177 @@
     }
 }
 /* end page engine */
+/* page protection */
+    .protection{
+        position: relative;
+        margin: auto;
+        width: 85%;
+        float: none;
+        padding-bottom: calc(10vw);
+        padding-top: 40px;
+    }
+    .protection img{
+        width: 60%;
+        margin: auto;
+        display: block;
+    }
+    .car{
+        width: 25% !important;
+        position: absolute;
+        top: 115px;
+        z-index: -2;
+    }
+    @keyframes moveCar {
+        0%   { transform: translate(-50px, 0); }
+        100% { transform: translate(0px, 0); }
+    }
+       /* .car { animation: moveCar 2s forwards;}       */
+    @keyframes Point {
+        0%   { opacity: 0; }
+        50%   { opacity: 0.5; }
+        75%   { opacity: 0.75 }
+        100% { opacity: 1; }
+    }
+     /*   .point { animation: Point 7s ease;}*/
+
+@media all and (max-width:1280px) and (min-width: 500px){
+    @keyframes moveCar {
+        0%   { transform: translate(-50px, 0); }
+        100% { transform: translate(450px, 0); }
+    }
+}
+@media all and (max-width:1367px) and (min-width: 1281px){
+    @keyframes moveCar {
+        0%   { transform: translate(-50px, 0); }
+        100% { transform: translate(485px, 0); }
+    }
+}
+@media all and (min-width:1368px){
+    .car{
+        width: 30% !important;
+        position: absolute;
+        top: 110px;
+        z-index: -2;
+    }
+    @keyframes moveCar {
+        0%   { transform: translate(-50px, 0); }
+        100% { transform: translate(110%, 0); }
+    }
+}
+/* end page protection */
+/* page salon repair */
+    .repair{
+        position: relative;
+        margin: auto;
+        width: 85%;
+        float: none;
+        padding-bottom: calc(10vw);
+        padding-top: 40px;
+    }
+    .salon-repair{
+        position: relative;
+        width: 50%;
+        left: 23%;
+        top: 40%;
+    }
+    .salon-repair-points{
+        position: absolute;
+        left: 28%;
+        width: 45%;
+        top: 10%;
+        z-index: 2;
+    }
+    .repair-text-block{
+        display: block;
+        position: absolute;
+        text-align: right;
+        font-weight: bold;
+    }
+    .flex-stuff{
+    	display: flex;
+    	flex-direction: row;
+    	justify-content: center;
+    }
+    .flex-stuff figure{
+
+    }
+    .flex-stuff figure div{
+    	width: 100px;
+    	margin: auto;
+    }
+    .flex-stuff img{
+    	width:100px;
+    }
+    .flex-stuff span{
+    	text-align: center;
+        padding-top:10px;
+    }
 
 
+
+@media all and (max-device-width:1366px) and (min-device-width: 500px) and (orientation: landscape){
+    .repair-text-block{
+        right: 8%;
+        top: 17%;
+        font-size: 1.2em;
+    }
+}
+@media all and (max-width:1280px) and (min-width: 500px){
+    .repair-text-block{
+        right: 5%;
+        top: 21%;
+        font-size: 1.4em;
+    }
+}
+@media all and (max-width:1367px) and (min-width: 1281px){
+    .repair-text-block{
+        right: 5%;
+        top: 24%;
+        font-size: 1.6em;
+    }
+}
+@media all and (max-width: 800px){
+    .repair-text-block{
+        right: 5%;
+        top: 20%;
+        font-size: 1em;
+    }
+}
+@media all and (max-width:480px){
+    .repair-text-block{
+        right: 6%;
+        top: 8%;
+        font-size: 0.6em;
+    }
+    .flex-stuff {
+        display: block;
+        margin-bottom: 30px;
+    }
+    .flex-stuff figure {
+        width: 100%;
+    }
+    .flex-stuff figure div{
+        width:50px;
+    }
+
+    .flex-stuff img{
+        width: 50px;
+    }
+
+}
+@media all and (min-width:1368px){
+    .repair-text-block{
+        right: 6%;
+        top: 25%;
+        font-size: 1.8em;
+    }
+}
+    @keyframes translating-repair-text {
+        0%   { transform: translate(200px, 0); }
+        100% { transform: translate(0, 0); }
+    }
+    .repair-text-block { animation: translating-repair-text 2s linear; }
+/* end gage salon repair */
 
        /*
 .middle-engine form{
@@ -450,32 +685,12 @@
 
 
 
-.top-engine .h form input[type='text']{
-    border: 1px solid white;
-    border-radius: 10px;
-    height: 30px;
-    background-color: transparent;
-    display: block;
-    margin-top: 5px;
-    color: white;
-    text-align: center;
-    width: 270px;
-}
-
-.top-engine .h form button[type='submit']{
-    width: 240px;
-    height: 35px;
-    background-color: #4c9432;
-    border: none;
-    color: white;
-    display: block;
-    margin: auto;
-}
 
 
 
 
-.top-engine .h form{
+
+.top .h form{
         margin-top: 10px;
 }
 
@@ -526,21 +741,8 @@
     }
 
 
-    .top-engine .h form{
-        margin: auto;
-        width: 100px;
-    }
-    .top-engine .h form input[type='text']{
-        border-radius: 10px;
-        height: 10px;
-        padding: 2px 0px 2px 0px;
-        width: 100px;
-    }
-    .top-engine .h form button[type='submit']{
-        width: 60px;
-        height: 20px;
-        font-size: 8px;
-    }
+
+
     .engine{
         zoom: 0.3;
         width: 90%;
