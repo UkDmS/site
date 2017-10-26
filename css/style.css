@@ -403,36 +403,7 @@
     }
 
 }
-@media all and (max-device-width:1366px) and (min-device-width: 500px) and (orientation: landscape){
-    .middle-engine form.block{
-        left: 20%;
-        bottom: 12%;
-    }
-    .text-block{
-        right: 8%;
-        top: 20%;
-        font-size: 1.2em;
-    }
-    .top .h h1{
-        font-size: 1.2em;
-    }
-    .top .h span{
-        font-size: 1em;
-        width:200px;
-    }
 
-    .top .h form input[type='text']{
-        border-radius: 10px;
-        height: 20px;
-        padding: 2px 0px 2px 0px;
-        width: 200px;
-    }
-    .top .h form button[type='submit']{
-        width: 150px;
-        height: 20px;
-        font-size: 8px;
-    }
-}
 @media all and (max-width:1367px) and (min-width: 1281px){
     .top .h{
         top: 5%;
@@ -495,6 +466,36 @@
         right: 5%;
         top: 22%;
         font-size: 2em;
+    }
+}
+ @media all and (max-device-width:1365px) and (min-device-width: 500px) and (orientation: landscape){
+    .middle-engine form.block{
+        left: 20%;
+        bottom: 12%;
+    }
+    .text-block{
+        right: 8%;
+        top: 20%;
+        font-size: 1.2em;
+    }
+    .top .h h1{
+        font-size: 1.2em;
+    }
+    .top .h span{
+        font-size: 1em;
+        width:200px;
+    }
+
+    .top .h form input[type='text']{
+        border-radius: 10px;
+        height: 20px;
+        padding: 2px 0px 2px 0px;
+        width: 200px;
+    }
+    .top .h form button[type='submit']{
+        width: 150px;
+        height: 20px;
+        font-size: 8px;
     }
 }
 /* end page engine */
@@ -668,6 +669,35 @@
         100% { transform: translate(0, 0); }
     }
     .repair-text-block { animation: translating-repair-text 2s linear; }
+    .price-flex{
+    	display: flex;
+    	flex-direction: row;
+    	justify-content: center;
+    }
+    .image-with-price p{
+        width: 200px;
+        margin: auto;
+        color: white;
+        padding-top: 4%;
+        font-size: 1.6em;
+    }
+    .price-flex figure div{
+    	width: 100px;
+    	margin: auto;
+    }
+    .price-flex span{
+    	text-align: center;
+        padding-top:10px;
+    }
+    .image-with-price{
+        background-size: contain;
+        background-image: url(../image/salon-repair/price.jpg);
+        background-repeat: no-repeat;
+        height: 100%;
+        margin-top: 10%;
+
+    }
+
 /* end gage salon repair */
 
        /*
