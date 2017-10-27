@@ -491,6 +491,7 @@
     }
     .top .h h1{
         font-size: 1.4em;
+        width: 200px;
     }
     .middle-form {
         width: 150px;
