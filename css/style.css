@@ -74,7 +74,6 @@
         /*width: 60%;*/
     }
     .example{
-        width: 200px;
         margin: auto;
         font-size: 1.6em;
         padding-top: 35px;
@@ -122,6 +121,12 @@
 }
 /* end page main */
 /* general style */
+    .breadcrumbs{
+        position: absolute;
+        top:30px;
+        color: white;
+    }
+
     .container,.col-lg-11{
         margin-right: 0px!important;
         margin-left: 0px;
@@ -157,13 +162,14 @@
     	text-align: center;
     }
     .slider {
-        width: 50%;
+        width: 100%;
         margin: 40px auto 10px auto;
     }
     .slider div.w{
         flex-direction: row;
         justify-content: space-around;
         display: flex;
+        width:100%!important;
     }
     .slick-slide {
         margin: 0px 20px;
@@ -173,10 +179,10 @@
     }
     .slick-slide {
         transition: all ease-in-out .3s;
-        opacity: .2;
+        opacity: 1;
     }
     .slick-active {
-        opacity: .5;
+        opacity: 1;
     }
     .slick-current {
         opacity: 1;
@@ -208,18 +214,18 @@
         background-size: cover!important;
         background-repeat: no-repeat!important;
     }
-    .item1{ background: url("../image/engine/slider4.jpg");}
-    .item2{ background: url("../image/engine/slider3.jpg");}
-    .item3{ background: url("../image/engine/slider2.jpg");}
-    .item4{ background: url("../image/engine/slider1.jpg");}
-    .item5{ background: url("../image/engine/slider8.jpg");}
-    .item6{ background: url("../image/engine/slider7.jpg");}
-    .item7{ background: url("../image/engine/slider6.jpg");}
-    .item8{ background: url("../image/engine/slider5.jpg");}
-    .item9{ background: url("../image/engine/slider12.jpg");}
-    .item10{ background: url("../image/engine/slider11.jpg");}
-    .item11{ background: url("../image/engine/slider10.jpg");}
-    .item12{ background: url("../image/engine/slider9.jpg");}
+    .item1{ background: url("../image/slider/slider4.jpg");}
+    .item2{ background: url("../image/slider/slider3.jpg");}
+    .item3{ background: url("../image/slider/slider2.jpg");}
+    .item4{ background: url("../image/slider/slider1.jpg");}
+    .item5{ background: url("../image/slider/slider8.jpg");}
+    .item6{ background: url("../image/slider/slider7.jpg");}
+    .item7{ background: url("../image/slider/slider6.jpg");}
+    .item8{ background: url("../image/slider/slider5.jpg");}
+    .item9{ background: url("../image/slider/slider12.jpg");}
+    .item10{ background: url("../image/slider/slider11.jpg");}
+    .item11{ background: url("../image/slider/slider10.jpg");}
+    .item12{ background: url("../image/slider/slider9.jpg");}
                              .my-flex2{
                             display: flex;
                             flex-direction: column;
@@ -228,7 +234,7 @@
                             align-items: center;
                         }
                         .my-flex2 .price-block{
-                            width: 60%;
+                            /*width: 60%;*/
                         }
                         .my-flex2 .price-block:nth-child(2){
                              background-color: #1e1e1e;
@@ -257,6 +263,7 @@
         padding-top: 10px;
         text-transform: uppercase;
         text-align: center;
+        font-size: 12px;
     }
     .engine{
         position: relative;
@@ -315,16 +322,19 @@
         font-size: 18px;
         color: white;
     }
+    span.price{
+        font-size: 16px;
+    }
+
     .btn-price-block span{
         text-align: center;
         display: block;
         margin-top: 22px;
-        font-size: 18px;
+        font-size: 16px;
         color: white;
     }
     .price-block{
         width: 60%;
-        margin: auto;
         background-color: black;
         height: 100px;
         margin-top: 10px;
@@ -396,17 +406,18 @@
         width: 100px;
     }
     .top .h {
-        top: 0%!important;
+        top: 2%!important;
         left: 5%!important;
+        font-size: 1em;
     }
 }
 @media all and (max-width:480px){
     .top .h {
-        top: 0;
+        top: 1%;
         left: 15%;
     }
     .top .h h1{
-        font-size: 0.8em;
+        font-size: 0.6em;
         margin-bottom: 0px!important;
     }
     .top .h span{
@@ -435,22 +446,17 @@
 
     .icon .my-flex figure {
         width: 100%;
-        margin-left: 10%;
     }
     .price{
         margin-top: 50px;
     }
     .price span, .trust span{
-        width: 20px;
         margin: auto;
     }
 
     .price-block{
         height: 150px;
-        width: 100%;
-        margin-left: 8%;
-        margin-right: 0px!important;
-        padding-right: 0px!important;
+       /* margin: auto;*/
     }
     .text-block{
         right: 7%;
@@ -469,13 +475,13 @@
     }
     .top .h form input[type='text']{
         border-radius: 10px;
-        height: 20px;
+        height: 16px;
         padding: 2px 0px 2px 0px;
         width: 100px;
     }
     .top .h form button[type='submit']{
         width: 60px;
-        height: 20px;
+        height: 18px;
         font-size: 8px;
     }
     .my-flex {
@@ -483,6 +489,11 @@
         flex-direction: column;
         justify-content: space-around;
     }
+    .breadcrumbs{
+        font-size: 0.6em;
+        top: 10px;
+    }
+
 }
 @media all and (max-width:1280px) and (min-width: 500px){
     .top .h{
@@ -491,7 +502,6 @@
     }
     .top .h h1{
         font-size: 1.4em;
-        width: 200px;
     }
     .middle-form {
         width: 150px;
@@ -532,7 +542,7 @@
 
 @media all and (max-width:1367px) and (min-width: 1281px){
     .top .h{
-        top: 5%;
+        top: 3%;
         left: 15%;
     }
     .top .h h1{
@@ -569,7 +579,7 @@
 }
 @media all and (min-width:1368px){
     .top .h{
-        top: 10%;
+        top: 6%;
         left: 15%;
     }
     .top .h h1{
@@ -643,6 +653,9 @@
         float: none;
         padding-bottom: calc(10vw);
         padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
     }
     .protection img{
         width: 60%;
@@ -652,7 +665,6 @@
     .car{
         width: 25% !important;
         position: absolute;
-        top: 115px;
         z-index: -2;
     }
     @keyframes moveCar {
@@ -823,18 +835,13 @@
     	border: 1px solid white;
         height: calc(36vh);
     }
-    .price-flex figure button{
-       /* height: 30px;
-        width: 70%;
-        margin: auto;
-        margin-top: auto;
+    .price-flex figure{
         display: flex;
-        margin-top: -15px;
-        background-color: #4c9432;
-        border: none;
-        color: white;
-        text-align: center;
-        display: table;*/
+    	flex-direction: column;
+    }
+    .price-flex figure button{
+        width: 50%;
+        margin: auto;
     }
 
     .price-flex span{
@@ -853,25 +860,94 @@
 /* end gage salon repair */
 /* brushing page */
 img.brushing-car{
-    width: 35%;
+width: 35%;
 margin: auto;
-display: flex;
-opacity: 0;
+position: absolute;
+left: 37%;
+top: 24%;
 }
+#brushing-points{
+    background: url('../image/brushing/points.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 48%;
+height: 70%;
+}
+
 @keyframes show-car {
     0%   { opacity: 0; }
     50%   { opacity: 0.5; }
     75%   { opacity: 0.75; }
     100%   { opacity:10; }
 }
+    /*.brushing-car { animation: show-car 2s linear; }   */
 .text-block-brushing{
     display: block;
 position: absolute;
 text-align: right;
 font-weight: bold;
 }
+#car-right{
+    position: absolute;
+right: -1000px;
+width: 40%;
+bottom: 0;
+}
 
 /* end */
+
+
+
+
+
+
+.text1{
+    font-size: 1em;
+    font-weight: bold;
+}
+.text2{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.text3{
+    color: gray;
+    font-size: 0.8em;
+}
+.text4{
+
+}
+@media all and (min-width: 800px) and (max-width: 800px){
+}
+@media all and (max-width:480px){
+}
+@media all and (max-width:1280px) and (min-width: 500px){
+}
+@media all and (max-width:1367px) and (min-width: 1281px){
+}
+@media all and (min-width:1368px){
+}
+@media all and (max-device-width:1365px) and (min-device-width: 500px) and (orientation: landscape){
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
        /*
 .middle-engine form{
