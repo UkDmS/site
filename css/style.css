@@ -78,6 +78,7 @@
         font-size: 1.6em;
         padding-top: 35px;
         text-align: center;
+        font-weight: bold;
     }
 /* menu */
 /* main page */
@@ -138,9 +139,15 @@
     }
     footer{
         height: 150px;
-        background-color: black;
+        background-color: #1e1e1e;
         color: white;
         text-align: center;
+    }
+    footer div.txt{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: justify;
+    font-size: 12px;
     }
     .my-flex{
     	display: flex;
@@ -197,17 +204,17 @@
         margin-right: 5px;
         margin-top: 0px;
     }
-    .slick-prev{
-        left: 50%!important;
-    }
     .slick-prev  {
+        left: 50%!important;
         top: 0!important;
         width: auto!important;
+        z-index: 1;
     }
     .slick-next  {
         top: 100%!important;
-        right: 50%!important;
+        right: 49%!important;
         width: auto!important;
+        z-index: 1;
     }
     .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .item10, .item11, .item12{
         height: 100%;
@@ -290,6 +297,7 @@
         display: block;
         margin: auto;
         border: 1px solid green !important;
+        border-radius: 0px !important;
     }
     .middle-engine form.block{
             position: absolute;
@@ -300,6 +308,7 @@
         color: white;
         display: block;
         z-index: 9999;
+        border-radius: 0px !important;
     }
     .middle-engine .text{
         position: absolute;
@@ -314,6 +323,7 @@
         margin-top: 50px;
         font-size: 28px;
         margin-bottom: 50px;
+        font-weight: bold;
     }
     .price-block span{
         text-align: center;
@@ -321,6 +331,7 @@
         margin-top: 22px;
         font-size: 18px;
         color: white;
+        font-weight: bold;
     }
     span.price{
         font-size: 16px;
@@ -352,6 +363,7 @@
     }
     .icon span{
         display: block;
+        margin-top: 15px;
     }
     .top .h form{
         margin: auto;
@@ -380,6 +392,7 @@
         margin-top:10px!important;
         margin-left:10%!important;
         margin: auto;
+        border-radius: 0px !important;
     }
 @keyframes translating {
     0%   { transform: translate(200px, 0); }
@@ -455,7 +468,7 @@
     }
 
     .price-block{
-        height: 150px;
+        height: 180px;
        /* margin: auto;*/
     }
     .text-block{
@@ -821,7 +834,7 @@
     	display: flex;
     	flex-direction: row;
     	justify-content: center;
-        height: 70%;
+        height: 50%;
     }
     .image-with-price p{
         width: 200px;
