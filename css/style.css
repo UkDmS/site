@@ -410,7 +410,7 @@
     }
     .text-block-brushing{
         right: 8%!important;
-        top: 14%!important;
+        top: 12%!important;
         font-size: 1em!important;
     }
 
@@ -544,7 +544,7 @@
     }
     .text-block-brushing{
         right: 8%;
-        top: 14%;
+        top: 15%;
         font-size: 1.2em;
     }
     .my-flex{
@@ -586,7 +586,7 @@
     }
     .text-block-brushing{
         right: 7%!important;
-        top: 15%!important;
+        top: 18%!important;
         font-size: 1.4em!important;
     }
 }
@@ -623,7 +623,7 @@
     }
     .text-block-brushing{
         right: 7%!important;
-        top: 15%!important;
+        top: 19%!important;
         font-size: 1.6em!important;
     }
 }
@@ -942,7 +942,35 @@ bottom: 0;
 @media all and (max-device-width:1365px) and (min-device-width: 500px) and (orientation: landscape){
 }
 
+/* glass  */
+.number-flex{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 40px;
+        margin-top: -10%;
+}
+.number-flex figure{
+    text-align: center;
+    margin: 0 10px 0 10px;
+}
+.number-flex figure div{
+        font-size: 3em;
+}
+.glass-points{
+        width: 80%!important;
+    position: relative;
+    margin: auto;
+}
+.glass-car{
+    position: relative;
+    width: 80%!important;
+    margin: auto;
+}.
 
+/* end glass */
 
 
 
