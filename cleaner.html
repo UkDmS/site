@@ -84,23 +84,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class='row glass-image'>
-                            <div class='text-block'>Чистота и свежесть<br>в салоне автомобиля!</div>
-                            <div class='row'>
-                                <div class='col-lg-7 col-lg-offset-4 col-xs-7 col-xs-offset-4'>
-                                    <img src='image/glass/points.png' class='glass-points'>
-                                </div>
-                            </div>
-                            <div class='row'>
-                                <div class='col-lg-7 col-lg-offset-4 col-xs-7 col-xs-offset-4'>
-                                    <img src='image/glass/car.png' class='glass-car'>
+                        <div class='row'>
+                            <div class='cleaner-text-block'>Чистота и свежесть<br>в салоне автомобиля!</div>
+                            <div class='row block-car-points'>
+                                <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2'>
+                                    <img src="image/cleaner/points.png" id='cleaner-points'>
+                                    <img src="image/cleaner/car.png" id='cleaner-car'>
                                 </div>
                             </div>
                         </div>
-                        <div class='row'>
-                            <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2 '>
+                        <div class='row cleaner-svg-icon-block'>
+                            <div class='col-lg-10 col-lg-offset-2 col-xs-6 col-xs-offset-5 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2 '>
                                 <div class='icon'>
-                                    <div class='row number-flex'>
+                                    <div class='row cleaner-flex'>
                                         <figure>
     	                                    <div><img src="image/cleaner/1.svg" alt="" /></div>
                                             <span>Потолок</span>
@@ -133,7 +129,7 @@
                             <div class='col-lg-12 col-xs-12'>
                                 <div class='middle-engine'>
                                     <div class='row'>
-                                        <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2'>
+                                        <div class='col-lg-10 col-lg-offset-2 col-xs-5 col-xs-offset-3'>
                                             <form class="form-horizontal" role="form">
                                                 <div class="form-group middle-form">
                                                     <div class="btn-middle">
@@ -157,7 +153,7 @@
                             </div>
                         </div>
                         <div class='row'>
-                            <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2 '>
+                            <div class='col-lg-10 col-lg-offset-2 col-xs-5 col-xs-offset-4 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2 '>
                                 <div class='icon'>
                                     <div class='row my-flex'>
                                         <figure class='col-xs-3 col-md-3'>
@@ -177,10 +173,10 @@
                             </div>
                         </div>
                         <div class='row'>
-                            <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2 price'><span>Стоимость</span></div>
+                            <div class='col-lg-10 col-lg-offset-2 col-xs-7 col-xs-offset-3 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2 price'><span>Стоимость</span></div>
                         </div>
                         <div class='row my-flex2'>
-                            <div class='col-lg-9 col-lg-offset-2 col-xs-7 col-xs-offset-4 col-md-6 col-md-offset-2 col-sm-6  col-sm-offset-2 price-block'>
+                            <div class='col-lg-9 col-lg-offset-2 col-xs-7 col-xs-offset-3 col-md-6 col-md-offset-2 col-sm-6  col-sm-offset-2 price-block'>
                                     <div class='col-lg-6 col-xs-12 col-md-6 col-sm-6'>
                                         <span>Химчистка салона + озоновая чистка</span>
                                     </div>
@@ -203,7 +199,7 @@
                                         </div>
                                     </div>
                             </div>
-                            <div class='col-lg-9 col-lg-offset-2 col-xs-7 col-xs-offset-4 col-md-6 col-md-offset-2 col-sm-6  col-sm-offset-2 price-block'>
+                            <div class='col-lg-9 col-lg-offset-2 col-xs-7 col-xs-offset-3 col-md-6 col-md-offset-2 col-sm-6  col-sm-offset-2 price-block'>
                                     <div class='col-lg-6 col-xs-12 col-md-6 col-sm-6'>
                                         <span>Озоновая чистка</span>
                                     </div>
@@ -228,7 +224,7 @@
                             </div>
                         </div>
                         <div class='row'>
-                            <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2'>
+                            <div class='col-lg-10 col-lg-offset-2 col-xs-7 col-xs-offset-3 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2'>
                                 <p class='example'>Примеры работ</p>
                             </div>
                         </div>
@@ -297,3 +293,56 @@
         </div>
     </body>
 </html>
+<script>
+        var isScrolling = false;
+        window.addEventListener("scroll", throttleScroll, false);
+        function throttleScroll(e) {
+            if (isScrolling == false) {
+                window.requestAnimationFrame(function() {
+                    scrolling(e);
+                    isScrolling = false;
+                });
+            }
+            isScrolling = true;
+        }
+        document.addEventListener("DOMContentLoaded", scrolling, false);
+        var item = document.getElementsByClassName("block-car-points");
+        var car = document.getElementById("cleaner-car");
+        var point = document.getElementById("cleaner-points");
+        var a = point.getBoundingClientRect();
+        var b = car.getBoundingClientRect();
+
+
+        function scrolling(e) {
+            var move=0;
+            if (isPartiallyVisible(item)) {
+                if(screen.width!==800 && screen.width!==360)
+                move = a.left-50;
+                else if(screen.width===800)
+                {
+                    move = a.left-150;
+                }
+                else if(screen.width===360)
+                {
+                    move = a.left-50;
+                }
+                $('#cleaner-car').animate({
+                marginLeft: move+'px'
+                }, 1200);
+
+            }
+        }
+        function isPartiallyVisible(el) {
+            var elementBoundary = el[0].getBoundingClientRect();
+            var top = elementBoundary.top;
+            var bottom = elementBoundary.bottom;
+            var height = elementBoundary.height;
+            return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+        }
+        function isFullyVisible(el) {
+            var elementBoundary = el[0].getBoundingClientRect();
+            var top = elementBoundary.top;
+            var bottom = elementBoundary.bottom;
+            return ((top >= 0) && (bottom <= window.innerHeight));
+        }
+    </script>
