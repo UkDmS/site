@@ -280,7 +280,12 @@
         float: none;
         padding-bottom: calc(10vw);
         padding-top: 40px;
+        opacity:  0;
     }
+    .img-engine{
+        opacity:0;
+    }
+
     .engine img{
         width: 60%;
         margin: auto;
@@ -408,7 +413,7 @@
 @media all and (min-width: 800px) and (max-width: 800px){
     .text-block{
         right: 8%!important;
-        top: 11%!important;
+        top: 14%!important;
         font-size: 1em!important;
     }
 
@@ -471,7 +476,7 @@
     }
     .text-block{
         right: 7%;
-        top: 8%;
+        top: 6%;
         font-size: 0.6em;
     }
 
@@ -532,8 +537,8 @@
     }
     .text-block{
         right: 8%;
-        top: 18%;
-        font-size: 1.4em;
+        top: 17%;
+        font-size: 1.6em;
     }
     .my-flex{
         margin-left: 10%!important;
@@ -568,9 +573,9 @@
         font-size: 20px;
     }
     .text-block{
-        right: 7%!important;
-        top: 18%!important;
-        font-size: 1.6em!important;
+        right: 7%;
+        top: 18%;
+        font-size: 1.6em;
     }
 }
 @media all and (min-width:1368px){

@@ -84,9 +84,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class='row'>
+                        <div class='row scroll'>
                             <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2 engine'>
-                                <img src='image/engine/engine.jpg' >
+                                <img src='image/engine/engine.jpg' class="img-engine">
                             </div>
                             <div class='text-block'>Уверенная работа<br> двигателя!</div>
                         </div>
@@ -140,7 +140,9 @@
                             </div>
                         </div>
                         <div class='row'>
-                            <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2 price'><span>Цены</span></div>
+                            <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2 price'>
+                                <span class="animatePriceBlock">Цены</span>
+                            </div>
                         </div>
                         <div class='row my-flex2'>
                             <div class='col-lg-9 col-lg-offset-2 col-xs-7 col-xs-offset-4 col-md-6 col-md-offset-2 col-sm-6  col-sm-offset-2 price-block'>
@@ -237,37 +239,62 @@
         </div>
     </body>
 </html>
+<script>
+        var isScrolling = false;
+        window.addEventListener("scroll", throttleScroll, false);
+        function throttleScroll(e) {
+            if (isScrolling == false) {
+                window.requestAnimationFrame(function() {
+                    scrolling(e);
+                    isScrolling = false;
+                });
+            }
+            isScrolling = true;
+        }
+        document.addEventListener("DOMContentLoaded", scrolling, false);
+        var item = document.getElementsByClassName("scroll");
+        var price = document.getElementsByClassName("price");
+        var engine = document.getElementsByClassName("engine");
+        var imgEnigine = document.getElementsByClassName("img-engine");
+        var example = document.getElementsByClassName("example");
 
-<!--<html>
-    <body>
-        <div class='container'>
-        <div class='row'>
-        <div class='col-lg-12 top-engine'>
+        function scrolling(e) {
+            if (isPartiallyVisible(item)) {
+                $( ".engine" ).animate({
+                        opacity: 1
+                    }, 1500, function() {
+                    });
+                $( ".img-engine" ).animate({
+                        opacity: 1
+                    }, 2500, function() {
+                    });
+            }
+            if (isPartiallyVisible(price)) {
+                $( ".animatePriceBlock" ).animate({
+                        display: "block",
+                        opacity: 1
+                    }, 1500, function() {
+                    });
+            }
+            if (isPartiallyVisible(example)) {
+                    $( ".example" ).animate({
+                            opacity: 1
+                    }, 2500, function() {
 
-
-
-            </div>
-
-            <div id='triangle' class='col-lg-12'>
-            </div>
-
-            </div>
-        </div>
-
-        <div class='row'>
-            <div class='col-lg-12 col-xs-12'>
-
-                <div class='middle-engine'>
-                        <div id='triangle-top'></div>
-                    <img src='image/middle-engine.jpg'>
-                 <div id='triangle-bottom'> </div>
-
-                </div>
-            </div>
-        </div>
-
-
-
-        </div>
-    </body>
-</html>-->
+                    });
+                }
+        }
+        function isPartiallyVisible(el) {
+            var elementBoundary = el[0].getBoundingClientRect();
+            var top = elementBoundary.top;
+            var bottom = elementBoundary.bottom;
+            var height = elementBoundary.height;
+            return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+        }
+        function isFullyVisible(el) {
+            var elementBoundary = el[0].getBoundingClientRect();
+            var top = elementBoundary.top;
+            var bottom = elementBoundary.bottom;
+            return ((top >= 0) && (bottom <= window.innerHeight));
+        }
+    </script>
