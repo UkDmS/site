@@ -129,7 +129,7 @@
                             <div class='col-lg-12 col-xs-12'>
                                 <div class='middle-engine'>
                                     <div class='row'>
-                                        <div class='col-lg-10 col-lg-offset-2 col-xs-5 col-xs-offset-3'>
+                                        <div class='col-lg-10 col-lg-offset-2 col-xs-5 col-xs-offset-3  col-md-4 col-md-offset-5 col-sm-5 col-sm-offset-4'>
                                             <form class="form-horizontal" role="form">
                                                 <div class="form-group middle-form">
                                                     <div class="btn-middle">
@@ -173,7 +173,7 @@
                             </div>
                         </div>
                         <div class='row'>
-                            <div class='col-lg-10 col-lg-offset-2 col-xs-7 col-xs-offset-3 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2 price'><span>Стоимость</span></div>
+                            <div class='col-lg-10 col-lg-offset-2 col-xs-7 col-xs-offset-3 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2 price'><span class='animatePriceBlock'>Стоимость</span></div>
                         </div>
                         <div class='row my-flex2'>
                             <div class='col-lg-9 col-lg-offset-2 col-xs-7 col-xs-offset-3 col-md-6 col-md-offset-2 col-sm-6  col-sm-offset-2 price-block'>
@@ -307,30 +307,46 @@
         }
         document.addEventListener("DOMContentLoaded", scrolling, false);
         var item = document.getElementsByClassName("block-car-points");
+        var price = document.getElementsByClassName("price");
         var car = document.getElementById("cleaner-car");
+        var example = document.getElementsByClassName("example");
         var point = document.getElementById("cleaner-points");
         var a = point.getBoundingClientRect();
         var b = car.getBoundingClientRect();
-
-
         function scrolling(e) {
-            var move=0;
+            var move;
             if (isPartiallyVisible(item)) {
-                if(screen.width!==800 && screen.width!==360)
-                move = a.left-50;
-                else if(screen.width===800)
+                if(screen.width===800)
                 {
-                    move = a.left-150;
+                    move = 140; console.log('wq');
                 }
                 else if(screen.width===360)
                 {
                     move = a.left-50;
                 }
+                else if(screen.width!==800 && screen.width!==360)
+                {
+                    move = a.left-50;
+                }
+
                 $('#cleaner-car').animate({
                 marginLeft: move+'px'
                 }, 1200);
-
             }
+            if (isPartiallyVisible(price)) {
+                $( ".animatePriceBlock" ).animate({
+                        display: "block",
+                        opacity: 1
+                    }, 1500, function() {
+                    });
+            }
+            if (isPartiallyVisible(example)) {
+                    $( ".example" ).animate({
+                            opacity: 1
+                    }, 2500, function() {
+
+                    });
+                }
         }
         function isPartiallyVisible(el) {
             var elementBoundary = el[0].getBoundingClientRect();

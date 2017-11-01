@@ -79,6 +79,7 @@
         padding-top: 35px;
         text-align: center;
         font-weight: bold;
+        opacity: 0;
     }
 /* menu */
 /* main page */
@@ -324,6 +325,7 @@
         font-size: 28px;
         margin-bottom: 50px;
         font-weight: bold;
+        opacity: 0;
     }
     .price-block span{
         text-align: center;
@@ -364,7 +366,7 @@
     .icon span{
         display: block;
         margin-top: 15px;
-        min-height: 85px;
+        min-height: 150px;
     }
     .top .h form{
         margin: auto;
@@ -955,7 +957,7 @@ bottom: 0;
     justify-content: center;
     align-items: end;
     padding-bottom: 40px;
-        margin-top: -10%;
+    margin-top: -10%;
 }
 .number-flex figure{
     text-align: center;
@@ -964,17 +966,88 @@ bottom: 0;
 .number-flex figure div{
         font-size: 3em;
 }
+.glass-image{
+    position: relative;
+    margin-top: 70px;
+}
 .glass-points{
-        width: 80%!important;
     position: relative;
     margin: auto;
+    margin-bottom: -20px;
+    z-index: 2;
+    opacity: 0;
 }
 .glass-car{
     position: relative;
-    width: 80%!important;
+    width: 72%!important;
     margin: auto;
+    opacity: 0;
 }
+.glass-text-block{
+    right: 8%;
+    display: block;
+    position: absolute;
+    text-align: right;
+    font-weight: bold;
+}
+.icon-glass span {
+    display: block;
+    margin-top: 15px;
+    min-height: 100px;
+}
+    @keyframes glassTextBlock {
+        0%   { transform: translate(200px, 0); }
+        100% { transform: translate(0, 0); }
+    }
+        .glass-text-block{ animation: glassTextBlock 2s linear; }
 
+@media all and (max-width:480px){
+    .number-flex{
+        flex-direction: column;
+        align-items: center;
+    }
+    .trust span{
+        font-size: 1.2em;
+    }
+
+}
+@media all and (max-width:1280px) and (min-width: 500px){
+    .glass-text-block{
+        right: 8%;
+        top: 15.5%;
+        font-size: 1.6em;
+    }
+}
+@media all and (min-width: 1023px) and (max-width: 1025px){
+    .glass-text-block{
+        top: 14.5%;
+        font-size: 1.4em;
+    }
+}
+@media all and (min-width: 800px) and (max-width: 800px){
+    .glass-text-block{
+        top: 11%;
+        font-size: 1.2em;
+    }
+}
+@media all and (max-width:1367px) and (min-width: 1281px){
+    .glass-text-block{
+        top: 16%;
+        font-size: 1.6em;
+    }
+}
+@media all and (min-width:1368px){
+    .glass-text-block{
+        top: 17.5%;
+        font-size: 1.8em;
+    }
+}
+ @media all and (max-width:1441px) and (min-width:1439px){
+    .glass-text-block{
+        top: 16%;
+        font-size: 1.8em;
+    }
+}
 /* end glass */
 /* cleaner */
    .cleaner-flex{
@@ -1033,12 +1106,15 @@ bottom: 0;
         75%   { opacity: 0.75 }
         100% { opacity: 1; }
     }
-    #cleaner-points { animation: cleanerPoint 8s linear; }
+    #cleaner-points { animation: cleanerPoint 6s linear; }
     @keyframes cleanerTextBlock {
         0%   { transform: translate(200px, 0); }
         100% { transform: translate(0, 0); }
     }
         .cleaner-text-block{ animation: cleanerTextBlock 2s linear; }
+    .animatePriceBlock{
+        opacity: 0;
+    }
 
 @media all and (min-width: 800px) and (max-width: 800px){
     .cleaner-text-block{
@@ -1073,7 +1149,7 @@ bottom: 0;
 @media all and (max-width:1280px) and (min-width: 500px){
     .cleaner-text-block{
         right: 8%!important;
-        top: 11%;
+        top: 15%;
         font-size: 1em;
     }
 }
@@ -1094,4 +1170,3 @@ bottom: 0;
 @media all and (max-device-width:1365px) and (min-device-width: 500px) and (orientation: landscape){
 }
 
-*/

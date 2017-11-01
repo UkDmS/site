@@ -84,10 +84,12 @@
                                 </div>
                             </div>
                         </div>
+                        <div class='row'>
+                            <div class='glass-text-block'>Технологии NASA<br> в гражданском мире</div>
+                        </div>
                         <div class='row glass-image'>
-                            <div class='text-block'>Технологии NASA<br> в гражданском мире</div>
                             <div class='row'>
-                                <div class='col-lg-7 col-lg-offset-4 col-xs-7 col-xs-offset-4'>
+                                <div class='col-lg-7 col-lg-offset-3 col-xs-7 col-xs-offset-4 col-md-5 col-md-offset-4  col-sm-5'>
                                     <img src='image/glass/points.png' class='glass-points'>
                                 </div>
                             </div>
@@ -98,8 +100,8 @@
                             </div>
                         </div>
                         <div class='row'>
-                            <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2 '>
-                                <div class='icon'>
+                            <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2 col-md-10 col-md-offset-2 col-sm-8 '>
+                                <div class='icon-glass'>
                                     <div class='row number-flex'>
                                         <figure>
     	                                    <div>1</div>
@@ -156,7 +158,7 @@
                             </div>
                         </div>
                         <div class='row'>
-                            <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-lg-offset-2 col-md-10 col-lg-offset-2 col-sm-10  col-sm-offset-2 trust'><span>Преимущества</span></div>
+                            <div class='col-lg-10 col-lg-offset-2 col-xs-6 col-xs-offset-4 col-lg-offset-2 col-md-10 col-lg-offset-2 col-sm-10  col-sm-offset-2 trust'><span>Преимущества</span></div>
                         </div>
                         <div class='row'>
                             <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2 '>
@@ -322,3 +324,59 @@
         </div>
     </body>
 </html>
+<script>
+        var isScrolling = false;
+        window.addEventListener("scroll", throttleScroll, false);
+        function throttleScroll(e) {
+            if (isScrolling == false) {
+                window.requestAnimationFrame(function() {
+                    scrolling(e);
+                    isScrolling = false;
+                });
+            }
+            isScrolling = true;
+        }
+        document.addEventListener("DOMContentLoaded", scrolling, false);
+        var item = document.getElementsByClassName("glass-image");
+        var trust = document.getElementsByClassName("trust");
+        var price = document.getElementsByClassName("price");
+        var example = document.getElementsByClassName("example");
+        function scrolling(e) {
+            if (isPartiallyVisible(item)) {
+                $( ".glass-car" ).animate({
+                    opacity: 1
+                }, 2000);
+                $( ".glass-points" ).animate({
+                    opacity: 1
+                }, 4500);
+            }
+            if (isPartiallyVisible(trust)) {
+            $( ".trust span" ).animate({
+                    opacity: 1
+                }, 1500);
+            }
+            if (isPartiallyVisible(price)) {
+                $( ".price span" ).animate({
+                    opacity: 1
+                }, 2500);
+            }
+            if (isPartiallyVisible(example)) {
+                $( ".example" ).animate({
+                    opacity: 1
+                }, 3500);
+            }
+        }
+        function isPartiallyVisible(el) {
+            var elementBoundary = el[0].getBoundingClientRect();
+            var top = elementBoundary.top;
+            var bottom = elementBoundary.bottom;
+            var height = elementBoundary.height;
+            return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+        }
+        function isFullyVisible(el) {
+            var elementBoundary = el[0].getBoundingClientRect();
+            var top = elementBoundary.top;
+            var bottom = elementBoundary.bottom;
+            return ((top >= 0) && (bottom <= window.innerHeight));
+        }
+    </script>
