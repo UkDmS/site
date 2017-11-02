@@ -79,6 +79,7 @@
         padding-top: 35px;
         text-align: center;
         font-weight: bold;
+        opacity: 0;
     }
 /* menu */
 /* main page */
@@ -279,7 +280,12 @@
         float: none;
         padding-bottom: calc(10vw);
         padding-top: 40px;
+        opacity:  0;
     }
+    .img-engine{
+        opacity:0;
+    }
+
     .engine img{
         width: 60%;
         margin: auto;
@@ -324,6 +330,7 @@
         font-size: 28px;
         margin-bottom: 50px;
         font-weight: bold;
+        opacity: 0;
     }
     .price-block span{
         text-align: center;
@@ -406,12 +413,7 @@
 @media all and (min-width: 800px) and (max-width: 800px){
     .text-block{
         right: 8%!important;
-        top: 11%!important;
-        font-size: 1em!important;
-    }
-    .text-block-brushing{
-        right: 8%!important;
-        top: 12%!important;
+        top: 14%!important;
         font-size: 1em!important;
     }
 
@@ -427,7 +429,7 @@
 }
 @media all and (max-width:480px){
     .top .h {
-        top: 1%;
+        top: 10px;
         left: 15%;
     }
     .top .h h1{
@@ -474,11 +476,6 @@
     }
     .text-block{
         right: 7%;
-        top: 8%;
-        font-size: 0.6em;
-    }
-    .text-block-brushing{
-        right: 7%;
         top: 6%;
         font-size: 0.6em;
     }
@@ -504,7 +501,7 @@
         justify-content: space-around;
     }
     .breadcrumbs{
-        font-size: 0.6em;
+        font-size: 0.4em;
         top: 10px;
     }
 
@@ -540,13 +537,8 @@
     }
     .text-block{
         right: 8%;
-        top: 18%;
-        font-size: 1.4em;
-    }
-    .text-block-brushing{
-        right: 8%;
-        top: 15%;
-        font-size: 1.2em;
+        top: 17%;
+        font-size: 1.6em;
     }
     .my-flex{
         margin-left: 10%!important;
@@ -581,14 +573,9 @@
         font-size: 20px;
     }
     .text-block{
-        right: 7%!important;
-        top: 18%!important;
-        font-size: 1.6em!important;
-    }
-    .text-block-brushing{
-        right: 7%!important;
-        top: 18%!important;
-        font-size: 1.4em!important;
+        right: 7%;
+        top: 18%;
+        font-size: 1.6em;
     }
 }
 @media all and (min-width:1368px){
@@ -622,11 +609,6 @@
         top: 19%;
         font-size: 2em;
     }
-    .text-block-brushing{
-        right: 7%!important;
-        top: 19%!important;
-        font-size: 1.6em!important;
-    }
 }
  @media all and (max-device-width:1365px) and (min-device-width: 500px) and (orientation: landscape){
     .middle-engine form.block{
@@ -657,8 +639,157 @@
         height: 20px;
         font-size: 8px;
     }
+    .breadcrumbs{
+        font-size: 0.4em;
+        top: 10px;
+    }
 }
 /* end page engine */
+
+/* brushing page */
+img.brushing-car{
+width: 35%;
+margin: auto;
+position: absolute;
+left: 37%;
+top: 24%;
+}
+    .block-brushing{
+        position: relative;
+        margin-bottom: 25%;
+    margin-top: 22%;
+    }
+    #brushing-car{
+        width: 53%;
+        position: absolute;
+        margin: auto;
+        left: -6%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -2;
+        opacity: 0;
+    }
+    #brushing-points{
+        width: 75%;
+        position: absolute;
+        margin: auto;
+        left: 2%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+    }
+
+@keyframes show-car {
+    0%   { opacity: 0; }
+    50%   { opacity: 0.5; }
+    75%   { opacity: 0.75; }
+    100%   { opacity:10; }
+}
+    /*.brushing-car { animation: show-car 2s linear; }   */
+.text-block-brushing{
+    display: block;
+position: absolute;
+text-align: right;
+font-weight: bold;
+}
+#car-right{
+    position: absolute;
+right: -1000px;
+width: 40%;
+bottom: 0;
+}
+
+/* end */
+
+
+
+
+
+
+.text1{
+    font-size: 1em;
+    font-weight: bold;
+}
+.text2{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.text3{
+    color: gray;
+    font-size: 0.8em;
+}
+.text4{
+
+}
+@media all and (min-width: 800px) and (max-width: 800px){
+    .text-block-brushing{
+        right: 5%;
+        top: 16%;
+        font-size: 1.4em;
+    }
+}
+@media all and (max-width:480px){
+    .text-block-brushing{
+        right: 5%;
+        top: 5.5%;
+        font-size: 0.4em;
+    }
+}
+@media all and (max-width:1280px) and (min-width: 500px){
+    .text-block-brushing{
+        right: 5%;
+        top: 16%;
+        font-size: 1.4em;
+    }
+}
+@media all and (min-width: 800px) and (max-width: 800px){
+    .text-block-brushing{
+        right: 5%;
+        top: 12%;
+        font-size: 1em;
+    }
+}
+@media all and (max-width:1025px) and (min-width: 1023px){
+    .text-block-brushing{
+        right: 5%;
+        top: 14%;
+        font-size: 1.2em;
+    }
+}
+@media all and (max-width:1367px) and (min-width: 1281px){
+    .text-block-brushing{
+        right: 5%;
+        top: 17%;
+        font-size: 1.6em;
+    }
+}
+@media all and (min-width:1368px){
+    .text-block-brushing{
+        right: 5%;
+        top: 18%;
+        font-size: 1.6em;
+    }
+}
+@media all and (max-width:1441px) and (min-width: 1439px){
+    .text-block-brushing{
+        right: 5%;
+        top: 16%;
+        font-size: 1.4em;
+    }
+}
+@media all and (max-width:1441px) and (min-width: 1439px){
+    .text-block-brushing{
+        right: 5%;
+        top: 16%;
+        font-size: 1.4em;
+    }
+}
+@media all and (max-device-width:1365px) and (min-device-width: 500px) and (orientation: landscape){
+}
+
+
 /* page protection */
     .protection{
         position: relative;
@@ -720,6 +851,26 @@
 }
 /* end page protection */
 /* page salon repair */
+    .block-repair{
+        position: relative;
+        margin-bottom: 12%;
+        margin-top: 15%;
+    }
+    #salon-repair{
+        width: 50%;
+        margin: auto;
+        display: block;
+        margin-left: -1000px;
+    }
+    #salon-repair-points{
+        width: 60%;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+    }
     .repair{
         position: relative;
         margin: auto;
@@ -871,106 +1022,111 @@
 
     }
 
-/* end gage salon repair */
-/* brushing page */
-img.brushing-car{
-width: 35%;
-margin: auto;
-position: absolute;
-left: 37%;
-top: 24%;
-}
-#brushing-points{
-    background: url('../image/brushing/points.gif');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 48%;
-height: 70%;
-}
-
-@keyframes show-car {
-    0%   { opacity: 0; }
-    50%   { opacity: 0.5; }
-    75%   { opacity: 0.75; }
-    100%   { opacity:10; }
-}
-    /*.brushing-car { animation: show-car 2s linear; }   */
-.text-block-brushing{
-    display: block;
-position: absolute;
-text-align: right;
-font-weight: bold;
-}
-#car-right{
-    position: absolute;
-right: -1000px;
-width: 40%;
-bottom: 0;
-}
-
-/* end */
+/* end page salon repair */
 
 
 
 
 
 
-.text1{
-    font-size: 1em;
-    font-weight: bold;
-}
-.text2{
-    font-size: 1.4em;
-    font-weight: bold;
-}
-.text3{
-    color: gray;
-    font-size: 0.8em;
-}
-.text4{
 
-}
-@media all and (min-width: 800px) and (max-width: 800px){
-}
-@media all and (max-width:480px){
-}
-@media all and (max-width:1280px) and (min-width: 500px){
-}
-@media all and (max-width:1367px) and (min-width: 1281px){
-}
-@media all and (min-width:1368px){
-}
-@media all and (max-device-width:1365px) and (min-device-width: 500px) and (orientation: landscape){
-}
-
-/* glass  */
-.number-flex{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    align-items: end;
-    padding-bottom: 40px;
+    /* glass  */
+    .number-flex{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        align-items: end;
+        padding-bottom: 40px;
         margin-top: -10%;
-}
-.number-flex figure{
-    text-align: center;
-    margin: 0 10px 0 10px;
-}
-.number-flex figure div{
-        font-size: 3em;
-}
-.glass-points{
-        width: 80%!important;
-    position: relative;
-    margin: auto;
-}
-.glass-car{
-    position: relative;
-    width: 80%!important;
-    margin: auto;
-}.
-
+    }
+    .number-flex figure{
+        text-align: center;
+        margin: 0 10px 0 10px;
+    }
+    .number-flex figure div{
+            font-size: 3em;
+    }
+    .glass-image{
+        position: relative;
+        margin-top: 70px;
+    }
+    .glass-points{
+        position: relative;
+        margin: auto;
+        margin-bottom: -20px;
+        z-index: 2;
+        opacity: 0;
+    }
+    .glass-car{
+        position: relative;
+        width: 72%!important;
+        margin: auto;
+        opacity: 0;
+    }
+    .glass-text-block{
+        right: 8%;
+        display: block;
+        position: absolute;
+        text-align: right;
+        font-weight: bold;
+    }
+    .icon-glass span {
+        display: block;
+        margin-top: 15px;
+        min-height: 100px;
+    }
+    @keyframes glassTextBlock {
+        0%   { transform: translate(200px, 0); }
+        100% { transform: translate(0, 0); }
+    }
+    .glass-text-block{ animation: glassTextBlock 2s linear; }
+    @media all and (max-width:480px){
+        .number-flex{
+            flex-direction: column;
+            align-items: center;
+        }
+        .trust span{
+            font-size: 1.2em;
+        }
+    }
+    @media all and (max-width:1280px) and (min-width: 500px){
+        .glass-text-block{
+            right: 8%;
+            top: 15.5%;
+            font-size: 1.6em;
+        }
+    }
+    @media all and (min-width: 1023px) and (max-width: 1025px){
+        .glass-text-block{
+            top: 14.5%;
+            font-size: 1.4em;
+        }
+    }
+    @media all and (min-width: 800px) and (max-width: 800px){
+        .glass-text-block{
+            top: 11%;
+            font-size: 1.2em;
+        }
+    }
+    @media all and (max-width:1367px) and (min-width: 1281px){
+        .glass-text-block{
+            top: 16%;
+            font-size: 1.6em;
+        }
+    }
+    @media all and (min-width:1368px){
+        .glass-text-block{
+            top: 17.5%;
+            font-size: 1.8em;
+        }
+    }
+     @media all and (max-width:1441px) and (min-width:1439px){
+        .glass-text-block{
+            top: 16%;
+            font-size: 1.8em;
+        }
+    }
 /* end glass */
 
 
@@ -978,141 +1134,189 @@ bottom: 0;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-       /*
-.middle-engine form{
-    position: absolute;
-}
-.container{
-    width: calc(100%)!important;
-    overflow: hidden;
-    padding: 0px 0px!important;
-    margin-left: 0px!important;
-    margin-right: 0px!important;
-}       */
-  /*
-
-
-
-
-
-
-
-
-.top .h form{
-        margin-top: 10px;
-}
-
-
-@media all and (max-width: 1368px){
-
-    .middle-engine form button[type='submit']{
-        width: 240px;
-        height: 35px;
+    /* cleaner */
+    .cleaner-flex{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        align-items: end;
+        padding-bottom: 40px;
+        margin-top: -10%;
     }
-
-    .middle-engine .text{
-        top: 35%;
-        margin-left: calc(10vw);
-        line-height: 1.4em;
-        font-size: 20px;
+    .cleaner-flex figure{
+        text-align: center;
+        margin: 0 10px 0 10px;
     }
-    .middle-form{
-        width: 200px;
+    .cleaner-flex span{
+    	text-align: center;
     }
-    .call-green{
-        width: 240px;
-        height: 35px;
+    .block-car-points{
+        position: relative;
+        margin-bottom: 12%;
+        margin-top: 15%;
     }
-    .icon ul li {
-        margin-right: 20%;
-    }
-    .price-block{
-        height: 150px;
-        margin-top: 50px!important;
-        margin-bottom: 50px!important;
-    }
-    .price-block span{
-        display: block;
+    #cleaner-car{
         width: 50%;
         margin: auto;
-        padding-top: 35px;
-        font-size: 26px;
-        color: white;
+        display: block;
+        margin-left: -1000px;
     }
-
-}
-@media all and (min-width:320px) and (max-width: 480px){
-    .text-block{
-        bottom: 15%;
-        right: 10%;
-        font-size: 16px;
-    }
-
-
-
-
-    .engine{
-        zoom: 0.3;
-        width: 90%;
-    }
-
-    .middle-engine form button[type='submit'] {
-        width: 76px;
-        height: 20px;
-        font-size: 8px;
-    }
-    .middle-engine form{
+    #cleaner-points{
+        width: 60%;
         position: absolute;
-        top: 70%;
-        left: 10%;
+        margin: auto;
+        left: -15%;
+        top: 0;
+        bottom: 0;
+        right: 0;
     }
-    .middle-engine .text{
-        top: 50%;
-        font-size: 8px;
-        width: 260px;
+    .cleaner-svg-icon-block{
+        display: block;
+        margin-top: 10%;
     }
-    .middle-form{
-        width: 150px;
+    @keyframes cleanerMoveCar {
+        0%   { transform: translate(-1000px, 0); }
+        100% { transform: translate(485px, 0); }
     }
-    .call-green{
-        width: 60px;
-        height: 20px;
-        font-size: 8px!important;
+    .cleaner-text-block{
+        display: block;
+        position: absolute;
+        text-align: right;
+        font-weight: bold;
     }
+    @keyframes cleanerPoint {
+        0%   { opacity: 0; }
+        50%   { opacity: 0.5; }
+        75%   { opacity: 0.75 }
+        100% { opacity: 1; }
+    }
+    #cleaner-points { animation: cleanerPoint 6s linear; }
+    @keyframes cleanerTextBlock {
+        0%   { transform: translate(200px, 0); }
+        100% { transform: translate(0, 0); }
+    }
+    .cleaner-text-block{ animation: cleanerTextBlock 2s linear; }
+    .animatePriceBlock{
+        opacity: 0;
+    }
+    @media all and (min-width: 800px) and (max-width: 800px){
+        .cleaner-text-block{
+            right: 8%!important;
+            top: 12% !important;
+            font-size: 1.4em !important;
+        }
+    }
+    @media all and (max-width:480px){
+        .cleaner-text-block{
+            right: 8%!important;
+            top: 5%;
+            font-size: 0.4em;
+        }
+        .cleaner-flex {
+            flex-direction: column;
+            width: 70%;
+        }
+        .cleaner-flex figure{
+            text-align: center;
+            height: 100px;
+        }
+        .cleaner-flex figure img{
+            width: 60px;
+        }
+        .price-block span {
+            font-size: 14px;
+        }
+    }
+    @media all and (max-width:1280px) and (min-width: 500px){
+        .cleaner-text-block{
+            right: 8%!important;
+            top: 15%;
+            font-size: 1em;
+        }
+    }
+    @media all and (max-width:1367px) and (min-width: 1281px){
+        .cleaner-text-block{
+            right: 8%!important;
+            top: 16%!important;
+            font-size: 1.6em!important;
+        }
+    }
+    @media all and (min-width:1368px){
+        .cleaner-text-block{
+            right: 8%!important;
+            top: 18%!important;
+            font-size: 1.6em!important;
+        }
+    }
+    @media all and (max-device-width:1365px) and (min-device-width: 500px) and (orientation: landscape){
+    }
+/* wheel page */
+.wheel{
 
-     .price-block{
-        height: 50px;
-    }
-    .btn-middle{
-
-    }
-
+}
+#wheel-block{
+              width: 40%!important;
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+    opacity: 0;
+    padding-top: 20px;
+}
+.clear {
+    clear: both;
+}
+.wheel-text-block{
+        display: block;
+    position: absolute;
+    text-align: right;
+    font-weight: bold;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-*/
+    @media all and (max-width:480px){
+        .wheel-text-block{
+            right: 4%;
+            top: 6%;
+            font-size: 0.4em;
+        }
+    }
+    @media all and (max-width:1280px) and (min-width: 500px){
+        .wheel-text-block{
+            right: 3%;
+            top: 16%;
+            font-size: 1.2em;
+        }
+    }
+    @media all and (min-width: 800px) and (max-width: 800px){
+        .wheel-text-block{
+            right: 4%;
+            top: 14%;
+            font-size: 0.8em;
+        }
+    }
+    @media all and (max-width:1367px) and (min-width: 1281px){
+        .wheel-text-block{
+            right: 4%;
+            top: 19%;
+            font-size: 1.6em;
+        }
+    }
+    @media all and (min-width:1368px){
+        .wheel-text-block{
+            right: 4%;
+            top: 22%;
+            font-size: 1.6em;
+        }
+    }
+      @media all and (max-width:1441px) and (min-width:1439px){
+        .wheel-text-block{
+            top: 19%;
+            font-size: 1.6em;
+        }
+    }
+        @keyframes wheelTextBlock {
+        0%   { transform: translate(200px, 0); }
+        100% { transform: translate(0, 0); }
+    }
+    .wheel-text-block{ animation: wheelTextBlock 2s linear; }

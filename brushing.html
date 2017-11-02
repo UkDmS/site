@@ -89,9 +89,12 @@
                             <div class='text-block-brushing'>Индивидуальный<br>подход к каждому<br>автомобилю</div>
                         </div>
                         <div class='row scroll'>
-                            <div class='col-lg-8 col-lg-offset-4 col-xs-8 col-xs-offset-4 col-md-8 col-md-offset-4 col-sm-8  col-sm-offset-4 brushing' id='brushing-points'>
+                            <div class='row block-brushing'>
+                                <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2'>
+                                    <img src="image/brushing/points.gif" id='brushing-points'>
+                                    <img src="image/brushing/car.gif" id='brushing-car'>
+                                </div>
                             </div>
-                            <img src='image/brushing/car.gif' class='brushing-car'>
                         </div>
                         <div class='row'>
                             <div class='col-lg-12 col-xs-12'>
@@ -108,7 +111,7 @@
                                         </div>
                                     </div>
                                     <img src='image/brushing/middle.jpg'>
-                                    <img src="image/brushing/car-right.png" alt="" id="car-right" class='qw'/>
+                                    <img src="image/brushing/car-right.png" alt="" id="car-right" class='car-right'/>
                                     <div class='text'><span class='text1'>Рекомендуем!</span><br>
                                     <span class='text2'>Защита кузова</span><br>
                                     <span class='text3'>Сохраните яркость</span><br>
@@ -146,10 +149,12 @@
                             </div>
                         </div>
                         <div class='row'>
-                            <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-lg-offset-2 col-md-10 col-lg-offset-2 col-sm-10  col-sm-offset-2  price'><span>Цены</span></div>
+                            <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2 price'>
+                                <span class='animatePriceBlock'>Стоимость</span>
+                            </div>
                         </div>
-                        <div class='row col-lg-10 col-lg-offset-2 col-xs-10 col-lg-offset-2 col-md-10 col-lg-offset-2 col-sm-10  col-sm-offset-2  my-flex2'>
-                            <div class='row price-block'>
+                        <div class='row my-flex2'>
+                            <div class='col-lg-9 col-lg-offset-2 col-xs-7 col-xs-offset-4 col-md-6 col-md-offset-2 col-sm-6  col-sm-offset-2 price-block'>
                                 <div class='col-lg-6 col-xs-12 col-md-6 col-sm-6'>
                                     <span>Фары и фонари</span>
                                 </div>
@@ -157,7 +162,7 @@
                                     <div class='btn-price-block'>
                                         <div class='row'>
                                             <div class='col-lg-12 col-xs-12 col-md-12 col-sm-12'>
-                                                <span class='price'>От 1000 р.</span>
+                                                <span class='price'>От 1000 р</span>
                                             </div>
                                         </div>
                                         <div class='row'>
@@ -172,7 +177,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class='row price-block'>
+                            <div class='col-lg-9 col-lg-offset-2 col-xs-7 col-xs-offset-4 col-md-6 col-md-offset-2 col-sm-6  col-sm-offset-2 price-block'>
                                 <div class='col-lg-6 col-xs-12 col-md-6 col-sm-6'>
                                     <span>Одна деталь</span>
                                 </div>
@@ -180,7 +185,7 @@
                                     <div class='btn-price-block'>
                                         <div class='row'>
                                             <div class='col-lg-12 col-xs-12 col-md-12 col-sm-12'>
-                                                <span class='price'>От 1000 р.</span>
+                                                <span class='price'>От 1000 р</span>
                                             </div>
                                         </div>
                                         <div class='row'>
@@ -195,7 +200,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class='row  price-block'>
+                            <div class='col-lg-9 col-lg-offset-2 col-xs-7 col-xs-offset-4 col-md-6 col-md-offset-2 col-sm-6  col-sm-offset-2 price-block'>
                                 <div class='col-lg-6 col-xs-12 col-md-6 col-sm-6'>
                                     <span>Детейлинг-полировка</span>
                                 </div>
@@ -203,7 +208,7 @@
                                     <div class='btn-price-block'>
                                         <div class='row'>
                                             <div class='col-lg-12 col-xs-12 col-md-12 col-sm-12'>
-                                                <span class='price'>От 1000 р.</span>
+                                                <span class='price'>От 12000 р</span>
                                             </div>
                                         </div>
                                         <div class='row'>
@@ -220,7 +225,7 @@
                             </div>
                         </div>
                         <div class='row'>
-                            <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-lg-offset-2 col-md-10 col-lg-offset-2 col-sm-10  col-sm-offset-2 '>
+                            <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2'>
                                 <p class='example'>Примеры работ</p>
                             </div>
                         </div>
@@ -303,23 +308,45 @@
             }
             isScrolling = true;
         }
-
         document.addEventListener("DOMContentLoaded", scrolling, false);
-
-        var item = document.getElementsByClassName("brushing");
-        var qw = document.getElementsByClassName("qw");
-
+        var item = document.getElementsByClassName("block-brushing");
+        var price = document.getElementsByClassName("price");
+        var example = document.getElementsByClassName("example");
+        var car = document.getElementById("brushing-car");
+        var right = document.getElementsByClassName("car-right");
+        var point = document.getElementById("brushing-points");
         function scrolling(e) {
             if (isPartiallyVisible(item)) {
-                $('img.brushing-car').css("animation", "show-car 5s forwards");
+                $("#brushing-car" ).animate({
+                        opacity: 1
+                    }, 1500, function() {
+                    });
+                $("#brushing-points" ).animate({
+                        opacity: 1
+                    }, 2500, function() {
+                    });
             }
-            if (isPartiallyVisible(qw)) {
+            if (isPartiallyVisible(price)) {
+                $( ".animatePriceBlock" ).animate({
+                        display: "block",
+                        opacity: 1
+                    }, 1500, function() {
+                    });
+            }
+            if (isPartiallyVisible(example)) {
+                    $( ".example" ).animate({
+                            opacity: 1
+                    }, 2500, function() {
+
+                    });
+            }
+             if (isPartiallyVisible(right)) {
+                 console.log("qqq");
                 $('#car-right').animate({
                 marginRight: "1000px"
                 }, 1500);
             }
         }
-
         function isPartiallyVisible(el) {
             var elementBoundary = el[0].getBoundingClientRect();
 
