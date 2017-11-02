@@ -371,7 +371,7 @@
     .icon span{
         display: block;
         margin-top: 15px;
-        min-height: 150px;
+        min-height: 85px;
     }
     .top .h form{
         margin: auto;
@@ -1251,4 +1251,72 @@ bottom: 0;
     }
     @media all and (max-device-width:1365px) and (min-device-width: 500px) and (orientation: landscape){
     }
+/* wheel page */
+.wheel{
 
+}
+#wheel-block{
+              width: 40%!important;
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+    opacity: 0;
+    padding-top: 20px;
+}
+.clear {
+    clear: both;
+}
+.wheel-text-block{
+        display: block;
+    position: absolute;
+    text-align: right;
+    font-weight: bold;
+}
+
+
+    @media all and (max-width:480px){
+        .wheel-text-block{
+            right: 4%;
+            top: 6%;
+            font-size: 0.4em;
+        }
+    }
+    @media all and (max-width:1280px) and (min-width: 500px){
+        .wheel-text-block{
+            right: 3%;
+            top: 16%;
+            font-size: 1.2em;
+        }
+    }
+    @media all and (min-width: 800px) and (max-width: 800px){
+        .wheel-text-block{
+            right: 4%;
+            top: 14%;
+            font-size: 0.8em;
+        }
+    }
+    @media all and (max-width:1367px) and (min-width: 1281px){
+        .wheel-text-block{
+            right: 4%;
+            top: 19%;
+            font-size: 1.6em;
+        }
+    }
+    @media all and (min-width:1368px){
+        .wheel-text-block{
+            right: 4%;
+            top: 22%;
+            font-size: 1.6em;
+        }
+    }
+      @media all and (max-width:1441px) and (min-width:1439px){
+        .wheel-text-block{
+            top: 19%;
+            font-size: 1.6em;
+        }
+    }
+        @keyframes wheelTextBlock {
+        0%   { transform: translate(200px, 0); }
+        100% { transform: translate(0, 0); }
+    }
+    .wheel-text-block{ animation: wheelTextBlock 2s linear; }
