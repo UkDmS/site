@@ -55,7 +55,7 @@
                             <div class='row'>
                                 <div class='col-lg-12'>
                                     <div class='row'>
-                                        <div class="col-lg-8 col-xs-5 col-md-7 col-sm-7">
+                                        <div class="col-lg-8 col-xs-5 col-md-4 col-sm-7">
                                             <h1>Защита салона</h1>
                                         </div>
                                     </div>
@@ -85,9 +85,14 @@
                             </div>
                         </div>
                         <div class='row'>
-                            <div class='col-lg-12 col-xs-12 protection'>
-                                <img src='image/protection/1.gif' class='car'>
-                                <img src='image/protection/3.gif' class='point'>
+                            <div class='protection-text-block'>Чистота и свежесть<br>в салоне автомобиля!</div>
+                        </div>
+                        <div class='row'>
+                            <div class='row block-protection'>
+                                <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2'>
+                                    <img src="image/protection/1.gif" id='protection-car'>
+                                    <img src="image/protection/3.gif" id='protection-points'>
+                                </div>
                             </div>
                         </div>
                         <div class='row'>
@@ -155,7 +160,8 @@
                             </div>
                         </div>
                         <div class='row'>
-                            <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2 price'><span>Цены</span></div>
+                            <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2 price'>
+                                <span class="animatePriceBlock">Цены</span></div>
                         </div>
                         <div class='row my-flex2'>
                             <div class='col-lg-6 col-lg-offset-2 col-xs-7 col-xs-offset-4 col-md-6 col-md-offset-2 col-sm-6  col-sm-offset-2  price-block'>
@@ -337,45 +343,61 @@
         }
 
         document.addEventListener("DOMContentLoaded", scrolling, false);
-
-        var item = document.getElementsByClassName("protection");
-        var car = document.getElementsByClassName("car");
-        var point = document.getElementsByClassName("point");
-        var a = point[0].getBoundingClientRect();
-        var b = car[0].getBoundingClientRect();
-        console.log(a.left) ;
-        console.log(a.width) ;
-/*        alert(a.left) ;
-        alert(a.width) ;
-        alert(screen.width);*/
-        $(".point").css("border","solid 1px black");
-
+        var item = document.getElementsByClassName("block-protection");
+        var price = document.getElementsByClassName("price");
+        var car = document.getElementById("protection-car");
+        var example = document.getElementsByClassName("example");
+        var point = document.getElementById("protection-points");
+        var a = point.getBoundingClientRect();
+        var b = car.getBoundingClientRect();
         function scrolling(e) {
-                    var move, topY;
+            var move;
             if (isPartiallyVisible(item)) {
-                /*$('.car').css("animation", "moveCar 2s forwards");*/
-                if(screen.width!==800 && screen.width!==360  && screen.width<=1368){
-                    move = a.left+a.width/2-b.width/2-20;
-                    //topY = a.height*0.2+'px';
+                switch (screen.width) {
+                    case 360:
+                        move = a.left -50;
+                        break;
+                    case 1366:
+                        move = a.left -150;
+                        break;
+                    case 1920:
+                         move = a.left - 220;
+                        break;
+                    case 800:
+                        move = a.left - 170;
+                        break;
+                    case 1024:
+                        move = a.left - 120;
+                        break;
+                    case 1280:
+                        move = a.left - 140;
+                        break;
+                    default:
+
                 }
-                else if(screen.width===800){
-                   move = a.left+b.width/4-20;
-                   topY =a.height*0.2;
-                }
-                else if(screen.width===360){
-                   move =a.left+b.width/2-40;
-                   topY =5+'%';
-                }
-                $('.car').animate({
-                marginLeft: move+'px',
-                marginTop: topY
-                }, 3000);
-                $('.point').css("animation", "Point 7s ease");
-                console.log('car'+b.left);
+                $('#protection-car').animate({
+                marginLeft: move+'px'
+                }, 1200);
+                $("#protection-points" ).animate({
+                        opacity: 1
+                    }, 2500, function() {
+                    });
             }
+            if (isPartiallyVisible(price)) {
+                $( ".animatePriceBlock" ).animate({
+                        display: "block",
+                        opacity: 1
+                    }, 1500, function() {
+                    });
+            }
+            if (isPartiallyVisible(example)) {
+                    $( ".example" ).animate({
+                            opacity: 1
+                    }, 2500, function() {
 
+                    });
+                }
         }
-
         function isPartiallyVisible(el) {
             var elementBoundary = el[0].getBoundingClientRect();
 

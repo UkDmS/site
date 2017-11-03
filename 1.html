@@ -1,0 +1,109 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+   .elem, .elem1{
+        height: 80px;
+        width: 80px;
+        background-color: black;
+        margin-right: 5px;
+        margin-top: 20px;
+   }
+
+</style>
+<script>
+$(document).ready(function(){
+var item = document.getElementsByClassName("elem1");
+var skew = '-10';
+console.log($(item).outerWidth());
+ $(".elem1").css("transform","skewY("+skew+"deg)");
+/*        var a = point[0].getBoundingClientRect();
+        console.log(a.left) ;
+        console.log(a.width) ;*/
+        });
+</script>
+<ul>
+<div class='row'>
+<div class="row">
+    <div class="col-lg-3 elem" style="transform: translateY(52px) skewY(-10deg);"></div>
+    <div class="col-lg-3 elem" style="transform: translateY(38px) skewY(-10deg);"></div>
+    <div class="col-lg-3 elem" style="transform: translateY(24px) skewY(-10deg);"></div>
+    <div class="col-lg-3 elem" style="transform: translateY(10px)  skewY(-10deg);"></div>
+</div>
+</div>
+<div class='row'>
+<div class="row">
+    <div class="col-lg-3 elem" style="transform: translateY(52px) skewY(-10deg);"></div>
+    <div class="col-lg-3 elem" style="transform: translateY(38px) skewY(-10deg);"></div>
+    <div class="col-lg-3 elem" style="transform: translateY(24px) skewY(-10deg);"></div>
+    <div class="col-lg-3 elem" style="transform: translateY(10px) skewY(-10deg);"></div>
+</div>
+</div>
+</ul>
+    <div id="block-for-slider">
+        <div id="viewport">
+            <ul id="slidewrapper">
+                <li class="slide"><img src="img/1.jpg" alt="1" class="slide-img"></li>
+                <li class="slide"><img src="img/2.jpg" alt="2" class="slide-img"></li>
+                <li class="slide"><img src="img/3.jpg" alt="3" class="slide-img"></li>
+                <li class="slide"><img src="img/4.jpg" alt="4" class="slide-img"></li>
+            </ul>
+        </div>
+    </div>
+    <style>
+    body {
+    margin: 0;
+    padding: 0;
+}
+
+#block-for-slider {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+#viewport {
+    width: 100%;
+    display: table;
+    position: relative;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#slidewrapper {
+    position: relative;
+    width: calc(100% * 4);
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+#slidewrapper ul, #slidewrapper li {
+    margin: 0;
+    padding: 0;
+}
+
+#slidewrapper li {
+    width: calc(100%/4);
+    list-style: none;
+    display: inline;
+    float: left;
+}
+
+.slide-img {
+    width: 100%;
+}
+</style>

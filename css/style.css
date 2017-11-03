@@ -639,8 +639,8 @@
         height: 20px;
         font-size: 8px;
     }
-    .breadcrumbs{
-        font-size: 0.4em;
+   .breadcrumbs{
+      /*  font-size: 0.4em;   */
         top: 10px;
     }
 }
@@ -786,69 +786,111 @@ bottom: 0;
         font-size: 1.4em;
     }
 }
-@media all and (max-device-width:1365px) and (min-device-width: 500px) and (orientation: landscape){
-}
+
 
 
 /* page protection */
-    .protection{
-        position: relative;
-        margin: auto;
-        width: 85%;
-        float: none;
-        padding-bottom: calc(10vw);
-        padding-top: 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
     .protection img{
         width: 60%;
         margin: auto;
         display: block;
     }
-    .car{
-        width: 25% !important;
+    .protection-text-block{
+        display: block;
         position: absolute;
-        z-index: -2;
+        text-align: right;
+        font-weight: bold;
     }
-    @keyframes moveCar {
-        0%   { transform: translate(-50px, 0); }
-        100% { transform: translate(0px, 0); }
+    .block-protection{
+        position: relative;
+        margin-bottom: 12%;
+        margin-top: 15%;
     }
-       /* .car { animation: moveCar 2s forwards;}       */
-    @keyframes Point {
-        0%   { opacity: 0; }
-        50%   { opacity: 0.5; }
-        75%   { opacity: 0.75 }
-        100% { opacity: 1; }
+    #protection-car{
+        width: 45%;
+        margin: auto;
+        display: block;
+        margin-left: -1000px;
     }
-     /*   .point { animation: Point 7s ease;}*/
+    #protection-points{
+        width: 60%;
+        position: absolute;
+        margin: auto;
+        left: -3%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+    }
+    @keyframes translatingProtection {
+        0%   { transform: translate(200px, 0); }
+        100% { transform: translate(0, 0); }
+    }
+    .protection-text-block { animation: translatingProtection 2s linear; }
+    @media all and (min-width: 800px) and (max-width: 800px){
+        .protection-text-block{
+            right: 5%;
+            top: 16%;
+            font-size: 1.4em;
+        }
+    }
+    @media all and (max-width:480px){
+        .protection-text-block{
+            right: 7%;
+            top: 5.5%;
+            font-size: 0.4em;
+        }
+    }
+    @media all and (max-width:1280px) and (min-width: 500px){
+        .protection-text-block{
+            right: 5%;
+            top: 15%;
+            font-size: 1.4em;
+        }
+    }
+    @media all and (min-width: 800px) and (max-width: 800px){
+        .protection-text-block{
+            right: 5%;
+            top: 12%;
+            font-size: 1em;
+        }
+    }
+    @media all and (max-width:1025px) and (min-width: 1023px){
+        .text-block-brushing{
+            right: 5%;
+            top: 14%;
+            font-size: 1.2em;
+        }
+    }
+    @media all and (max-width:1367px) and (min-width: 1281px){
+        .protection-text-block{
+            right: 5%;
+            top: 16%;
+            font-size: 1.4em;
+        }
+    }
+    @media all and (min-width:1368px){
+        .protection-text-block{
+            right: 5%;
+            top: 18%;
+            font-size: 1.6em;
+        }
+    }
+    @media all and (max-width:1441px) and (min-width: 1439px){
+        .protection-text-block{
+            right: 5%;
+            top: 16%;
+            font-size: 1.4em;
+        }
+    }
+    @media all and (max-width:1441px) and (min-width: 1439px){
+        .protection-text-block{
+            right: 5%;
+            top: 16%;
+            font-size: 1.4em;
+        }
+    }
 
-@media all and (max-width:1280px) and (min-width: 500px){
-    @keyframes moveCar {
-        0%   { transform: translate(-50px, 0); }
-        100% { transform: translate(450px, 0); }
-    }
-}
-@media all and (max-width:1367px) and (min-width: 1281px){
-    @keyframes moveCar {
-        0%   { transform: translate(-50px, 0); }
-        100% { transform: translate(485px, 0); }
-    }
-}
-@media all and (min-width:1368px){
-    .car{
-        width: 30% !important;
-        position: absolute;
-        top: 110px;
-        z-index: -2;
-    }
-    @keyframes moveCar {
-        0%   { transform: translate(-50px, 0); }
-        100% { transform: translate(110%, 0); }
-    }
-}
 /* end page protection */
 /* page salon repair */
     .block-repair{
@@ -1320,3 +1362,84 @@ bottom: 0;
         100% { transform: translate(0, 0); }
     }
     .wheel-text-block{ animation: wheelTextBlock 2s linear; }
+
+
+/* coatinds page */
+     .coatngs{
+         margin-top: 10%;
+     }
+    #coatings-car{
+        width: 50%;
+        margin: auto;
+        display: block;  `
+    }
+    #coatings-points{
+        width: 45%;
+        position: absolute;
+        margin: auto;
+        left: 16%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    .coatings-text-block{
+        display: block;
+        position: absolute;
+        text-align: right;
+        font-weight: bold;
+    }
+    @keyframes translatingCoatings {
+        0%   { transform: translate(200px, 0); }
+        100% { transform: translate(0, 0); }
+    }
+    .coatings-text-block { animation: translatingCoatings 2s linear; }
+    @media all and (max-width:480px){
+        .coatings-text-block{
+            right: 7%;
+            top: 5.5%;
+            font-size: 0.4em;
+        }
+    }
+    @media all and (max-width:1280px) and (min-width: 500px){
+        .coatings-text-block{
+            right: 5%;
+            top: 13%;
+            font-size: 1.4em;
+        }
+    }
+    @media all and (min-width: 800px) and (max-width: 800px){
+        .coatings-text-block{
+            right: 5%;
+            top: 10%;
+            font-size: 1em;
+        }
+    }
+    @media all and (max-width:1025px) and (min-width: 1023px){
+        .coatings-text-block{
+            right: 5%;
+            top: 12%;
+            font-size: 1.2em;
+        }
+    }
+    @media all and (max-width:1367px) and (min-width: 1281px){
+        .coatings-text-block{
+            right: 5%;
+            top: 13%;
+            font-size: 1.4em;
+        }
+    }
+    @media all and (min-width:1368px){
+        .coatings-text-block{
+            right: 5%;
+            top: 14%;
+            font-size: 1.6em;
+        }
+    }
+    @media all and (max-width:1441px) and (min-width: 1439px){
+        .coatings-text-block{
+            right: 5%;
+            top: 13%;
+            font-size: 1.4em;
+        }
+    }
