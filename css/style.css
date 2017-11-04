@@ -273,17 +273,31 @@
         text-align: center;
         font-size: 12px;
     }
-    .engine{
-        position: relative;
+    #engine{
+        width: 53%;
+        position: absolute;
         margin: auto;
-        width: 85%;
-        float: none;
-        padding-bottom: calc(10vw);
-        padding-top: 40px;
-        opacity:  0;
+        left: -6%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -2;
+        opacity: 0;
     }
-    .img-engine{
-        opacity:0;
+    #engine-points{
+        width: 75%;
+        position: absolute;
+        margin: auto;
+        left: 2%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+    }
+    .block-engine{
+        position: relative;
+        margin-bottom: 25%;
+    margin-top: 22%;
     }
 
     .engine img{
@@ -610,7 +624,7 @@
         font-size: 2em;
     }
 }
- @media all and (max-device-width:1365px) and (min-device-width: 500px) and (orientation: landscape){
+/* @media all and (max-device-width:1365px) and (min-device-width: 500px) and (orientation: landscape){
     .middle-engine form.block{
         left: 20%;
         bottom: 12%;
@@ -640,10 +654,10 @@
         font-size: 8px;
     }
    .breadcrumbs{
-      /*  font-size: 0.4em;   */
+
         top: 10px;
     }
-}
+} */
 /* end page engine */
 
 /* brushing page */
@@ -899,13 +913,13 @@ bottom: 0;
         margin-top: 15%;
     }
     #salon-repair{
-        width: 50%;
+        width: 70%;
         margin: auto;
         display: block;
         margin-left: -1000px;
     }
     #salon-repair-points{
-        width: 60%;
+        width: 65%;
         position: absolute;
         margin: auto;
         left: 0;
@@ -939,6 +953,7 @@ bottom: 0;
         position: absolute;
         text-align: right;
         font-weight: bold;
+        right: 6%;
     }
     .flex-stuff{
     	display: flex;
@@ -962,40 +977,8 @@ bottom: 0;
 
 
 
-@media all and (max-device-width:1366px) and (min-device-width: 500px) and (orientation: landscape){
-    .repair-text-block{
-        right: 8%;
-        top: 17%;
-        font-size: 1.2em;
-    }
-}
-@media all and (max-width:1280px) and (min-width: 500px){
-    .repair-text-block{
-        right: 5%;
-        top: 21%;
-        font-size: 1.4em;
-    }
-}
-@media all and (max-width:1367px) and (min-width: 1281px){
-    .repair-text-block{
-        right: 5%;
-        top: 24%;
-        font-size: 1.6em;
-    }
-}
-@media all and (max-width: 800px){
-    .repair-text-block{
-        right: 5%;
-        top: 20%;
-        font-size: 1em;
-    }
-}
+
 @media all and (max-width:480px){
-    .repair-text-block{
-        right: 6%;
-        top: 8%;
-        font-size: 0.6em;
-    }
     .flex-stuff {
         display: block;
         margin-bottom: 30px;
@@ -1012,13 +995,7 @@ bottom: 0;
     }
 
 }
-@media all and (min-width:1368px){
-    .repair-text-block{
-        right: 6%;
-        top: 25%;
-        font-size: 1.8em;
-    }
-}
+
     @keyframes translating-repair-text {
         0%   { transform: translate(200px, 0); }
         100% { transform: translate(0, 0); }
@@ -1063,7 +1040,50 @@ bottom: 0;
         margin-top: 10%;
 
     }
-
+           @media all and (max-width:480px){
+        .repair-text-block{
+            right: 8%!important;
+            top: 5%;
+            font-size: 0.4em;
+        }
+    }
+    @media all and (max-width:1280px) and (min-width: 500px){
+        .repair-text-block{
+            right: 8%;
+            top: 15.5%;
+            font-size: 1.6em;
+        }
+    }
+    @media all and (min-width: 1023px) and (max-width: 1025px){
+        .repair-text-block{
+            top: 14.5%;
+            font-size: 1.4em;
+        }
+    }
+    @media all and (min-width: 800px) and (max-width: 800px){
+        .repair-text-block{
+            top: 13%;
+            font-size: 1.2em;
+        }
+    }
+    @media all and (max-width:1367px) and (min-width: 1281px){
+        .repair-text-block{
+            top: 16%;
+            font-size: 1.6em;
+        }
+    }
+    @media all and (min-width:1368px){
+        .repair-text-block{
+            top: 17%;
+            font-size: 1.8em;
+        }
+    }
+     @media all and (max-width:1441px) and (min-width:1439px){
+        .repair-text-block{
+            top: 16%;
+            font-size: 1.8em;
+        }
+    }
 /* end page salon repair */
 
 
@@ -1130,6 +1150,11 @@ bottom: 0;
         }
         .trust span{
             font-size: 1.2em;
+        }
+        .glass-text-block{
+            right: 8%!important;
+            top: 4%;
+            font-size: 0.4em;
         }
     }
     @media all and (max-width:1280px) and (min-width: 500px){
@@ -1365,22 +1390,32 @@ bottom: 0;
 
 
 /* coatinds page */
-     .coatngs{
-         margin-top: 10%;
+     .coatings{
+                 position: relative;
+        margin-bottom: 25%;
+    margin-top: 22%;
      }
     #coatings-car{
+        position: absolute;
         width: 50%;
         margin: auto;
-        display: block;  `
+        left: -2000px;
+        top: -2000px;
+        bottom: 0;
+        right: 0;
     }
     #coatings-points{
-        width: 45%;
+        width: 60%;
         position: absolute;
         margin: auto;
         left: 16%;
         top: 0;
         bottom: 0;
         right: 0;
+        opacity: 0;
+    }
+    .properties{
+        opacity: 0;
     }
 
     .coatings-text-block{
@@ -1411,7 +1446,7 @@ bottom: 0;
     @media all and (min-width: 800px) and (max-width: 800px){
         .coatings-text-block{
             right: 5%;
-            top: 10%;
+            top: 12%;
             font-size: 1em;
         }
     }
@@ -1425,7 +1460,7 @@ bottom: 0;
     @media all and (max-width:1367px) and (min-width: 1281px){
         .coatings-text-block{
             right: 5%;
-            top: 13%;
+            top: 16%;
             font-size: 1.4em;
         }
     }
@@ -1438,6 +1473,187 @@ bottom: 0;
     }
     @media all and (max-width:1441px) and (min-width: 1439px){
         .coatings-text-block{
+            right: 5%;
+            top: 13%;
+            font-size: 1.4em;
+        }
+    }
+/* end */
+
+/* carcase-repair */
+  .carcase-repair{
+                 position: relative;
+        margin-bottom: 25%;
+    margin-top: 22%;
+     }
+    #carcase-repair-car{
+        position: absolute;
+        width: 50%;
+        margin: auto;
+        left: -2000px;
+        top: -2000px;
+        bottom: 0;
+        right: 0;
+    }
+    #carcase-repair-points{
+        width: 74%;
+        position: absolute;
+        margin: auto;
+        left: 8%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+    }
+    .properties{
+        opacity: 0;
+    }
+
+    .carcase-repair-text-block{
+        display: block;
+        position: absolute;
+        text-align: right;
+        font-weight: bold;
+    }
+    @keyframes translatingCarcaseRepair {
+        0%   { transform: translate(200px, 0); }
+        100% { transform: translate(0, 0); }
+    }
+    .carcase-repair-text-block { animation: translatingCarcaseRepair 2s linear; }
+    @media all and (max-width:480px){
+        .carcase-repair-text-block{
+            right: 7%;
+            top: 5.5%;
+            font-size: 0.4em;
+        }
+    }
+    @media all and (max-width:1280px) and (min-width: 500px){
+        .carcase-repair-text-block{
+            right: 5%;
+            top: 13%;
+            font-size: 1.4em;
+        }
+    }
+    @media all and (min-width: 800px) and (max-width: 800px){
+        .carcase-repair-text-block{
+            right: 5%;
+            top: 12%;
+            font-size: 1em;
+        }
+    }
+    @media all and (max-width:1025px) and (min-width: 1023px){
+        .carcase-repair-text-block{
+            right: 5%;
+            top: 12%;
+            font-size: 1.2em;
+        }
+    }
+    @media all and (max-width:1367px) and (min-width: 1281px){
+        .carcase-repair-text-block{
+            right: 5%;
+            top: 16%;
+            font-size: 1.4em;
+        }
+    }
+    @media all and (min-width:1368px){
+        .carcase-repair-text-block{
+            right: 5%;
+            top: 14%;
+            font-size: 1.6em;
+        }
+    }
+    @media all and (max-width:1441px) and (min-width: 1439px){
+        .carcase-repair-text-block{
+            right: 5%;
+            top: 13%;
+            font-size: 1.4em;
+        }
+    }
+/* end    */
+/* car-skin */
+  .car-skin{
+                 position: relative;
+        margin-bottom: 25%;
+    margin-top: 22%;
+     }
+    #car-skin-car{
+        position: absolute;
+        width: 50%;
+        margin: auto;
+        left: -2000px;
+        top: -2000px;
+        bottom: 0;
+        right: 0;
+    }
+    #car-skin-points{
+        width: 70%;
+        position: absolute;
+        margin: auto;
+        left: 14%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+    }
+    .properties{
+        opacity: 0;
+    }
+
+    .car-skin-text-block{
+        display: block;
+        position: absolute;
+        text-align: right;
+        font-weight: bold;
+    }
+    @keyframes translatingCarcaseRepair {
+        0%   { transform: translate(200px, 0); }
+        100% { transform: translate(0, 0); }
+    }
+    .car-skin-text-block { animation: translatingCarcaseRepair 2s linear; }
+    @media all and (max-width:480px){
+        .car-skin-text-block{
+            right: 7%;
+            top: 5.5%;
+            font-size: 0.4em;
+        }
+    }
+    @media all and (max-width:1280px) and (min-width: 500px){
+        .car-skin-text-block{
+            right: 5%;
+            top: 13%;
+            font-size: 1.4em;
+        }
+    }
+    @media all and (min-width: 800px) and (max-width: 800px){
+        .car-skin-text-block{
+            right: 5%;
+            top: 12%;
+            font-size: 1em;
+        }
+    }
+    @media all and (max-width:1025px) and (min-width: 1023px){
+        .car-skin-text-block{
+            right: 5%;
+            top: 12%;
+            font-size: 1.2em;
+        }
+    }
+    @media all and (max-width:1367px) and (min-width: 1281px){
+        .car-skin-text-block{
+            right: 5%;
+            top: 17%;
+            font-size: 1.4em;
+        }
+    }
+    @media all and (min-width:1368px){
+        .car-skin-text-block{
+            right: 5%;
+            top: 14%;
+            font-size: 1.6em;
+        }
+    }
+    @media all and (max-width:1441px) and (min-width: 1439px){
+        .car-skin-text-block{
             right: 5%;
             top: 13%;
             font-size: 1.4em;

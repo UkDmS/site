@@ -169,7 +169,7 @@
                                 <div class='image-with-price'>
                                     <div class='row'>
                                         <div class='col-lg-9 col-lg-offset-1'>
-                                            <p>Стоимость работ</p>
+                                            <p class='animatePriceBlock'>Стоимость работ</p>
                                         </div>
                                         <div class='row'>
                                             <div class='col-lg-9 col-lg-offset-1'>
@@ -222,3 +222,77 @@
         </div>
     </body>
 </html>
+<script>
+        var isScrolling = false;
+        window.addEventListener("scroll", throttleScroll, false);
+        function throttleScroll(e) {
+            if (isScrolling == false) {
+                window.requestAnimationFrame(function() {
+                    scrolling(e);
+                    isScrolling = false;
+                });
+            }
+            isScrolling = true;
+        }
+        document.addEventListener("DOMContentLoaded", scrolling, false);
+        var item = document.getElementsByClassName("block-repair");
+        var price = document.getElementsByClassName("animatePriceBlock");
+        var car = document.getElementById("salon-repair");
+        var point = document.getElementById("salon-repair-points");
+        var a = point.getBoundingClientRect();
+        var b = car.getBoundingClientRect();
+        console.log(a);
+        function scrolling(e) {
+            var move;
+            if (isPartiallyVisible(item)) {
+                switch (screen.width) {
+                    case 360:
+                        move = a.left -50;
+                        break;
+                    case 1366:
+                        move = a.left -250;
+                        break;
+                    case 1920:
+                         move = a.left - 220;
+                        break;
+                    case 800:
+                        move = a.left - 170;
+                        break;
+                    case 1024:
+                        move = a.left - 120;
+                        break;
+                    case 1280:
+                        move = a.left - 140;
+                        break;
+                    default:
+
+                }
+                $('#salon-repair').animate({
+                marginLeft: move+'px'
+                }, 1200);
+                $( "#salon-repair-points" ).animate({
+                        opacity: 1
+                    }, 1800, function() {
+                });
+            }
+            if (isPartiallyVisible(price)) {
+                $( ".animatePriceBlock" ).animate({
+                        opacity: 1
+                    }, 1500, function() {
+                    });
+            }
+        }
+        function isPartiallyVisible(el) {
+            var elementBoundary = el[0].getBoundingClientRect();
+            var top = elementBoundary.top;
+            var bottom = elementBoundary.bottom;
+            var height = elementBoundary.height;
+            return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+        }
+        function isFullyVisible(el) {
+            var elementBoundary = el[0].getBoundingClientRect();
+            var top = elementBoundary.top;
+            var bottom = elementBoundary.bottom;
+            return ((top >= 0) && (bottom <= window.innerHeight));
+        }
+    </script>

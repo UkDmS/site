@@ -84,11 +84,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class='row scroll'>
-                            <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2 engine'>
-                                <img src='image/engine/engine.jpg' class="img-engine">
+                        <div class='row scroll block-engine'>
+                            <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2'>
+                                <img src='image/engine/engine.png' id="engine">
+                                <img src='image/engine/points.png' id="engine-points">
                             </div>
-                            <div class='text-block'>Уверенная работа<br> двигателя!</div>
                         </div>
                         <div class='row'>
                             <div class='col-lg-12 col-xs-12'>
@@ -260,11 +260,11 @@
 
         function scrolling(e) {
             if (isPartiallyVisible(item)) {
-                $( ".engine" ).animate({
+                $( "#engine" ).animate({
                         opacity: 1
                     }, 1500, function() {
                     });
-                $( ".img-engine" ).animate({
+                $( "#engine-points" ).animate({
                         opacity: 1
                     }, 2500, function() {
                     });
