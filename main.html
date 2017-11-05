@@ -10,6 +10,87 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="fullPage/jquery.fullPage.css" />
+<script src="vendors/fullPage/jquery.easings.min.js"></script>
+<script type="text/javascript" src="fullPage/vendors/scrolloverflow.min.js"></script>
+<script type="text/javascript" src="fullPage/jquery.fullPage.js"></script>
+<script>
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+        //Навигация
+        menu: '#menu',
+        lockAnchors: false,
+        anchors:['firstPage', 'secondPage'],
+        navigation: false,
+        navigationPosition: 'right',
+        navigationTooltips: ['firstSlide', 'secondSlide'],
+        showActiveTooltip: false,
+        slidesNavigation: false,
+        slidesNavPosition: 'bottom',
+
+        //Скроллинг
+        css3: true,
+        scrollingSpeed: 700,
+        autoScrolling: true,
+        fitToSection: true,
+        fitToSectionDelay: 1000,
+        scrollBar: false,
+        easing: 'easeInOutCubic',
+        easingcss3: 'ease',
+        loopBottom: false,
+        loopTop: false,
+        loopHorizontal: true,
+        continuousVertical: false,
+        continuousHorizontal: false,
+        scrollHorizontally: false,
+        interlockedSlides: false,
+        dragAndMove: false,
+        offsetSections: false,
+        resetSliders: false,
+        fadingEffect: false,
+        normalScrollElements: '#element1, .element2',
+        scrollOverflow: false,
+        scrollOverflowReset: false,
+        scrollOverflowOptions: null,
+        touchSensitivity: 15,
+        normalScrollElementTouchThreshold: 5,
+        bigSectionsDestination: null,
+
+        //Доступ
+        keyboardScrolling: true,
+        animateAnchor: true,
+        recordHistory: true,
+
+        //Дизайн
+        controlArrows: true,
+        verticalCentered: true,
+        sectionsColor : ['#ccc', '#fff'],
+        paddingTop: '0',
+        paddingBottom: '10px',
+        fixedElements: '#header, .footer',
+        responsiveWidth: 0,
+        responsiveHeight: 0,
+        responsiveSlides: false,
+        parallax: false,
+        parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+
+        //Настроить селекторы
+        sectionSelector: '.section',
+        slideSelector: '.slide',
+
+        lazyLoading: true,
+
+        //события
+        onLeave: function(index, nextIndex, direction){},
+        afterLoad: function(anchorLink, index){},
+        afterRender: function(){},
+        afterResize: function(){},
+        afterResponsive: function(isResponsive){},
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+    });
+});
+</script>
     </head>
     <body>
         <div class='container'>
@@ -39,16 +120,42 @@
                         </div>
                 </nav>
             </div>
-            <div class='col-lg-11 col-xs-10'>
+            <div class='col-lg-11 col-xs-10 col-sm-12'>
                 <main>
-                    <div id="slide1">
-                    </div>
-                    <div id="slide-2">
-
-                    </div>
-                </main>
-
+                    <div id='fullpage'>
+                        <div class="section display1"></div>
+                        <div class="section display2">
+                            <div class='engineBlock'><img src="image/main/engine.png" alt="" /></div>
+                            <div class='wheelBlock'><img src="image/main/wheel.png" alt="" /></div>
+                            <div class='glassBlock'><img src="image/main/glass.png" alt="" /></div>
+                            <div class='carcaseBlock'><img src="image/main/carcase.png" alt="" /></div>
+                            <div class='placeBlock'><img src="image/main/place.png" alt="" /></div>
+                        </div>
+            <div class="section">Slide 2
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt aliquet venenatis. Quisque nec dolor id purus aliquam viverra a ac eros. Quisque a tellus semper, mollis ligula et, rutrum risus. Suspendisse purus turpis, semper et turpis eu, venenatis egestas nisi. Vestibulum rhoncus laoreet augue, sit amet aliquet sem imperdiet nec. Aenean id luctus turpis. Aenean porttitor libero in sem tempor lobortis. Mauris in magna quis purus volutpat laoreet. Nullam sollicitudin volutpat lorem, non dictum purus maximus ut. Morbi id condimentum sapien, convallis malesuada lacus. Mauris id varius nunc. Duis ligula elit, ornare et leo mattis, volutpat vulputate arcu. Nulla tincidunt erat sed cursus ultricies. Curabitur bibendum turpis quis velit porttitor, at eleifend dolor dictum.
+Sed eget ante eget risus rhoncus porta. Nulla est sapien, tristique venenatis lectus in, tincidunt pharetra diam. Donec eu vehicula ex, non posuere ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet justo ipsum, et varius sem lacinia sit amet. Duis faucibus leo et tempor ullamcorper. Curabitur elementum hendrerit elit eget sodales. Maecenas imperdiet mi tellus, a commodo orci condimentum vitae. Suspendisse lobortis magna augue, sed venenatis est consectetur in. Vestibulum semper dapibus tortor quis posuere. Sed consectetur ipsum mi, sed vestibulum purus tempus eu. Suspendisse arcu leo, suscipit vel arcu vulputate, mattis auctor massa. Nam aliquam vel neque ut accumsan. Cras egestas lorem id mi eleifend commodo. Vestibulum posuere fringilla massa sit amet imperdiet. Vivamus tincidunt lorem feugiat lorem varius laoreet.
+Duis in fringilla felis. Aenean id turpis suscipit, finibus velit eu, tempus massa. Pellentesque id purus ut neque venenatis vestibulum. Etiam molestie vestibulum congue. Duis sit amet ex sit amet neque auctor molestie. Proin vel magna lacinia, blandit elit et, tincidunt nulla. Vestibulum eleifend quam diam, eget auctor nisl ultricies ac. Sed dictum nec tortor non fringilla. Curabitur quam tortor, porta gravida imperdiet ut, porttitor non quam. Sed facilisis diam ut mollis gravida. In nisl enim, luctus a auctor non, auctor nec dolor. In eget mi dolor. Nulla malesuada arcu in diam tempus varius. Suspendisse in viverra est, non egestas lacus. Proin id tortor eros.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt aliquet venenatis. Quisque nec dolor id purus aliquam viverra a ac eros. Quisque a tellus semper, mollis ligula et, rutrum risus. Suspendisse purus turpis, semper et turpis eu, venenatis egestas nisi. Vestibulum rhoncus laoreet augue, sit amet aliquet sem imperdiet nec. Aenean id luctus turpis. Aenean porttitor libero in sem tempor lobortis. Mauris in magna quis purus volutpat laoreet. Nullam sollicitudin volutpat lorem, non dictum purus maximus ut. Morbi id condimentum sapien, convallis malesuada lacus. Mauris id varius nunc. Duis ligula elit, ornare et leo mattis, volutpat vulputate arcu. Nulla tincidunt erat sed cursus ultricies. Curabitur bibendum turpis quis velit porttitor, at eleifend dolor dictum.
+Sed eget ante eget risus rhoncus porta. Nulla est sapien, tristique venenatis lectus in, tincidunt pharetra diam. Donec eu vehicula ex, non posuere ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet justo ipsum, et varius sem lacinia sit amet. Duis faucibus leo et tempor ullamcorper. Curabitur elementum hendrerit elit eget sodales. Maecenas imperdiet mi tellus, a commodo orci condimentum vitae. Suspendisse lobortis magna augue, sed venenatis est consectetur in. Vestibulum semper dapibus tortor quis posuere. Sed consectetur ipsum mi, sed vestibulum purus tempus eu. Suspendisse arcu leo, suscipit vel arcu vulputate, mattis auctor massa. Nam aliquam vel neque ut accumsan. Cras egestas lorem id mi eleifend commodo. Vestibulum posuere fringilla massa sit amet imperdiet. Vivamus tincidunt lorem feugiat lorem varius laoreet.
+Duis in fringilla felis. Aenean id turpis suscipit, finibus velit eu, tempus massa. Pellentesque id purus ut neque venenatis vestibulum. Etiam molestie vestibulum congue. Duis sit amet ex sit amet neque auctor molestie. Proin vel magna lacinia, blandit elit et, tincidunt nulla. Vestibulum eleifend quam diam, eget auctor nisl ultricies ac. Sed dictum nec tortor non fringilla. Curabitur quam tortor, porta gravida imperdiet ut, porttitor non quam. Sed facilisis diam ut mollis gravida. In nisl enim, luctus a auctor non, auctor nec dolor. In eget mi dolor. Nulla malesuada arcu in diam tempus varius. Suspendisse in viverra est, non egestas lacus. Proin id tortor eros.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt aliquet venenatis. Quisque nec dolor id purus aliquam viverra a ac eros. Quisque a tellus semper, mollis ligula et, rutrum risus. Suspendisse purus turpis, semper et turpis eu, venenatis egestas nisi. Vestibulum rhoncus laoreet augue, sit amet aliquet sem imperdiet nec. Aenean id luctus turpis. Aenean porttitor libero in sem tempor lobortis. Mauris in magna quis purus volutpat laoreet. Nullam sollicitudin volutpat lorem, non dictum purus maximus ut. Morbi id condimentum sapien, convallis malesuada lacus. Mauris id varius nunc. Duis ligula elit, ornare et leo mattis, volutpat vulputate arcu. Nulla tincidunt erat sed cursus ultricies. Curabitur bibendum turpis quis velit porttitor, at eleifend dolor dictum.
+Sed eget ante eget risus rhoncus porta. Nulla est sapien, tristique venenatis lectus in, tincidunt pharetra diam. Donec eu vehicula ex, non posuere ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet justo ipsum, et varius sem lacinia sit amet. Duis faucibus leo et tempor ullamcorper. Curabitur elementum hendrerit elit eget sodales. Maecenas imperdiet mi tellus, a commodo orci condimentum vitae. Suspendisse lobortis magna augue, sed venenatis est consectetur in. Vestibulum semper dapibus tortor quis posuere. Sed consectetur ipsum mi, sed vestibulum purus tempus eu. Suspendisse arcu leo, suscipit vel arcu vulputate, mattis auctor massa. Nam aliquam vel neque ut accumsan. Cras egestas lorem id mi eleifend commodo. Vestibulum posuere fringilla massa sit amet imperdiet. Vivamus tincidunt lorem feugiat lorem varius laoreet.
+Duis in fringilla felis. Aenean id turpis suscipit, finibus velit eu, tempus massa. Pellentesque id purus ut neque venenatis vestibulum. Etiam molestie vestibulum congue. Duis sit amet ex sit amet neque auctor molestie. Proin vel magna lacinia, blandit elit et, tincidunt nulla. Vestibulum eleifend quam diam, eget auctor nisl ultricies ac. Sed dictum nec tortor non fringilla. Curabitur quam tortor, porta gravida imperdiet ut, porttitor non quam. Sed facilisis diam ut mollis gravida. In nisl enim, luctus a auctor non, auctor nec dolor. In eget mi dolor. Nulla malesuada arcu in diam tempus varius. Suspendisse in viverra est, non egestas lacus. Proin id tortor eros.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt aliquet venenatis. Quisque nec dolor id purus aliquam viverra a ac eros. Quisque a tellus semper, mollis ligula et, rutrum risus. Suspendisse purus turpis, semper et turpis eu, venenatis egestas nisi. Vestibulum rhoncus laoreet augue, sit amet aliquet sem imperdiet nec. Aenean id luctus turpis. Aenean porttitor libero in sem tempor lobortis. Mauris in magna quis purus volutpat laoreet. Nullam sollicitudin volutpat lorem, non dictum purus maximus ut. Morbi id condimentum sapien, convallis malesuada lacus. Mauris id varius nunc. Duis ligula elit, ornare et leo mattis, volutpat vulputate arcu. Nulla tincidunt erat sed cursus ultricies. Curabitur bibendum turpis quis velit porttitor, at eleifend dolor dictum.
+Sed eget ante eget risus rhoncus porta. Nulla est sapien, tristique venenatis lectus in, tincidunt pharetra diam. Donec eu vehicula ex, non posuere ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet justo ipsum, et varius sem lacinia sit amet. Duis faucibus leo et tempor ullamcorper. Curabitur elementum hendrerit elit eget sodales. Maecenas imperdiet mi tellus, a commodo orci condimentum vitae. Suspendisse lobortis magna augue, sed venenatis est consectetur in. Vestibulum semper dapibus tortor quis posuere. Sed consectetur ipsum mi, sed vestibulum purus tempus eu. Suspendisse arcu leo, suscipit vel arcu vulputate, mattis auctor massa. Nam aliquam vel neque ut accumsan. Cras egestas lorem id mi eleifend commodo. Vestibulum posuere fringilla massa sit amet imperdiet. Vivamus tincidunt lorem feugiat lorem varius laoreet.
+Duis in fringilla felis. Aenean id turpis suscipit, finibus velit eu, tempus massa. Pellentesque id purus ut neque venenatis vestibulum. Etiam molestie vestibulum congue. Duis sit amet ex sit amet neque auctor molestie. Proin vel magna lacinia, blandit elit et, tincidunt nulla. Vestibulum eleifend quam diam, eget auctor nisl ultricies ac. Sed dictum nec tortor non fringilla. Curabitur quam tortor, porta gravida imperdiet ut, porttitor non quam. Sed facilisis diam ut mollis gravida. In nisl enim, luctus a auctor non, auctor nec dolor. In eget mi dolor. Nulla malesuada arcu in diam tempus varius. Suspendisse in viverra est, non egestas lacus. Proin id tortor eros.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt aliquet venenatis. Quisque nec dolor id purus aliquam viverra a ac eros. Quisque a tellus semper, mollis ligula et, rutrum risus. Suspendisse purus turpis, semper et turpis eu, venenatis egestas nisi. Vestibulum rhoncus laoreet augue, sit amet aliquet sem imperdiet nec. Aenean id luctus turpis. Aenean porttitor libero in sem tempor lobortis. Mauris in magna quis purus volutpat laoreet. Nullam sollicitudin volutpat lorem, non dictum purus maximus ut. Morbi id condimentum sapien, convallis malesuada lacus. Mauris id varius nunc. Duis ligula elit, ornare et leo mattis, volutpat vulputate arcu. Nulla tincidunt erat sed cursus ultricies. Curabitur bibendum turpis quis velit porttitor, at eleifend dolor dictum.
+Sed eget ante eget risus rhoncus porta. Nulla est sapien, tristique venenatis lectus in, tincidunt pharetra diam. Donec eu vehicula ex, non posuere ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet justo ipsum, et varius sem lacinia sit amet. Duis faucibus leo et tempor ullamcorper. Curabitur elementum hendrerit elit eget sodales. Maecenas imperdiet mi tellus, a commodo orci condimentum vitae. Suspendisse lobortis magna augue, sed venenatis est consectetur in. Vestibulum semper dapibus tortor quis posuere. Sed consectetur ipsum mi, sed vestibulum purus tempus eu. Suspendisse arcu leo, suscipit vel arcu vulputate, mattis auctor massa. Nam aliquam vel neque ut accumsan. Cras egestas lorem id mi eleifend commodo. Vestibulum posuere fringilla massa sit amet imperdiet. Vivamus tincidunt lorem feugiat lorem varius laoreet.
+Duis in fringilla felis. Aenean id turpis suscipit, finibus velit eu, tempus massa. Pellentesque id purus ut neque venenatis vestibulum. Etiam molestie vestibulum congue. Duis sit amet ex sit amet neque auctor molestie. Proin vel magna lacinia, blandit elit et, tincidunt nulla. Vestibulum eleifend quam diam, eget auctor nisl ultricies ac. Sed dictum nec tortor non fringilla. Curabitur quam tortor, porta gravida imperdiet ut, porttitor non quam. Sed facilisis diam ut mollis gravida. In nisl enim, luctus a auctor non, auctor nec dolor. In eget mi dolor. Nulla malesuada arcu in diam tempus varius. Suspendisse in viverra est, non egestas lacus. Proin id tortor eros.
+                </div>
             </div>
-        </div></div>
+            <div class="section">Slide 3</div>
+            <div class="section">Slide 4</div>
+        </div>
+                </main>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
