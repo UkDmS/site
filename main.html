@@ -21,7 +21,7 @@ $(document).ready(function() {
         menu: '#menu',
         lockAnchors: false,
         anchors:['firstPage', 'secondPage'],
-        navigation: false,
+        navigation: true,
         navigationPosition: 'right',
         navigationTooltips: ['firstSlide', 'secondSlide'],
         showActiveTooltip: false,
@@ -131,6 +131,11 @@ $(document).ready(function() {
                             <div class='carcaseBlock'><img src="image/main/carcase.png" alt="" /></div>
                             <div class='placeBlock'><img src="image/main/place.png" alt="" /></div>
                             <div class='close-img'><img src="image/main/icons8-cancel.png" alt="" /></div>
+                            <span class='text-engine'>Двигатель</span>
+                            <span class='text-salon'>Салон</span>
+                            <span class='text-glass'>Стекла</span>
+                            <span class='text-wheel'>Колеса</span>
+                            <span class='text-carcase'>Кузов</span>
                         </div>
             <div class="section">Slide 2
                 <div>
@@ -164,13 +169,120 @@ Duis in fringilla felis. Aenean id turpis suscipit, finibus velit eu, tempus mas
     $('.engineBlock').click(function(){
         $('.display2').toggleClass("display2-z-engine");
         if($(".display2").hasClass("display2-z-engine")){
+            $(".display2-z-engine").css('z-index','10');
             $('.close-img').css("opacity",'1');
+            $('.text-engine').css("opacity",'1');
             $('.engineBlock').css("pointer-events",'none');
+            $('.placeBlock').css("pointer-events",'none');
+            $('.carcaseBlock').css("pointer-events",'none');
+            $('.wheelBlock').css("pointer-events",'none');
+            $('.glassBlock').css("pointer-events",'none');
+            $('.engineBlock').css("opacity",'0');
+            $('.placeBlock').css("opacity",'0');
+            $('.glassBlock').css("opacity",'0');
+            $('.wheelBlock').css("opacity",'0');
+            $('.carcaseBlock').css("opacity",'0');
+        }
+    });
+    $('.glassBlock').click(function(){
+        $('.display2').toggleClass("display2-z-glass");
+        if($(".display2").hasClass("display2-z-glass")){
+            $(".display2-z-glass").css('z-index','10');
+            $('.close-img').css("opacity",'1');
+            $('.text-glass').css("opacity",'1');
+            $('.engineBlock').css("pointer-events",'none');
+            $('.placeBlock').css("pointer-events",'none');
+            $('.carcaseBlock').css("pointer-events",'none');
+            $('.wheelBlock').css("pointer-events",'none');
+            $('.glassBlock').css("pointer-events",'none');
+            $('.engineBlock').css("opacity",'0');
+            $('.placeBlock').css("opacity",'0');
+            $('.glassBlock').css("opacity",'0');
+            $('.wheelBlock').css("opacity",'0');
+            $('.carcaseBlock').css("opacity",'0');
+        }
+    });
+    $('.carcaseBlock').click(function(){
+        $('.display2').toggleClass("display2-z-carcase");
+        if($(".display2").hasClass("display2-z-carcase")){
+            $(".display2-z-carcase").css('z-index','10');
+            $('.close-img').css("opacity",'1');
+            $('.text-carcase').css("opacity",'1');
+            $('.engineBlock').css("pointer-events",'none');
+            $('.placeBlock').css("pointer-events",'none');
+            $('.carcaseBlock').css("pointer-events",'none');
+            $('.wheelBlock').css("pointer-events",'none');
+            $('.glassBlock').css("pointer-events",'none');
+            $('.engineBlock').css("opacity",'0');
+            $('.placeBlock').css("opacity",'0');
+            $('.glassBlock').css("opacity",'0');
+            $('.wheelBlock').css("opacity",'0');
+            $('.carcaseBlock').css("opacity",'0');
+        }
+    });
+    $('.placeBlock').click(function(){
+        $('.display2').toggleClass("display2-z-salon");
+        if($(".display2").hasClass("display2-z-salon")){
+            $(".display2-z-salon").css('z-index','10');
+            $('.close-img').css("opacity",'1');
+            $('.text-salon').css("opacity",'1');
+            $('.engineBlock').css("pointer-events",'none');
+            $('.placeBlock').css("pointer-events",'none');
+            $('.carcaseBlock').css("pointer-events",'none');
+            $('.wheelBlock').css("pointer-events",'none');
+            $('.glassBlock').css("pointer-events",'none');
+            $('.engineBlock').css("opacity",'0');
+            $('.placeBlock').css("opacity",'0');
+            $('.glassBlock').css("opacity",'0');
+            $('.wheelBlock').css("opacity",'0');
+            $('.carcaseBlock').css("opacity",'0');
+        }
+    });
+    $('.wheelBlock').click(function(){
+        $('.display2').toggleClass("display2-z-wheel");
+        if($(".display2").hasClass("display2-z-wheel")){
+            $(".display2-z-wheel").css('z-index','10');
+            $('.close-img').css("opacity",'1');
+            $('.text-wheel').css("opacity",'1');
+            $('.engineBlock').css("pointer-events",'none');
+            $('.placeBlock').css("pointer-events",'none');
+            $('.carcaseBlock').css("pointer-events",'none');
+            $('.wheelBlock').css("pointer-events",'none');
+            $('.glassBlock').css("pointer-events",'none');
+            $('.engineBlock').css("opacity",'0');
+            $('.placeBlock').css("opacity",'0');
+            $('.glassBlock').css("opacity",'0');
+            $('.wheelBlock').css("opacity",'0');
+            $('.carcaseBlock').css("opacity",'0');
         }
     });
     $('.close-img').click(function(){
-       $('.display2').toggleClass("display2-z-engine");
-       $('.close-img').css("opacity",'0');
-       $('.engineBlock').css("pointer-events",'auto');
+        $('.engineBlock').css("pointer-events",'auto');
+        $('.placeBlock').css("pointer-events",'auto');
+        $('.carcaseBlock').css("pointer-events",'auto');
+        $('.wheelBlock').css("pointer-events",'auto');
+        $('.glassBlock').css("pointer-events",'auto');
+        $('.close-img').css("opacity",'0');
+        $('.engineBlock').css("opacity",'1');
+        $('.placeBlock').css("opacity",'1');
+        $('.glassBlock').css("opacity",'1');
+        $('.wheelBlock').css("opacity",'1');
+        $('.carcaseBlock').css("opacity",'1');
+        $('.display2').removeClass("display2-z-engine display2-z-glass display2-z-carcase display2-z-salon display2-z-wheel");
+        if($(".display2").hasClass("display2-z-engine")===false){
+            $('.text-engine').css("opacity",'0');
+        }
+        if($(".display2").hasClass("display2-z-glass")===false){
+            $('.text-glass').css("opacity",'0');
+        }
+        if($(".display2").hasClass("display2-z-carcase")===false){
+            $('.text-carcase').css("opacity",'0');
+        }
+        if($(".display2").hasClass("display2-z-calon")===false){
+            $('.text-salon').css("opacity",'0');
+        }
+        if($(".display2").hasClass("display2-z-wheel")===false){
+            $('.text-wheel').css("opacity",'0');
+        }
     });
 </script>

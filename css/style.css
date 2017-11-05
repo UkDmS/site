@@ -107,7 +107,39 @@ html, body {height:100%;}
         position: relative;
         width: 100%;
         height: 100%;
-        z-index: 10;
+        z-index: -10;
+    }
+    .display2-z-salon{
+        background-image: url(../image/main/hover-salon.jpg);
+        background-repeat: no-repeat;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+    }
+    .display2-z-carcase{
+        background-image: url(../image/main/hover-carcase.jpg);
+        background-repeat: no-repeat;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+    }
+    .display2-z-wheel{
+        background-image: url(../image/main/hover-wheel.jpg);
+        background-repeat: no-repeat;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+    }
+    .display2-z-glass{
+        background-image: url(../image/main/hover-glass.jpg);
+        background-repeat: no-repeat;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
     }
     .close-img{
         position: absolute;
@@ -115,6 +147,10 @@ html, body {height:100%;}
         top: 2%;
         width: 50px;
         right: 5%;
+    }
+    .engineBlock{
+        width: 45px;
+        height: 45px;
     }
 
     .display2 div.engineBlock img{
@@ -128,7 +164,7 @@ html, body {height:100%;}
         position: relative;
         width: 45px;
         margin-left: 43%;
-        margin-top: 37%;
+        margin-top: 35%;
     }
     .display2 div.glassBlock img{
         position: relative;
@@ -178,6 +214,14 @@ html, body {height:100%;}
         left: 25%;
         top: 45%;
     }
+    .text-engine, .text-carcase, .text-glass, .text-salon, .text-wheel{
+        opacity:0;
+        display: block;
+        position: absolute;
+        top: 6%;
+        left: 50%;
+        color: white;
+    }
 
     @media all and (max-width:480px){
             .display2{ background-size: contain;}
@@ -207,52 +251,60 @@ html, body {height:100%;}
             .red-button span{
                 font-size: 14px;
             }
+            .display2 div.wheelBlock img {
+                margin-top: 18%;
+            }
+            .text-engine, .text-carcase, .text-glass, .text-salon, .text-wheel{
+                top: 2.5%;
+                font-size: 1.2em;
+            }
+            .close-img img{ width: 20px;    }
 
     }
     @media all and (max-width:1280px) and (min-width: 500px){
         .display2{ background-size: 100%;}
         .red-button { max-height: 90px; }
+        .text-engine, .text-carcase, .text-glass, .text-salon, .text-wheel{ font-size: 3em; }
     }
     @media all and (min-width: 800px) and (max-width: 800px){
         .display2{ background-size: 100%;}
-        .display2 div.engineBlock img{
-            width: 30px;
-        }
-        .display2 div.wheelBlock img{
-            width: 30px;
-        }
-        .display2 div.glassBlock img{
-            width: 30px;
-        }
-        .display2 div.carcaseBlock img{
-            width: 30px;
-        }
-        .display2 div.placeBlock img{
-            width: 30px;
-        }
-        .red-button{
-            max-height: 56px;
-            width: 80px;
-        }
-        .red-button span {
-            font-size: 18px;
-        }
+        .display2 div.engineBlock img,
+        .display2 div.wheelBlock img,
+        .display2 div.glassBlock img,
+        .display2 div.carcaseBlock img,
+        .display2 div.placeBlock img{ width: 30px;}
+        .red-button{ max-height: 56px; width: 80px; }
+        .red-button span { font-size: 18px; }
+        .text-engine, .text-carcase, .text-glass, .text-salon, .text-wheel{ font-size: 1.8em; }
     }
     @media all and (max-width:1025px) and (min-width: 1023px){
         .display2{ background-size: 100%;}
         .red-button { max-height: 75px; }
+        .text-engine, .text-carcase, .text-glass, .text-salon, .text-wheel{ font-size: 3em; }
     }
     @media all and (max-width:1367px) and (min-width: 1281px){
         .display2{ background-size: 100%;}
         .red-button { max-height: 100px; }
+        .text-engine, .text-carcase, .text-glass, .text-salon, .text-wheel{ font-size: 4em; }
     }
     @media all and (min-width:1368px){
         .display2{ background-size: 100%;}
         .red-button { width: 120px; }
+        .text-engine, .text-carcase, .text-glass, .text-salon, .text-wheel{ font-size: 4em; }
     }
     @media all and (max-width:1441px) and (min-width: 1439px){
-            .display2{ background-size: 100%;}
+        .display2{ background-size: 100%;}
     }
+
+
+
+
+
+
+
+
+
+
 @media all and (max-width:480px){
     .display1{ background-size: contain;}
     .left-panel{ zoom: 0.7; }
