@@ -11,7 +11,7 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="fullPage/jquery.fullPage.css" />
-<script src="vendors/fullPage/jquery.easings.min.js"></script>
+<script src="fullPage/vendors/jquery.easings.min.js"></script>
 <script type="text/javascript" src="fullPage/vendors/scrolloverflow.min.js"></script>
 <script type="text/javascript" src="fullPage/jquery.fullPage.js"></script>
 <script>
@@ -130,6 +130,7 @@ $(document).ready(function() {
                             <div class='glassBlock'><img src="image/main/glass.png" alt="" /></div>
                             <div class='carcaseBlock'><img src="image/main/carcase.png" alt="" /></div>
                             <div class='placeBlock'><img src="image/main/place.png" alt="" /></div>
+                            <div class='close-img'><img src="image/main/icons8-cancel.png" alt="" /></div>
                         </div>
             <div class="section">Slide 2
                 <div>
@@ -159,3 +160,17 @@ Duis in fringilla felis. Aenean id turpis suscipit, finibus velit eu, tempus mas
         </div>
     </body>
 </html>
+<script>
+    $('.engineBlock').click(function(){
+        $('.display2').toggleClass("display2-z-engine");
+        if($(".display2").hasClass("display2-z-engine")){
+            $('.close-img').css("opacity",'1');
+            $('.engineBlock').css("pointer-events",'none');
+        }
+    });
+    $('.close-img').click(function(){
+       $('.display2').toggleClass("display2-z-engine");
+       $('.close-img').css("opacity",'0');
+       $('.engineBlock').css("pointer-events",'auto');
+    });
+</script>
