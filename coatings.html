@@ -245,8 +245,10 @@
                         <div class='row'>
                             <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2 '>
                                 <p class='example'>Примеры работ</p>
+                                    <div id="result"></div>
                             </div>
                         </div>
+
                         <div class='row'>
                             <div class='col-lg-12 col-xs-12 col-md-12 col-sm-12'>
                                 <section class="vertical-center-4 slider">
@@ -301,6 +303,7 @@
             <div class='row'>
                 <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
                     <footer>
+
                          <div class="col-lg-9 col-lg-offset-2 col-xs-7 col-xs-offset-4 col-md-6 col-md-offset-2 col-sm-6  col-sm-offset-2 txt">
                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a dolor sagittis, tristique diam nec, posuere nisi. Fusce ultrices faucibus enim eget interdum. Sed eu urna varius, vehicula felis nec, dapibus nisi.  Donec sagittis velit at turpis eleifend, vel maximus neque mollis. Integer nec ex lorem.  In posuere urna vitae odio tempus, vitae pharetra nisl pellentesque. Curabitur ligula dui, mattis sed commodo nec, volutpat vel lectus. In pulvinar a nunc ut sagittis. Ut rhoncus tincidunt dolor, ac consectetur sem gravida in. In hac habitasse platea dictumst. Donec vitae mauris nec turpis ullamcorper pharetra et sit amet nulla.</p>
 
@@ -329,14 +332,17 @@
         var price = document.getElementsByClassName("price");
         var example = document.getElementsByClassName("example");
         var properties = document.getElementsByClassName("properties");
-
         function scrolling(e) {
             if (isPartiallyVisible(item)) {
                 $( "#coatings-car" ).animate({
-                        top: "0",
-                        left: "140"
-                    }, 1000, function() {
-                    });
+                            top: "0",
+                            left: "140" ,
+                            right: "0",
+                            bottom: "0"
+                        }, 500, function() {
+                            ;
+                }), queue = true;
+                $('#coatings-car').queue("fx", []);
                 $( "#coatings-points" ).animate({
                         opacity: 1
                     }, 2500, function() {
@@ -377,5 +383,4 @@
             var bottom = elementBoundary.bottom;
             return ((top >= 0) && (bottom <= window.innerHeight));
         }
-    </script>
-
+</script>

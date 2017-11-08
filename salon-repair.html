@@ -141,7 +141,7 @@
                             </div>
                         </div>
                         <div class='row'>
-                            <div class='col-lg-10 col-lg-offset-1'>
+                            <div class='col-lg-10 col-lg-offset-2 col-xs-10 col-xs-offset-2 col-md-10 col-md-offset-2 col-sm-10  col-sm-offset-2 '>
                                 <div class='icon'>
                                     <div class='row my-flex'>
                                         <figure class='col-xs-3 col-md-3'>
@@ -167,42 +167,37 @@
                         <div class='row'>
                             <div class='col-lg-11 col-lg-offset-1'>
                                 <div class='image-with-price'>
-                                    <div class='row'>
-                                        <div class='col-lg-9 col-lg-offset-1'>
-                                            <p class='animatePriceBlock'>Стоимость работ</p>
-                                        </div>
-                                        <div class='row'>
-                                            <div class='col-lg-9 col-lg-offset-1'>
-                                                <div class='row price-flex'>
-                                                    <figure class='col-xs-2 col-md-2'>
-                                                        <div><span>Покраска руля</span></div>
-                                                        <div></div>
-                                                        <div><span>от 2500 р</span></div>
-                                                        <button type="submit">Заказать</button>
-                                                    </figure>
-                                                    <figure class='col-xs-2 col-md-2'>
-                                                        <div></div>
-                                                        <button type="submit">Заказать</button>
-                                                    </figure>
-                                                    <figure class='col-xs-2 col-md-2'>
-                                                        <div></div>
-                                                        <button type="submit">Заказать</button>
-                                                    </figure>
-                                                    <figure class='col-xs-2 col-md-2'>
-                                                        <div></div>
-                                                        <button type="submit">Заказать</button>
-                                                    </figure>
-                                                    <figure class='col-xs-2 col-md-2'>
-                                                        <div></div>
-                                                       <button type="submit">Заказать</button>
-                                                    </figure>
-                                                    <figure class='col-xs-2 col-md-2'>
-                                                        <div></div>
-                                                        <button type="submit">Заказать</button>
-                                                    </figure>
-                                                </div>
+                                    <img src="image/salon-repair/price.jpg" alt="" />
+                                    <p class='animatePriceBlock'>Стоимость работ</p>
+                                    <div class='price-flex'>
+                                        <figure>
+                                            <div>
+                                                <span>Покраска руля</span>
+                                                <div></div>
+                                                <span>от 2500 р</span>
+                                                <button type="submit">Заказать</button> 
                                             </div>
-                                        </div>
+                                        </figure>
+                                        <figure>
+                                            <div></div>
+                                            <button type="submit">Заказать</button>
+                                        </figure>
+                                        <figure>
+                                            <div></div>
+                                            <button type="submit">Заказать</button>
+                                        </figure>
+                                        <figure>
+                                            <div></div>
+                                            <button type="submit">Заказать</button>
+                                        </figure>
+                                        <figure>
+                                            <div></div>
+                                           <button type="submit">Заказать</button>
+                                        </figure>
+                                        <figure>
+                                            <div></div>
+                                            <button type="submit">Заказать</button>
+                                        </figure>
                                     </div>
                                 </div>
                             </div>
@@ -245,32 +240,37 @@
         var b = car.getBoundingClientRect();
         console.log(a);
         function scrolling(e) {
-            var move;
+            var move,top;
             if (isPartiallyVisible(item)) {
                 switch (screen.width) {
                     case 360:
-                        move = a.left -50;
+                        move = 45;
                         break;
                     case 1366:
-                        move = a.left -250;
+                        move = a.left - 250;
+                        top = 30;
                         break;
                     case 1920:
-                         move = a.left - 220;
+                         move = a.left - 350;
                         break;
                     case 800:
-                        move = a.left - 170;
+                        move = a.left - 230;
+                        top = 15;
                         break;
                     case 1024:
-                        move = a.left - 120;
+                        move = a.left - 190;
+                        top = 15;
                         break;
                     case 1280:
-                        move = a.left - 140;
+                        move = a.left - 230;
+                        top = 15;
                         break;
                     default:
 
                 }
                 $('#salon-repair').animate({
-                marginLeft: move+'px'
+                marginLeft: move+'px',
+                marginTop:  top+'px'
                 }, 1200);
                 $( "#salon-repair-points" ).animate({
                         opacity: 1
