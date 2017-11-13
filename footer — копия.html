@@ -1,0 +1,1006 @@
+﻿<!--<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="css/reset.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="slick/slick.css">
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+        <script src="slick/slick.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/slider.js" type="text/javascript" charset="utf-8"></script>
+
+    </head>
+    <body>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-lg-1 col-xs-1 col-md-2'>
+                    <nav class='left-panel'>
+                        <div class='left-panel-menu'>
+                            <a class='logo'></a>
+                            <ul class='list'>
+                                <li class='item-1'>
+                                    <a>Кузов</a>
+                                </li>
+                                <li class='item-2'>
+                                    <a>Салон</a>
+                                </li>
+                                <li class='item-3'>
+                                    <a>Стекла</a>
+                                </li>
+                                <li class='item-4'>
+                                    <a>Колеса</a>
+                                </li>
+                                <li class='item-5'>
+                                    <a>Двигатель</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class='col-lg-11 col-xs-11 col-md-10'>
+                    <main class='top'>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6"></div>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6"></div>
+                    </main>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+                    <footer class="col-lg-12 col-xs-12 col-md-12 col-sm-12">
+                    <div class="col-lg-9 col-lg-offset-2 col-xs-7 col-xs-offset-4 col-md-6 col-md-offset-2 col-sm-6  col-sm-offset-2 txt">
+                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a dolor sagittis, tristique diam nec, posuere nisi. Fusce ultrices faucibus enim eget interdum. Sed eu urna varius, vehicula felis nec, dapibus nisi.  Donec sagittis velit at turpis eleifend, vel maximus neque mollis. Integer nec ex lorem.  In posuere urna vitae odio tempus, vitae pharetra nisl pellentesque. Curabitur ligula dui, mattis sed commodo nec, volutpat vel lectus. In pulvinar a nunc ut sagittis. Ut rhoncus tincidunt dolor, ac consectetur sem gravida in. In hac habitasse platea dictumst. Donec vitae mauris nec turpis ullamcorper pharetra et sit amet nulla.</p>
+
+<p>In a laoreet erat, non vulputate felis. Aenean neque libero, interdum nec molestie non, auctor egestas massa. Ut quis metus lacus. Vivamus odio felis, tincidunt ac velit eget, facilisis tincidunt purus.  Mauris sollicitudin convallis dolor, vitae vulputate nunc vulputate eget. Morbi a diam venenatis, dignissim ipsum sit amet, aliquet dui. Proin venenatis molestie metus. Nulla ultricies a nisl eget porttitor.</p>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>KRYTEX</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200">
+<script src="js/blog/jquery.min.js"></script>
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="all" />
+<link rel="stylesheet/less" type="text/css" href="original/style.less" media="all"/>
+<!--<link rel="stylesheet/less" type="text/css" href="css/user-lk.less" media="all"/>  -->
+<script src="js/blog/less.min.js"></script>
+<script src="js/blog/user-lk.js"></script>
+<script src="js/blog/calculator.js"></script>
+<script src="js/blog/jquery.formstyler.min.js"></script>
+<script src="js/blog/jquery.maskedinput.js"></script>
+<script src="js/blog/jquery.circliful.min.js"></script>
+<script src="js/blog/jquery.animateNumber.min.js"></script>
+<script src="js/blog/notify.js"></script>
+<script src="js/blog/fsvs.js"></script>
+<script src="js/blog/slick.min.js"></script>
+
+
+
+<!--[if lt IE 11]>
+    <link rel="stylesheet" href="css/ie.css" type="text/css" media="all" />
+<![endif]-->
+</head>
+<body>
+    <div class="page-site">
+        <main class="wrapper">
+            <div class="slide">
+                <div class="contacts-page">
+                    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+                    <script>
+                        $(document).ready(function() {
+                            ymaps.ready(function () {
+                                var myMap = new ymaps.Map('map', {
+                                        center: [55.751574, 37.073856],
+                                        zoom: 9,
+                                        controls: ['zoomControl']
+                                    }, {
+                                        searchControlProvider: 'yandex#search'
+                                    }),
+
+                                    // Создание макета балуна на основе Twitter Bootstrap.
+                                    MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
+                                        '<div class="popover top">' +
+                                            '<a class="close" href="#">&times;</a>' +
+                                            '<div class="arrow"></div>' +
+                                            '<div class="popover-inner">' +
+                                            '$[[options.contentLayout observeSize minWidth=235 maxWidth=235 maxHeight=350]]' +
+                                            '</div>' +
+                                        '</div>', {
+                                        /**
+                                         * Строит экземпляр макета на основе шаблона и добавляет его в родительский HTML-элемент.
+                                         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#build
+                                         * @function
+                                         * @name build
+                                         */
+                                        build: function () {
+                                            this.constructor.superclass.build.call(this);
+
+                                            this._$element = $('.popover', this.getParentElement());
+
+                                            this.applyElementOffset();
+
+                                            this._$element.find('.close')
+                                                .on('click', $.proxy(this.onCloseClick, this));
+                                        },
+
+                                        /**
+                                         * Удаляет содержимое макета из DOM.
+                                         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#clear
+                                         * @function
+                                         * @name clear
+                                         */
+                                        clear: function () {
+                                            this._$element.find('.close')
+                                                .off('click');
+
+                                            this.constructor.superclass.clear.call(this);
+                                        },
+
+                                        /**
+                                         * Метод будет вызван системой шаблонов АПИ при изменении размеров вложенного макета.
+                                         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
+                                         * @function
+                                         * @name onSublayoutSizeChange
+                                         */
+                                        onSublayoutSizeChange: function () {
+                                            MyBalloonLayout.superclass.onSublayoutSizeChange.apply(this, arguments);
+
+                                            if(!this._isElement(this._$element)) {
+                                                return;
+                                            }
+
+                                            this.applyElementOffset();
+
+                                            this.events.fire('shapechange');
+                                        },
+
+                                        /**
+                                         * Сдвигаем балун, чтобы "хвостик" указывал на точку привязки.
+                                         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
+                                         * @function
+                                         * @name applyElementOffset
+                                         */
+                                        applyElementOffset: function () {
+                                            this._$element.css({
+                                                left: -(this._$element[0].offsetWidth / 2),
+                                                top: -(this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight)
+                                            });
+                                        },
+
+                                        /**
+                                         * Закрывает балун при клике на крестик, кидая событие "userclose" на макете.
+                                         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
+                                         * @function
+                                         * @name onCloseClick
+                                         */
+                                        onCloseClick: function (e) {
+                                            e.preventDefault();
+
+                                            this.events.fire('userclose');
+                                        },
+
+                                        /**
+                                         * Используется для автопозиционирования (balloonAutoPan).
+                                         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/ILayout.xml#getClientBounds
+                                         * @function
+                                         * @name getClientBounds
+                                         * @returns {Number[][]} Координаты левого верхнего и правого нижнего углов шаблона относительно точки привязки.
+                                         */
+                                        getShape: function () {
+                                            if(!this._isElement(this._$element)) {
+                                                return MyBalloonLayout.superclass.getShape.call(this);
+                                            }
+
+                                            var position = this._$element.position();
+
+                                            return new ymaps.shape.Rectangle(new ymaps.geometry.pixel.Rectangle([
+                                                [position.left, position.top], [
+                                                    position.left + this._$element[0].offsetWidth,
+                                                    position.top + this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight
+                                                ]
+                                            ]));
+                                        },
+
+                                        /**
+                                         * Проверяем наличие элемента (в ИЕ и Опере его еще может не быть).
+                                         * @function
+                                         * @private
+                                         * @name _isElement
+                                         * @param {jQuery} [element] Элемент.
+                                         * @returns {Boolean} Флаг наличия.
+                                         */
+                                        _isElement: function (element) {
+                                            return element && element[0] && element.find('.arrow')[0];
+                                        }
+                                    }),
+
+                                    // Создание вложенного макета содержимого балуна.
+                                    MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+                                        '<div class="top">' +
+                                            '<div class="left">' +
+                                                '<div class="title">$[properties.balloonTitle]</div>' +
+                                                '<div class="type">$[properties.balloonContent]</div>' +
+                                            '</div><div class="right">' +
+                                                '<div class="rating">' +
+                                                    '<div class="circle">$[properties.balloonCircleVal]</div>' +
+                                                    '<div class="label">$[properties.balloonCircleLabel]</div>' +
+                                                '</div>' +
+                                            '</div>' +
+                                        '</div>' +
+                                        '<div class="bottom">' +
+                                            '<div class="address">$[properties.balloonAddress]</div>' +
+                                            '<div class="phone"><a href="tel:$[properties.balloonPhone]">$[properties.balloonPhone]</a></div>' +
+                                            '<div class="email"><a href="mailto:$[properties.balloonEmail]">$[properties.balloonEmail]</a></div>' +
+                                        '</div>'
+                                    ),
+
+                                    // Создание метки с пользовательским макетом балуна.
+                                    myPlacemark = window.myPlacemark = new ymaps.Placemark([55.661574, 37.573856], {
+                                        balloonTitle: 'У Навруса',
+                                        balloonContent: 'Автомойка',
+                                        balloonCircleVal: '4,7',
+                                        balloonCircleLabel: 'Рейтинг',
+                                        balloonAddress: 'ул. Неверовского, 6<br> офис 423',
+                                        balloonPhone: '+7(438)734-73-99',
+                                        balloonEmail: 'krytex@mail.ru',
+                                    }, {
+                                        balloonShadow: false,
+                                        balloonLayout: MyBalloonLayout,
+                                        balloonContentLayout: MyBalloonContentLayout,
+                                        balloonPanelMaxMapArea: 0,
+                                        // Не скрываем иконку при открытом балуне.
+                                        // hideIconOnBalloonOpen: false,
+                                        // И дополнительно смещаем балун, для открытия над иконкой.
+                                        // balloonOffset: [3, -40]
+                                        // Необходимо указать данный тип макета.
+                                        iconLayout: 'default#image',
+                                        // Своё изображение иконки метки.
+                                        iconImageHref: 'image/main/map-icon-small.png',
+                                        // Размеры метки.
+                                        iconImageSize: [25, 37],
+                                        // Смещение левого верхнего угла иконки относительно
+                                        // её "ножки" (точки привязки).
+                                        iconImageOffset: [-4, -14]
+                                    });
+
+                                    myPlacemark2 = window.myPlacemark = new ymaps.Placemark([55.661574, 37.273856], {
+                                        balloonTitle: 'У Навруса',
+                                        balloonContent: 'Автомойка',
+                                        balloonCircleVal: '4,7',
+                                        balloonCircleLabel: 'Рейтинг',
+                                        balloonAddress: 'ул. Неверовского, 6<br> офис 423',
+                                        balloonPhone: '+7(438)734-73-99',
+                                        balloonEmail: 'krytex@mail.ru',
+                                    }, {
+                                        balloonShadow: false,
+                                        balloonLayout: MyBalloonLayout,
+                                        balloonContentLayout: MyBalloonContentLayout,
+                                        balloonPanelMaxMapArea: 0,
+                                        // Не скрываем иконку при открытом балуне.
+                                        // hideIconOnBalloonOpen: false,
+                                        // И дополнительно смещаем балун, для открытия над иконкой.
+                                        // balloonOffset: [3, -40]
+                                        // Необходимо указать данный тип макета.
+                                        iconLayout: 'default#image',
+                                        // Своё изображение иконки метки.
+                                        iconImageHref: 'image/main/map-icon-small.png',
+                                        // Размеры метки.
+                                        iconImageSize: [25, 37],
+                                        // Смещение левого верхнего угла иконки относительно
+                                        // её "ножки" (точки привязки).
+                                        iconImageOffset: [-4, -14]
+                                    });
+
+                                    myPlacemark3 = window.myPlacemark = new ymaps.Placemark([55.701574, 36.473856], {
+                                        balloonTitle: 'У Навруса',
+                                        balloonContent: 'Автомойка',
+                                        balloonCircleVal: '4,7',
+                                        balloonCircleLabel: 'Рейтинг',
+                                        balloonAddress: 'ул. Неверовского, 6<br> офис 423',
+                                        balloonPhone: '+7(438)734-73-99',
+                                        balloonEmail: 'krytex@mail.ru',
+                                    }, {
+                                        balloonShadow: false,
+                                        balloonLayout: MyBalloonLayout,
+                                        balloonContentLayout: MyBalloonContentLayout,
+                                        balloonPanelMaxMapArea: 0,
+                                        // Не скрываем иконку при открытом балуне.
+                                        // hideIconOnBalloonOpen: false,
+                                        // И дополнительно смещаем балун, для открытия над иконкой.
+                                        // balloonOffset: [3, -40]
+                                        // Необходимо указать данный тип макета.
+                                        iconLayout: 'default#image',
+                                        // Своё изображение иконки метки.
+                                        iconImageHref: 'image/main/map-icon-small.png',
+                                        // Размеры метки.
+                                        iconImageSize: [25, 37],
+                                        // Смещение левого верхнего угла иконки относительно
+                                        // её "ножки" (точки привязки).
+                                        iconImageOffset: [-4, -14]
+                                    });
+
+                                myMap.geoObjects
+                                    .add(myPlacemark)
+                                    .add(myPlacemark2)
+                                    .add(myPlacemark3);
+                            });
+
+                            ymaps.ready(function () {
+                                var myMap = new ymaps.Map('map2', {
+                                        center: [55.651574, 37.073856],
+                                        zoom: 9,
+                                        controls: ['zoomControl']
+                                    }, {
+                                        searchControlProvider: 'yandex#search'
+                                    }),
+
+                                    // Создание макета балуна на основе Twitter Bootstrap.
+                                    MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
+                                        '<div class="popover top">' +
+                                            '<a class="close" href="#">&times;</a>' +
+                                            '<div class="arrow"></div>' +
+                                            '<div class="popover-inner">' +
+                                            '$[[options.contentLayout observeSize minWidth=235 maxWidth=235 maxHeight=350]]' +
+                                            '</div>' +
+                                        '</div>', {
+                                        /**
+                                         * Строит экземпляр макета на основе шаблона и добавляет его в родительский HTML-элемент.
+                                         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#build
+                                         * @function
+                                         * @name build
+                                         */
+                                        build: function () {
+                                            this.constructor.superclass.build.call(this);
+
+                                            this._$element = $('.popover', this.getParentElement());
+
+                                            this.applyElementOffset();
+
+                                            this._$element.find('.close')
+                                                .on('click', $.proxy(this.onCloseClick, this));
+                                        },
+
+                                        /**
+                                         * Удаляет содержимое макета из DOM.
+                                         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#clear
+                                         * @function
+                                         * @name clear
+                                         */
+                                        clear: function () {
+                                            this._$element.find('.close')
+                                                .off('click');
+
+                                            this.constructor.superclass.clear.call(this);
+                                        },
+
+                                        /**
+                                         * Метод будет вызван системой шаблонов АПИ при изменении размеров вложенного макета.
+                                         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
+                                         * @function
+                                         * @name onSublayoutSizeChange
+                                         */
+                                        onSublayoutSizeChange: function () {
+                                            MyBalloonLayout.superclass.onSublayoutSizeChange.apply(this, arguments);
+
+                                            if(!this._isElement(this._$element)) {
+                                                return;
+                                            }
+
+                                            this.applyElementOffset();
+
+                                            this.events.fire('shapechange');
+                                        },
+
+                                        /**
+                                         * Сдвигаем балун, чтобы "хвостик" указывал на точку привязки.
+                                         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
+                                         * @function
+                                         * @name applyElementOffset
+                                         */
+                                        applyElementOffset: function () {
+                                            this._$element.css({
+                                                left: -(this._$element[0].offsetWidth / 2),
+                                                top: -(this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight)
+                                            });
+                                        },
+
+                                        /**
+                                         * Закрывает балун при клике на крестик, кидая событие "userclose" на макете.
+                                         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
+                                         * @function
+                                         * @name onCloseClick
+                                         */
+                                        onCloseClick: function (e) {
+                                            e.preventDefault();
+
+                                            this.events.fire('userclose');
+                                        },
+
+                                        /**
+                                         * Используется для автопозиционирования (balloonAutoPan).
+                                         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/ILayout.xml#getClientBounds
+                                         * @function
+                                         * @name getClientBounds
+                                         * @returns {Number[][]} Координаты левого верхнего и правого нижнего углов шаблона относительно точки привязки.
+                                         */
+                                        getShape: function () {
+                                            if(!this._isElement(this._$element)) {
+                                                return MyBalloonLayout.superclass.getShape.call(this);
+                                            }
+
+                                            var position = this._$element.position();
+
+                                            return new ymaps.shape.Rectangle(new ymaps.geometry.pixel.Rectangle([
+                                                [position.left, position.top], [
+                                                    position.left + this._$element[0].offsetWidth,
+                                                    position.top + this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight
+                                                ]
+                                            ]));
+                                        },
+
+                                        /**
+                                         * Проверяем наличие элемента (в ИЕ и Опере его еще может не быть).
+                                         * @function
+                                         * @private
+                                         * @name _isElement
+                                         * @param {jQuery} [element] Элемент.
+                                         * @returns {Boolean} Флаг наличия.
+                                         */
+                                        _isElement: function (element) {
+                                            return element && element[0] && element.find('.arrow')[0];
+                                        }
+                                    }),
+
+                                    // Создание вложенного макета содержимого балуна.
+                                    MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+                                        '<div class="top">' +
+                                            '<div class="left">' +
+                                                '<div class="title">$[properties.balloonTitle]</div>' +
+                                                '<div class="type">$[properties.balloonContent]</div>' +
+                                            '</div><div class="right">' +
+                                                '<div class="rating">' +
+                                                    '<div class="circle">$[properties.balloonCircleVal]</div>' +
+                                                    '<div class="label">$[properties.balloonCircleLabel]</div>' +
+                                                '</div>' +
+                                            '</div>' +
+                                        '</div>' +
+                                        '<div class="bottom">' +
+                                            '<div class="address">$[properties.balloonAddress]</div>' +
+                                            '<div class="phone"><a href="tel:$[properties.balloonPhone]">$[properties.balloonPhone]</a></div>' +
+                                            '<div class="email"><a href="mailto:$[properties.balloonEmail]">$[properties.balloonEmail]</a></div>' +
+                                        '</div>'
+                                    ),
+
+                                    // Создание метки с пользовательским макетом балуна.
+                                    myPlacemark = window.myPlacemark = new ymaps.Placemark([55.661574, 37.573856], {
+                                        balloonTitle: 'У Навруса',
+                                        balloonContent: 'Автомойка',
+                                        balloonCircleVal: '4,7',
+                                        balloonCircleLabel: 'Рейтинг',
+                                        balloonAddress: 'ул. Неверовского, 6<br> офис 423',
+                                        balloonPhone: '+7(438)734-73-99',
+                                        balloonEmail: 'krytex@mail.ru',
+                                    }, {
+                                        balloonShadow: false,
+                                        balloonLayout: MyBalloonLayout,
+                                        balloonContentLayout: MyBalloonContentLayout,
+                                        balloonPanelMaxMapArea: 0,
+                                        // Не скрываем иконку при открытом балуне.
+                                        // hideIconOnBalloonOpen: false,
+                                        // И дополнительно смещаем балун, для открытия над иконкой.
+                                        // balloonOffset: [3, -40]
+                                        // Необходимо указать данный тип макета.
+                                        iconLayout: 'default#image',
+                                        // Своё изображение иконки метки.
+                                        iconImageHref: 'image/main/map-icon-small.png',
+                                        // Размеры метки.
+                                        iconImageSize: [25, 37],
+                                        // Смещение левого верхнего угла иконки относительно
+                                        // её "ножки" (точки привязки).
+                                        iconImageOffset: [-4, -14]
+                                    });
+
+                                    myPlacemark2 = window.myPlacemark = new ymaps.Placemark([55.661574, 37.273856], {
+                                        balloonTitle: 'У Навруса',
+                                        balloonContent: 'Автомойка',
+                                        balloonCircleVal: '4,7',
+                                        balloonCircleLabel: 'Рейтинг',
+                                        balloonAddress: 'ул. Неверовского, 6<br> офис 423',
+                                        balloonPhone: '+7(438)734-73-99',
+                                        balloonEmail: 'krytex@mail.ru',
+                                    }, {
+                                        balloonShadow: false,
+                                        balloonLayout: MyBalloonLayout,
+                                        balloonContentLayout: MyBalloonContentLayout,
+                                        balloonPanelMaxMapArea: 0,
+                                        // Не скрываем иконку при открытом балуне.
+                                        // hideIconOnBalloonOpen: false,
+                                        // И дополнительно смещаем балун, для открытия над иконкой.
+                                        // balloonOffset: [3, -40]
+                                        // Необходимо указать данный тип макета.
+                                        iconLayout: 'default#image',
+                                        // Своё изображение иконки метки.
+                                        iconImageHref: 'image/main/map-icon-small.png',
+                                        // Размеры метки.
+                                        iconImageSize: [25, 37],
+                                        // Смещение левого верхнего угла иконки относительно
+                                        // её "ножки" (точки привязки).
+                                        iconImageOffset: [-4, -14]
+                                    });
+
+                                    myPlacemark3 = window.myPlacemark = new ymaps.Placemark([55.701574, 36.473856], {
+                                        balloonTitle: 'У Навруса',
+                                        balloonContent: 'Автомойка',
+                                        balloonCircleVal: '4,7',
+                                        balloonCircleLabel: 'Рейтинг',
+                                        balloonAddress: 'ул. Неверовского, 6<br> офис 423',
+                                        balloonPhone: '+7(438)734-73-99',
+                                        balloonEmail: 'krytex@mail.ru',
+                                    }, {
+                                        balloonShadow: false,
+                                        balloonLayout: MyBalloonLayout,
+                                        balloonContentLayout: MyBalloonContentLayout,
+                                        balloonPanelMaxMapArea: 0,
+                                        // Не скрываем иконку при открытом балуне.
+                                        // hideIconOnBalloonOpen: false,
+                                        // И дополнительно смещаем балун, для открытия над иконкой.
+                                        // balloonOffset: [3, -40]
+                                        // Необходимо указать данный тип макета.
+                                        iconLayout: 'default#image',
+                                        // Своё изображение иконки метки.
+                                        iconImageHref: 'image/main/map-icon-small.png',
+                                        // Размеры метки.
+                                        iconImageSize: [25, 37],
+                                        // Смещение левого верхнего угла иконки относительно
+                                        // её "ножки" (точки привязки).
+                                        iconImageOffset: [-4, -14]
+                                    });
+
+                                myMap.geoObjects
+                                    .add(myPlacemark)
+                                    .add(myPlacemark2)
+                                    .add(myPlacemark3);
+                            });
+                        });
+                    </script>
+                    <div class="map">
+                        <div class="tabs">
+                            <div class="tabs-nav">
+                                <div class="item active">Где купить продукцию</div>
+                                <div class="item">Где заказать услугу</div>
+                            </div>
+                            <div class="tabs-content">
+                                <div class="item active">
+                                    <div id="map"></div>
+                                </div>
+                                <div class="item">
+                                    <div id="map2"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="calculator">
+                        <div class="left-info">
+                            <div class="title"><span>Калькулятор рекомендуемой стоимости</span></div>
+                        </div>
+                        <div class="main-info">
+                            <div class="section choose-type">
+                                <div class="section-content">
+                                    <div class="label">Выберите класс:</div>
+                                    <div class="list">
+                                        <div class="item item-1">
+                                            <label>
+                                                <input type="radio" name="group1">
+                                                <span>Компакт</span>
+                                            </label>
+                                        </div>
+                                        <div class="item item-2">
+                                            <label>
+                                                <input type="radio" name="group1">
+                                                <span>Бизнес,<br> паркетники</span>
+                                            </label>
+                                        </div>
+                                        <div class="item item-3">
+                                            <label>
+                                                <input type="radio" name="group1">
+                                                <span>Джипы,<br> минивэны</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section car-body disabled">
+                                <div class="section-content">
+                                    <div class="top">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="price1">
+                                                <span>Защита кузова</span>
+                                            </label>
+                                        </div>
+                                        <div class="select-group disabled">
+                                            <div class="label">
+                                                Выберите вид подготовки
+                                                <div class="tooltip">
+                                                    <div class="icon"></div>
+                                                    <div class="text">
+                                                        Вид полировки
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="select">
+                                                <select>
+                                                    <option data-type="0">Выбрать</option>
+                                                    <option data-type="1">Восстановительная</option>
+                                                    <option data-type="2">Мягкая</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main disabled">
+                                        <div class="number-layers">
+                                            <div class="label">Количество <br> слоёв</div>
+                                            <div class="radio-group">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="group2" checked>
+                                                        <span>1</span>
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="group2">
+                                                        <span>2</span>
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="group2">
+                                                        <span>3</span>
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="group2">
+                                                        <span>4</span>
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="group2">
+                                                        <span>5</span>
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="group2">
+                                                        <span>6</span>
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="group2">
+                                                        <span>7</span>
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="group2">
+                                                        <span>8</span>
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="group2">
+                                                        <span>9</span>
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="group2">
+                                                        <span>10</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="result-list">
+                                            <div class="item item-1">
+                                                <div class="circle-item">
+                                                    <div class="circle-content" id="circle1"></div>
+                                                    <div class="circle-number">
+                                                        0%*
+                                                    </div>
+                                                </div>
+                                                <div class="text">
+                                                    Устойчивость
+                                                </div>
+                                            </div>
+                                            <div class="item item-2">
+                                                <div class="circle-item">
+                                                    <div class="circle-content" id="circle2"></div>
+                                                    <div class="circle-number">
+                                                        0%*
+                                                    </div>
+                                                </div>
+                                                <div class="text">
+                                                    Блеск
+                                                </div>
+                                            </div>
+                                            <div class="item item-3">
+                                                <div class="circle-item">
+                                                    <div class="circle-content" id="circle3"></div>
+                                                    <div class="circle-number">
+                                                        0%*
+                                                    </div>
+                                                </div>
+                                                <div class="text">
+                                                    Гидрофобность
+                                                </div>
+                                            </div>
+                                            <div class="item item-4">
+                                                <div class="circle-item">
+                                                    <div class="circle-content" id="circle4"></div>
+                                                    <div class="circle-number">
+                                                        0%*
+                                                    </div>
+                                                </div>
+                                                <div class="text">
+                                                    Срок службы
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="description">*к базовому ЛКП</div>
+                                </div>
+                            </div>
+                            <div class="section car-interior disabled">
+                                <div class="section-content">
+                                    <div class="top">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="price2">
+                                                <span>Защита салона</span>
+                                            </label>
+                                        </div>
+                                        <div class="select-group disabled">
+                                            <div class="label">
+                                                Выберите вид подготовки
+                                                <div class="tooltip">
+                                                    <div class="icon"></div>
+                                                    <div class="text">
+                                                        123
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="select">
+                                                <select>
+                                                    <option data-type="0">Выбрать</option>
+                                                    <option data-type="1">Новое авто</option>
+                                                    <option data-type="2">Химчистка + консервация</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section more-options disabled">
+                                <div class="section-content">
+                                    <div class="checkbox-list">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="price3">
+                                                <span>Антидождь</span>
+                                                <div class="tooltip">
+                                                    <div class="icon"></div>
+                                                    <div class="text">
+                                                        123
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="price4">
+                                                <span>Защита дисков</span>
+                                                <div class="tooltip">
+                                                    <div class="icon"></div>
+                                                    <div class="text">
+                                                        123
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="price5">
+                                                <span>Защита резины</span>
+                                                <div class="tooltip">
+                                                    <div class="icon"></div>
+                                                    <div class="text">
+                                                        123
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="price6">
+                                                <span>Химчистка двигателя</span>
+                                                <div class="tooltip">
+                                                    <div class="icon"></div>
+                                                    <div class="text">
+                                                        123
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section total-price">
+                                <div class="section-content">
+                                    <div class="total-info">
+                                        <div class="price">
+                                            <div class="label">Итого:</div>
+                                            <div class="val">
+                                                <span class="number">0</span>
+                                                <span class="curr rub"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form">
+                                            <form action="">
+                                                <div class="row">
+                                                    <input type="text" class="phone" placeholder="Ваш номер телефона">
+                                                    <input type="submit" value="Заказать">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="more-info">
+                                        <div class="label">см. подробней</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="container">
+                            <div class="bottom-section">
+                                <div class="info">
+                                    <div class="columns">
+                                        <div class="col col-1">
+                                            <div class="title">
+                                                Кузов
+                                            </div>
+                                            <div class="list">
+                                                <ul>
+                                                    <li><a href="/">Полировка</a></li>
+                                                    <li><a href="/">Защитные покрытия</a></li>
+                                                    <li><a href="/">Локальный ремонт</a></li>
+                                                    <li><a href="/">Пленка</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col col-2">
+                                            <div class="title">
+                                                Салон
+                                            </div>
+                                            <div class="list">
+                                                <ul>
+                                                    <li><a href="/">Химчистка</a></li>
+                                                    <li><a href="/">Ремонт</a></li>
+                                                    <li><a href="/">Защита салона</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col col-3">
+                                            <div class="title">
+                                                Стекла
+                                            </div>
+                                            <div class="list">
+                                                <ul>
+                                                    <li><a href="/">Ремонт</a></li>
+                                                    <li><a href="/">Полировка</a></li>
+                                                    <li><a href="/">Антидождь</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col col-4">
+                                            <div class="title">
+                                                Колеса
+                                            </div>
+                                            <div class="list">
+                                                <ul>
+                                                    <li><a href="/">Защита резины</a></li>
+                                                    <li><a href="/">Полировка дисков</a></li>
+                                                    <li><a href="/">Защита дисков</a></li>
+                                                    <li><a href="/">Покраска дисков</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col col-5">
+                                            <div class="title">
+                                                Двигатель
+                                            </div>
+                                            <div class="title">
+                                                Информация
+                                            </div>
+                                            <div class="list">
+                                                <ul>
+                                                    <li><a href="/">Блог</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col col-6">
+                                            <div class="title">
+                                                О компании
+                                            </div>
+                                            <div class="list">
+                                                <ul>
+                                                    <li><a href="/">Миссия и цель</a></li>
+                                                    <li><a href="/">Гарантия качества</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col col-1">
+                                            <div class="title">
+                                                О компании
+                                            </div>
+                                            <div class="list">
+                                                <ul>
+                                                    <li><a href="/">Миссия и цель</a></li>
+                                                    <li><a href="/">Гарантия качества</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="copy">
+                                        © ООО "БК ХИМ" 2017 г. Все права защищены. Не является договором оферты.
+                                    </div>
+                                </div>
+                                <div class="contacts">
+                                    <div class="address">
+                                        г. Москва,<br>
+                                        ул. Большая Очаковская,<br>
+                                        д. 47а, офис 703
+                                    </div>
+                                    <div class="phone">
+                                        +7 (495) 432-30-32
+                                    </div>
+                                    <div class="meta">
+                                        <div class="social">
+                                            <ul class="list">
+                                                <li class="item item-1"><a href="/"></a></li>
+                                                <li class="item item-2"><a href="/"></a></li>
+                                                <li class="item item-3"><a href="/"></a></li>
+                                                <li class="item item-4"><a href="/"></a></li>
+                                            </ul>
+                                        </div>
+                                        <a class="email" href="mailto:krytex@mail.ru">krytex@mail.ru</a>
+                                    </div>
+                                    <div class="create">
+                                        <a href="/" class="chr"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <noindex><div class="ie">Для просмотра сайта обновите браузер.</div></noindex>
+</body>
+</html>

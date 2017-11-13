@@ -1,0 +1,29 @@
+/***************************************************************************/
+/* HTML Tags */
+/***************************************************************************/
+.page-site,
+.footer,
+.login,
+.home,
+.start,
+.usefull,
+.advantages,
+.how-work,
+.author {
+	display:none;
+}
+.ie {
+	display:block;
+	padding:20px;
+	border:2px solid #fff;
+	background-color:#ededed;
+	width:300px;
+	position:absolute;
+	height:20px;
+	left:50%;
+	top:50%;
+	margin-left:-150px;
+	margin-top:-10px;
+	text-align:center;
+	color:#262626;
+}
