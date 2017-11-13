@@ -72,15 +72,12 @@ ul.list-main li.item-5{
         background-repeat: no-repeat;
         width:50px;
 }
-ul.list-main li.call{
-        padding-top: 50px;
-        background-image: url(../image/menu/call.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        width:50px;
+ul.list-main li.call-main{
         border-radius: 35px;
+        width: 50px;
+        height: 50px;
 }
-ul.list-main li.call:hover{
+ul.list-main li.call-main:hover{
         -moz-box-shadow: 0 0 20px #c22929;
         -webkit-box-shadow: 0 0 20px #c22929;
         box-shadow: 0 0 20px #c22929;
@@ -104,7 +101,6 @@ ul.list-main li a{
         background-repeat: no-repeat;
         position: relative;
         width: 100%;
-        height: 800px!important;
 }
 .display2-z-engine{
         background-image: url(../image/main/hover-engine.jpg);
@@ -177,13 +173,13 @@ ul.list-main li a{
         top: 36%;
 }
 .display2 div.carcaseBlock img{
-        position: relative;
+        position: absolute;
         width: 45px;
         margin-left: 44%;
-        margin-top: -16%;
+        margin-top: -17%;
 }
 .display2 div.placeBlock img{
-        position: relative;
+        position: absolute;
         width: 45px;
         margin-left: 32%;
         margin-top: -8%;
@@ -225,26 +221,86 @@ ul.list-main li a{
         left: 50%;
         color: white;
 }
-.wheelBottom,.engineBottom{
+.wheelBottom{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin-top: 7%;
         position: relative;
         opacity: 0;
 }
-.wheelBottom figure img, .engineBottom figure img{
+.carcaseBottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        opacity: 0;
+        bottom: 12%;
+}
+.engineBottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        opacity: 0;
+}
+.salonBottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        opacity: 0;
+        bottom: 12%;
+}
+.glassBottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        opacity: 0;
+        bottom: 20%;
+}
+.wheelBottom figure img{
         display: block;
         margin: auto;
-        width: 50%;
+        width: 290px;
 }
-.wheelBottom figure span, .engineBottom figure span{
+.engineBottom figure img{
+        display: block;
+        margin: auto;
+        width: 290px;
+}
+.salonBottom figure img{
+        display: block;
+        margin: auto;
+        width: 290px;
+}
+.carcaseBottom figure img{
+        display: block;
+        margin: auto;
+        width: 290px;
+}
+.glassBottom figure img{
+        display: block;
+        margin: auto;
+        width: 290px;
+}
+.engineBottom figure span{
         display: inline-block;
         position: absolute;
         top: 14px;
         color: white;
         left: 47%;
 }
+.wheelBottom figure span{
+        position: relative;
+        bottom: 35px;
+        color: white;
+        left: 47%;
+}
+.wheelBottom figure{
+
+}
+
 @media all and (max-width:480px){
         .display1{ background-size: contain;}
         .display2{ background-size: contain;}
@@ -266,10 +322,11 @@ ul.list-main li a{
         .display2{ background-size: 100%;}
         .red-button { max-height: 90px; }
         .text-engine, .text-carcase, .text-glass, .text-salon, .text-wheel{ font-size: 3em; }
+        .display2 div.glassBlock img { top: 34%;}
 }
 @media all and (min-width: 800px) and (max-width: 800px){
-        .display1{ background-size: 100%;}
-        .display2{ background-size: 100%;}
+        .display1{ background-size: contain;}
+        .display2{ background-size: contain;}
         .display2 div.engineBlock img,
         .display2 div.wheelBlock img,
         .display2 div.glassBlock img,
@@ -277,14 +334,22 @@ ul.list-main li a{
         .display2 div.placeBlock img{ width: 30px;}
         .red-button{ max-height: 56px; width: 80px; }
         .red-button span { font-size: 18px; }
-        .text-engine, .text-carcase, .text-glass, .text-salon, .text-wheel{ font-size: 1.8em; }
-        .display2 div.wheelBlock img{ margin-top: 32%; }
+        .text-engine, .text-carcase, .text-glass, .text-salon, .text-wheel{ font-size: 1.8em;  left: 40%; }
+        .display2 div.wheelBlock img{ margin-top: 25%; margin-left: 33%; }
+        .close-img { right: 36%;}
+        .display2 div.engineBlock img { margin-left: 51%; padding-top: 20%;}
+        .display2 div.placeBlock img {margin-left: 25%; margin-top: -6%; }
+        .display2 div.carcaseBlock img {margin-left: 33%; margin-top: -13%; }
+        .display2 div.glassBlock img{ left: 38%; top: 36%;         }
+
 }
 @media all and (max-width:1025px) and (min-width: 1023px){
-        .display1{ background-size: 100%;}
+        .display1{ background-size: contain;}
         .display2{ background-size: 100%;}
         .red-button { max-height: 75px; }
         .text-engine, .text-carcase, .text-glass, .text-salon, .text-wheel{ font-size: 3em; }
+        .close-img {right: 17%;}
+        .display2 div.glassBlock img { top: 37%;}
 }
 @media all and (max-width:1367px) and (min-width: 1281px){
         .display1{ background-size: 100%;}
@@ -520,3 +585,85 @@ ul.list-main li a{
         }
                                 */
 /* end general style */
+#modal_form {
+    width: 300px;
+    height: 300px; /* Рaзмеры дoлжны быть фиксирoвaны */
+    border-radius: 5px;
+    border: 3px #000 solid;
+    background: #fff;
+    position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+    top: 45%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+    left: 50%; /* пoлoвинa экрaнa слевa */
+    margin-top: -150px;
+    margin-left: -150px; /* тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
+    display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+    opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+    z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+    padding: 20px 10px;
+}
+/* Кнoпкa зaкрыть для тех ктo в тaнке) */
+#modal_form #modal_close {
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: block;
+}
+/* Пoдлoжкa */
+#overlay {
+    z-index:3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+    position:fixed; /* всегдa перекрывaет весь сaйт */
+    background-color:#000; /* чернaя */
+    opacity:0.8; /* нo немнoгo прoзрaчнa */
+    -moz-opacity:0.8; /* фикс прозрачности для старых браузеров */
+    filter:alpha(opacity=80);
+    width:100%;
+    height:100%; /* рaзмерoм вo весь экрaн */
+    top:0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+    left:0;
+    cursor:pointer;
+    display:none; /* в oбычнoм сoстoянии её нет) */
+}
+.social-modal ul li a  img{
+    width: 30px;
+}
+.social-modal ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding-top: 25px;
+}
+.social-modal ul li{
+    margin-right: 5px;
+}
+
+.phone-modal{
+    display: flex;
+    justify-content: center;
+    font-size: 1.6em;
+    padding-top: 50px;
+}
+.address-modal{
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    text-align: center;
+    padding: 5px 0px;
+}
+.email-modal{
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    padding-top: 15px;
+}
+.email-modal img{
+    width: 25px;
+    padding-right: 5px;
+}
+.email-modal a{
+    text-decoration: none;
+    color: black;
+}
