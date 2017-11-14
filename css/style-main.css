@@ -667,3 +667,34 @@ ul.list-main li a{
     text-decoration: none;
     color: black;
 }
+
+ul.list-main li ul{
+    position: absolute;
+    left: -9999px;
+    width: 150px;
+    font-size: 12px;
+    background: white;
+    opacity: 0;
+    border-left: 7px solid red;
+    padding: 10px 20px;
+}
+ul.list-main li ul li a{
+        padding-bottom: 0px;
+}
+
+ul.list-main li.item-1:hover  ul{
+    opacity: 0.7;
+    left:100%;
+    top: 95px;
+}
+ul.list-main li.item-2:hover  ul{
+    opacity: 0.7;
+    left:100%;
+    top: 190px;
+}
+ul.list-main li.item-3:hover  ul{
+    opacity: 0.7;
+    left:100%;
+    top: 270px;
+}
+
