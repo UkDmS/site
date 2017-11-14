@@ -193,7 +193,11 @@ $(document).ready(function() {
                         <li class='item-5'>
                             <a>Двигатель</a>
                         </li>
-                        <li class='call'></li>
+                        <li class='call-main'>
+                            <a  href="#" id="go">
+                                <img src="image/menu/call.svg" alt="" />
+                            </a>
+                        </li>
                     </ul>
 
                 </div>
@@ -221,25 +225,67 @@ $(document).ready(function() {
                 <div class='wheelBottom'>
                     <figure>
                         <img src="image/main/wheel-button-1.png">
-                        <span>Двигатель</span>
+                        <span>Защита резины</span>
                     </figure>
                     <figure>
                         <img src="image/main/wheel-button-2.png">
-                        <span>Двигатель</span>
+                        <span>Полировка дисков</span>
                     </figure>
                     <figure>
                         <img src="image/main/wheel-button-3.png">
-                        <span>Двигатель</span>
+                        <span>Защита дисков</span>
                     </figure>
                     <figure>
                         <img src="image/main/wheel-button-4.png">
-                        <span>Двигатель</span>
+                        <span>Покраска дисков</span>
                     </figure>
                 </div>
-                <div class='wheelBottom'><figure><img><span></span></figure></div>
-                <div class='glassBottom'><figure><img><span></span></figure></div>
-                <div class='carcaseBottom'><figure><img><span></span></figure></div>
-                <div class='placeBottom'><figure><img><span></span></figure></div>
+                <div class='salonBottom'>
+                    <figure>
+                        <img src="image/main/place-button-1.png">
+                        <span>Защита резины</span>
+                    </figure>
+                    <figure>
+                        <img src="image/main/place-button-2.png">
+                        <span>Полировка дисков</span>
+                    </figure>
+                    <figure>
+                        <img src="image/main/place-button-3.png">
+                        <span>Защита дисков</span>
+                    </figure>
+                </div>
+                <div class='glassBottom'>
+                    <figure>
+                        <img src="image/main/glass-button-1.png">
+                        <span>Ремонт</span>
+                    </figure>
+                    <figure>
+                        <img src="image/main/glass-button-2.png">
+                        <span>Полировка</span>
+                    </figure>
+                    <figure>
+                        <img src="image/main/glass-button-3.png">
+                        <span>Антидождь</span>
+                    </figure>
+                </div>
+                <div class='carcaseBottom'>
+                    <figure>
+                        <img src="image/main/carcase-button-1.png">
+                        <span>Полировка</span>
+                    </figure>
+                    <figure>
+                        <img src="image/main/carcase-button-2.png">
+                        <span>Защитные покрытия</span>
+                    </figure>
+                    <figure>
+                        <img src="image/main/carcase-button-3.png">
+                        <span>Локальный ремонт</span>
+                    </figure>
+                    <figure>
+                        <img src="image/main/carcase-button-4.png">
+                        <span>Пленка</span>
+                    </figure>
+                </div>
             </div>
             <div class="section1 slide">
                 <div class="contacts-page">
@@ -1148,6 +1194,29 @@ $(document).ready(function() {
             </div>
         </main>
     </div>
+    <div id="modal_form">
+        <span id="modal_close">X</span>
+            <div class='phone-modal'>+ 7 (926) 111 88 08</div>
+            <div class="social-modal">
+                <ul>
+                    <li><a href="/"><img src="image/main/twitter.svg" alt="" /></a></li>
+                    <li><a href="/"><img src="image/main/vk.svg" alt="" /></a></li>
+                    <li><a href="/"><img src="image/main/facebook.svg" alt="" /></a></li>
+                    <li><a href="/"><img src="image/main/inst.svg" alt="" /></a></li>
+                </ul>
+            </div>
+            <div class='address-modal'>г. Москва, <br>ул. Большая Очаковская, д. 47а </div>
+            <div class='email-modal'><img src="image/main/email-icon.png" alt="" /><a href="mailto: info@topdetail.ru">info@topdetail.ru</a></div>
+            <div class="form">
+                <form action="">
+                    <div class="row">
+                        <input class="phone" placeholder="Ваш номер телефона" type="text">
+                        <input value="Обратная связь" type="submit">
+                    </div>
+                </form>
+            </div>
+    </div>
+    <div id="overlay"></div><!-- Пoдлoжкa -->
     <noindex><div class="ie">Для просмотра сайта обновите браузер.</div></noindex>
     <script>
     $('.engineBlock').click(function(){
@@ -1174,6 +1243,7 @@ $(document).ready(function() {
         if($(".display2").hasClass("display2-z-glass")){
             $(".display2-z-glass").css('z-index','10');
             $('.close-img').css("opacity",'1');
+            $('.glassBottom').css("opacity",'1');
             $('.text-glass').css("opacity",'1');
             $('.engineBlock').css("pointer-events",'none');
             $('.placeBlock').css("pointer-events",'none');
@@ -1192,6 +1262,7 @@ $(document).ready(function() {
         if($(".display2").hasClass("display2-z-carcase")){
             $(".display2-z-carcase").css('z-index','10');
             $('.close-img').css("opacity",'1');
+            $('.carcaseBottom').css("opacity",'1');
             $('.text-carcase').css("opacity",'1');
             $('.engineBlock').css("pointer-events",'none');
             $('.placeBlock').css("pointer-events",'none');
@@ -1210,6 +1281,7 @@ $(document).ready(function() {
         if($(".display2").hasClass("display2-z-salon")){
             $(".display2-z-salon").css('z-index','10');
             $('.close-img').css("opacity",'1');
+            $('.salonBottom').css("opacity",'1');
             $('.text-salon').css("opacity",'1');
             $('.engineBlock').css("pointer-events",'none');
             $('.placeBlock').css("pointer-events",'none');
@@ -1261,18 +1333,44 @@ $(document).ready(function() {
         }
         if($(".display2").hasClass("display2-z-glass")===false){
             $('.text-glass').css("opacity",'0');
+            $('.glassBottom').css("opacity",'0');
         }
         if($(".display2").hasClass("display2-z-carcase")===false){
             $('.text-carcase').css("opacity",'0');
+            $('.carcaseBottom').css("opacity",'0');
         }
         if($(".display2").hasClass("display2-z-calon")===false){
             $('.text-salon').css("opacity",'0');
+            $('.salonBottom').css("opacity",'0');
         }
         if($(".display2").hasClass("display2-z-wheel")===false){
             $('.text-wheel').css("opacity",'0');
             $('.wheelBottom').css("opacity",'0');
         }
     });
+</script>
+<script>
+$(document).ready(function() { // вся мaгия пoсле зaгрузки стрaницы
+    $('a#go').click( function(event){ // лoвим клик пo ссылки с id="go"
+        event.preventDefault(); // выключaем стaндaртную рoль элементa
+        $('#overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
+         	function(){ // пoсле выпoлнения предъидущей aнимaции
+                $('#modal_form')
+                    .css('display', 'block') // убирaем у мoдaльнoгo oкнa display: none;
+                    .animate({opacity: 1, top: '50%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
+        });
+    });
+    /* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
+    $('#modal_close, #overlay').click( function(){ // лoвим клик пo крестику или пoдлoжке
+        $('#modal_form')
+            .animate({opacity: 0, top: '45%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
+                function(){ // пoсле aнимaции
+                    $(this).css('display', 'none'); // делaем ему display: none;
+                    $('#overlay').fadeOut(400); // скрывaем пoдлoжку
+                }
+            );
+    });
+});
 </script>
 </body>
 </html>
