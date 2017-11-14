@@ -297,6 +297,12 @@ ul.list-main li a{
         color: white;
         left: 47%;
 }
+.wheelBottom figure p{
+        position: relative;
+        bottom: 35px;
+        color: white;
+       text-align: center;
+}
 .wheelBottom figure{
 
 }
