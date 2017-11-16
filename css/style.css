@@ -447,7 +447,7 @@ html, body {height:100%;}
         height: 150px;
     }
     .elem{
-        height: 100px;
+        height: 140px;
         width: 70%;
         margin-right: 5px;
         margin-top: 0px;
@@ -481,6 +481,24 @@ html, body {height:100%;}
     .item10{ background: url("../image/slider/slider11.jpg");}
     .item11{ background: url("../image/slider/slider10.jpg");}
     .item12{ background: url("../image/slider/slider9.jpg");}
+
+    .item12, .item22, .item32, .item42, .item52, .item62, .item72, .item82, .item92, .item102, .item112, .item122{
+        height: 100%;
+        background-size: cover!important;
+        background-repeat: no-repeat!important;
+    }
+    .item12{ background: url("../image/slider2/5.jpg");}
+    .item22{ background: url("../image/slider2/6.jpg");}
+    .item32{ background: url("../image/slider2/7.jpg");}
+    .item42{ background: url("../image/slider2/8.jpg");}
+    .item52{ background: url("../image/slider2/1.jpg");}
+    .item62{ background: url("../image/slider2/2.jpg");}
+    .item72{ background: url("../image/slider2/3.jpg");}
+    .item82{ background: url("../image/slider2/4.jpg");}
+    .item92{ background: url("../image/slider2/1.jpg");}
+    .item102{ background: url("../image/slider2/2.jpg");}
+    .item112{ background: url("../image/slider2/3.jpg");}
+    .item122{ background: url("../image/slider2/4.jpg");}
                              .my-flex2{
                             display: flex;
                             flex-direction: column;
