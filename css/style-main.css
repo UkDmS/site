@@ -1,5 +1,5 @@
 .left-panel{
-        width: 110px;
+       /* width: 110px;*/
         position: fixed;
         top: 0;
         left: 0;
@@ -12,12 +12,13 @@
  .logo{
         display: block;
         height: 70px;
+        width: 90%;
         background: url(../image/logo.png) no-repeat 50% 50%;
-        background-size: auto 70px;
+        background-size: contain;
         text-indent: -9999px;
         position: absolute;
         left: 0;
-        right: 0;
+        right: 0;                                             
         top: 20px;
 }
 .logo:hover{
@@ -178,7 +179,7 @@ ul.list-main li a{
         position: absolute;
         width: 45px;
         left: 50%;
-        top: 36%;
+        top: 40%;
 }
 .display2 div.carcaseBlock img{
         position: absolute;
@@ -235,7 +236,7 @@ ul.list-main li a{
         justify-content: center;
         position: relative;
         opacity: 0;
-        bottom: 0%;
+        bottom: 10%;
 }
 .carcaseBottom{
         display: flex;
@@ -258,7 +259,7 @@ ul.list-main li a{
         justify-content: center;
         position: relative;
         opacity: 0;
-        bottom: 5%;
+        bottom: 20%;
 }
 .glassBottom{
         display: flex;
@@ -266,32 +267,32 @@ ul.list-main li a{
         justify-content: center;
         position: relative;
         opacity: 0;
-        bottom: 5%;
+        bottom: 28%;
 }
 .wheelBottom figure img{
         display: block;
         margin: auto;
-        width: 290px;
+        width: 290px;  cursor:pointer;  z-index:9999999;
 }
 .engineBottom figure img{
         display: block;
         margin: auto;
-        width: 290px;
+        width: 290px;  cursor:pointer; z-index:9999999;
 }
 .salonBottom figure img{
         display: block;
         margin: auto;
-        width: 290px;
+        width: 290px;  cursor:pointer; z-index:9999999;
 }
 .carcaseBottom figure img{
         display: block;
         margin: auto;
-        width: 290px;
+        width: 290px;   cursor:pointer;  z-index:9999999;
 }
 .glassBottom figure img{
         display: block;
         margin: auto;
-        width: 290px;
+        width: 290px;    cursor:pointer;  z-index:9999999;
 }
 .engineBottom figure p{
         position: relative;
