@@ -223,6 +223,7 @@ html, body {height:100%;}
         color: white;
         vertical-align: middle;
         font-size: 26px;
+        cursor: pointer;
     }
 
     .logo-krytex{
