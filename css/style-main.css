@@ -235,7 +235,7 @@ ul.list-main li a{
         justify-content: center;
         position: relative;
         opacity: 0;
-        bottom: 15%;
+        bottom: 0%;
 }
 .carcaseBottom{
         display: flex;
@@ -258,7 +258,7 @@ ul.list-main li a{
         justify-content: center;
         position: relative;
         opacity: 0;
-        bottom: 28%;
+        bottom: 5%;
 }
 .glassBottom{
         display: flex;
@@ -266,7 +266,7 @@ ul.list-main li a{
         justify-content: center;
         position: relative;
         opacity: 0;
-        bottom: 28%;
+        bottom: 5%;
 }
 .wheelBottom figure img{
         display: block;
